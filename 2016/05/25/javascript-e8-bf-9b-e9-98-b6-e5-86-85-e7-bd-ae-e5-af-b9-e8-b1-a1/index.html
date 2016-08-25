@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>JavaScript进阶-内置对象 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-25T15:02:06.000Z" itemprop="datePublished">
+          2016-05-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/post/'>post</a>
+    
+    
+</span>
+                <h1>JavaScript进阶-内置对象</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="什么是对象"><a href="#什么是对象" class="headerlink" title="什么是对象"></a>什么是对象</h2><p>JavaScript 中的所有事物都是对象，如:字符串、数值、数组、函数等，每个对象带有<strong>属性</strong>和<strong>方法</strong>。</p>
+<p><strong>访问对象属性的语法:</strong></p>
+<pre>objectName.propertyName
+
+</pre>
+
+<p><strong>访问对象的方法：</strong></p>
+<pre><span>objectName.methodName()
+
+</span></pre>
+
+<h2 id="Date-日期对象"><a href="#Date-日期对象" class="headerlink" title="Date 日期对象"></a>Date 日期对象</h2><p>日期对象可以储存任意一个日期，并且可以精确到毫秒数（1/1000 秒）。<br>Date对象定义初始值：<pre>var d = new Date(2012, 10, 1);  <span>//2012年10月1日</span><br>var d = new Date(‘Oct 1, 2012’); <span>//2012年10月1日</span></pre></p>
+<p></p>
+<p>Date对象中处理时间和日期的常用方法：</p>
+<p><a href="http://img.mukewang.com/555c650d0001ae7b04180297.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/ae7b4d650a537539bfa1b13aaf6d51b3.jpeg" alt=""></a><br>返回星期方法：getDay() 0~6 星期日~星期六</p>
+<h2 id="String-字符串对象"><a href="#String-字符串对象" class="headerlink" title="String 字符串对象"></a>String 字符串对象</h2><h2 id="返回指定位置的字符"><a href="#返回指定位置的字符" class="headerlink" title="返回指定位置的字符"></a>返回指定位置的字符</h2><p><strong>语法:</strong></p>
+<pre>stringObject.charAt(index)</pre>
+
+<p><strong>参数说明：</strong></p>
+<p><span><a href="http://img.mukewang.com/53251a310001cf1e03370092.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/cf1e3a0e2cf56a6fce6668504ba0067c.jpeg" alt=""></a></span><br><strong>注意**</strong>：**<span>1.字符串中第一个字符的下标是 0。最后一个字符的下标为字符串长度减一（string.length-1）。</span></p>
+<h2 id="返回指定的字符串首次出现的位置"><a href="#返回指定的字符串首次出现的位置" class="headerlink" title="返回指定的字符串首次出现的位置"></a>返回指定的字符串首次出现的位置</h2><p><strong>语法</strong></p>
+<pre>stringObject.indexOf(substring, startpos)</pre>
+
+<p><span><strong>参数说明：</strong></span></p>
+<p><a href="http://img.mukewang.com/53853d4200019feb04920149.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/9febe7efbdd5d9918dd329d5a8a4a64e.jpeg" alt=""></a></p>
+<h2 id="字符串分割split"><a href="#字符串分割split" class="headerlink" title="字符串分割split()"></a>字符串分割split()</h2><p>split() 方法将字符串分割为字符串数组，并返回此数组。</p>
+<h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a><strong>语法：</strong></h3><pre>stringObject.split(separator,limit)</pre>
+
+<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明:"></a><strong>参数说明:</strong></h3><p><strong><a href="http://img.mukewang.com/532bee4800014c0404230108.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/4c040ed2e282f4337b5e774c02aa28b5.jpeg" alt=""></a></strong></p>
+<p><strong>注意：</strong>如果把空字符串 (&quot;&quot;) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</p>
+<h2 id="提取字符串substring"><a href="#提取字符串substring" class="headerlink" title="提取字符串substring()"></a>提取字符串substring()</h2><p>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
+<p><strong>语法:</strong></p>
+<pre>stringObject.substring(starPos,stopPos) </pre>
+
+<p><strong>参数说明:</strong></p>
+<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/51afc9eeef7fa60934634e4159f63ea4.jpeg" alt=""></p>
+<p><strong>注意：</strong></p>
+<p>1. 返回的内容是star~stop-1，其长度为 stop 减start。</p>
+<h2 id="提取指定数目的字符substr"><a href="#提取指定数目的字符substr" class="headerlink" title="提取指定数目的字符substr()"></a>提取指定数目的字符substr()</h2><p><span>substr() 方法从字符串中提取从 startPos位置开始的指定数目的字符串。</span></p>
+<p><strong>语法:</strong></p>
+<pre>stringObject.substr(startPos,length)
+</pre>
+
+<p><strong>参数说明:</strong></p>
+<p><a href="http://img.mukewang.com/532bf2e00001105305100098.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/105310b2d7b18d2b98a1b4367fa4a317.jpeg" alt=""></a></p>
+<p><strong>注意：</strong>如果参数startPos是负数，从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推。</p>
+<p>如果startPos为负数且绝对值大于字符串长度，startPos为0。</p>
+<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2><p>Math对象，提供对数据的数学计算。</p>
+<p>Math 对象属性</p>
+<p><span><span lang="EN-US"><a href="http://img.mukewang.com/532fe7cf0001e7b505170269.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/e7b59023562b18650bbe786b2c3b984f.jpeg" alt=""></a></span></span></p>
+<p>Math 对象方法</p>
+<p><a href="http://img.mukewang.com/532fe841000174db05160622.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/74db37145ec175a1c35eaf6598e20628.jpeg" alt=""></a></p>
+<h2 id="Array-数组对象"><a href="#Array-数组对象" class="headerlink" title="Array 数组对象"></a>Array 数组对象</h2><p>数组对象是一个对象的集合，里边的对象可以是不同类型的。数组的每一个成员对象都有一个“下标”，用来表示它在数组中的位置，是从零开始的</p>
+<p><strong>数组方法：</strong></p>
+<p><a href="http://img.mukewang.com/533295ab0001dead05190599.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/deade660484daa0657e18562d6b09d93.jpeg" alt=""></a><br>几个重要的数组对象：</p>
+<h2 id="数组连接concat"><a href="#数组连接concat" class="headerlink" title="数组连接concat()"></a>数组连接concat()</h2><p>concat() 方法用于连接两个或多个数组。此方法返回一个新数组，不改变原来的数组。</p>
+<p><strong>语法</strong></p>
+<pre>arrayObject.concat(array1,array2,...,arrayN)</pre><span>**注意:  **该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。
+</span>
+
+## <span>指定分隔符连接数组元素join()</span>
+
+<span>join()方法用于把数组中的所有元素放入一个字符串。元素是通过指定的分隔符进行分隔的。</span>
+
+<span>**语法：**</span>
+<pre><span>arrayObject.join(分隔符) <span>分隔符为空则加入逗号连接数组元素
+<span>
+</span></span></span></pre>
+
+<h2 id="颠倒数组元素顺序reverse"><a href="#颠倒数组元素顺序reverse" class="headerlink" title="颠倒数组元素顺序reverse()"></a>颠倒数组元素顺序reverse()</h2><p>reverse() 方法用于颠倒数组中元素的顺序。</p>
+<p><strong>语法：</strong></p>
+<pre>arrayObject.reverse()</pre>
+
+<p><strong>注意：</strong>该方法会改变原来的数组，而不会创建新的数组。<br><span><span><span></span></span></span></p>
+<h2 id="选定元素slice-类似于sbustring"><a href="#选定元素slice-类似于sbustring" class="headerlink" title="选定元素slice()  [类似于sbustring()]"></a>选定元素slice()  [类似于sbustring()]</h2><p>slice() 方法可从已有的数组中返回选定的元素。</p>
+<p><strong>语法</strong></p>
+<pre>arrayObject.slice(start,end) <span>start~end-1
+<span>**注意：**该方法并不会修改数组，而是返回一个子数组。
+
+</span></span></pre>
+
+<h2 id="数组排序sort-important"><a href="#数组排序sort-important" class="headerlink" title="数组排序sort()  important"></a><span>数组排序sort()  <span>important</span></span></h2><p><span>sort()方法使数组中的元素按照一定的顺序排列。</span></p>
+<p><span>语法:</span></p>
+<pre><span>arrayObject.sort(方法函数)
+注意：如果不写方法函数，默认按照unicode码进行排序
+     如果指定方法函数，则按&lt;方法函数&gt;所指定的排序方法排序。</span></pre><pre>     myArray.sort(sortMethod);</pre>
+
+<p>  该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：<span> </span></p>
+<p>  若返回值&lt;=-1，则表示 A 在排序后的序列中出现在 B 之前。<br>  若返回值&gt;-1 &amp;&amp; &lt;1，则表示 A 和 B 具有相同的排序顺序。<br>  若返回值&gt;=1，则表示 A 在排序后的序列中出现在 B 之后。</p>
+<p>function sortNum(a,b){</p>
+<p><span><span><span><span><span><span><span><span>return a-b;//升序</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>return b-a;//降序</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>}</span></span></span></span></span></span></span></span></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/05/26/javascript-e8-bf-9b-e9-98-b6-e6-b5-8f-e8-a7-88-e5-99-a8-e5-af-b9-e8-b1-a1/" style="float: left;">
+        ← JavaScript进阶-浏览器对象
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/05/25/javascript-e8-bf-9b-e9-98-b6-e4-ba-8b-e4-bb-b6/">
+        JavaScript进阶-事件 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/25/javascript-e8-bf-9b-e9-98-b6-e5-86-85-e7-bd-ae-e5-af-b9-e8-b1-a1/" data-title="JavaScript进阶-内置对象" data-url="http://yoursite.com/2016/05/25/javascript-e8-bf-9b-e9-98-b6-e5-86-85-e7-bd-ae-e5-af-b9-e8-b1-a1/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

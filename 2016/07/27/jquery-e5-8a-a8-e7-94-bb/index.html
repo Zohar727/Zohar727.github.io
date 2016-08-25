@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>jQuery动画 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-27T13:54:15.000Z" itemprop="datePublished">
+          2016-07-27
+      </time>
+    
+</span>
+                <h1>jQuery动画</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>**</p>
+<h2 id="隐藏元素的hide方法"><a href="#隐藏元素的hide方法" class="headerlink" title="隐藏元素的hide方法"></a>隐藏元素的hide方法</h2><p>**<br>$elem.hide()提供参数：</p>
+<p>.hide( options ) 当提供hide方法一个参数时，.hide()成为一个动画方法。.hide()方法将为匹配元素的宽度，高度，以及不透明度，同时进行动画操作</p>
+<p>快捷参数：</p>
+<p>.hide(fast / slow) 这是一个动画设置的快捷方式，’fast’ 和 ‘slow’ 分别代表200和600毫秒的延时，就是元素会执行200/600毫秒的动画后在隐藏默认400ms</p>
+<p>**</p>
+<h2 id="显示元素的show方法"><a href="#显示元素的show方法" class="headerlink" title="显示元素的show方法"></a>显示元素的show方法</h2><p>**css中有display:none属性，同时也有display:block，所以jQuery同样提供了与hide相反的show方法</p>
+<p>方法的使用几乎与hide是一致的，hide是让元素显示到隐藏，show则是相反，让元素从隐藏到显示</p>
+<p>看一段代码：使用上一致，结果相反</p>
+<p>$(‘elem’).hide(3000).show(3000) 让元素执行3秒的隐藏动画，然后执行3秒的显示动画。</p>
+<p>show与hide方法是非常常用的，但是一般很少会基于这2个属性执行动画，大多情况下还是直接操作元素的显示与隐藏为主</p>
+<p>**</p>
+<h2 id="显示与隐藏切换toggle方法"><a href="#显示与隐藏切换toggle方法" class="headerlink" title="显示与隐藏切换toggle方法"></a>显示与隐藏切换toggle方法</h2><p>**基本的操作：toggle(); 这是最基本的操作，处理元素显示或者隐藏，因为不带参数，所以没有动画。通过改变CSS的display属性，匹配的元素将被立即显示或隐藏，没有动画。</p>
+<p>提供参数：.toggle( [duration ] [, complete ] ) 同样的提供了时间、还有动画结束的回调。在参数对应的时间内，元素会发生显示/隐藏的改变，在改变的过程中会把元素的高、宽、不透明度进行一系列动画。这个元素其实就是show与hide的方法</p>
+<p>直接定位：.toggle(display) 直接提供一个参数，指定要改变的元素的最终效果</p>
+<p><span></span></p>
+<h2 id="下拉动画slideDown"><a href="#下拉动画slideDown" class="headerlink" title="下拉动画slideDown"></a>下拉动画slideDown</h2><p>.slideDown( [duration ] [, complete ] )</p>
+<p><span></span></p>
+<h2 id="上卷动画slideUp"><a href="#上卷动画slideUp" class="headerlink" title="上卷动画slideUp"></a>上卷动画slideUp</h2><p>用法同上</p>
+<p><span></span></p>
+<h2 id="上卷下拉切换slideToggle"><a href="#上卷下拉切换slideToggle" class="headerlink" title="上卷下拉切换slideToggle"></a>上卷下拉切换slideToggle</h2><p>用法同上<br><span><br>  **</span></p>
+<p>**<br><span></span></p>
+<h2 id="淡出动画fadeOut"><a href="#淡出动画fadeOut" class="headerlink" title="淡出动画fadeOut"></a>淡出动画fadeOut</h2><p><br><span>用法同上</span></p>
+<p><span></span></p>
+<h2 id="淡入动画fadeIn"><a href="#淡入动画fadeIn" class="headerlink" title="淡入动画fadeIn"></a>淡入动画fadeIn</h2><p><br><span>用法同上</span><br><span><br>  **</span></p>
+<p>**<br><br><span></span></p>
+<h2 id="淡入淡出切换fadeToggle"><a href="#淡入淡出切换fadeToggle" class="headerlink" title="淡入淡出切换fadeToggle"></a>淡入淡出切换fadeToggle</h2><p><br><span>用法同上</span><br><span><br>  **</span></p>
+<p>**<br><br><span></span></p>
+<h2 id="淡入效果fadeTo（可设置透明度变化区间）"><a href="#淡入效果fadeTo（可设置透明度变化区间）" class="headerlink" title="淡入效果fadeTo（可设置透明度变化区间）"></a>淡入效果fadeTo（可设置透明度变化区间）</h2><p>.fadeTo( duration, opacity [, complete ] )</p>
+<p><span></span></p>
+<h2 id="toggle与slideToggle以及fadeToggle的比较"><a href="#toggle与slideToggle以及fadeToggle的比较" class="headerlink" title="toggle与slideToggle以及fadeToggle的比较"></a>toggle与slideToggle以及fadeToggle的比较</h2><p>toggle、sildeToggle以及fadeToggle的区别： toggle：切换显示与隐藏效果 sildeToggle：切换上下拉卷滚效果 fadeToggle：切换淡入淡出效果</p>
+<p><span></span></p>
+<h2 id="复杂动画使用animate实现"><a href="#复杂动画使用animate实现" class="headerlink" title="复杂动画使用animate实现"></a>复杂动画使用animate实现</h2><p><br>语法：</p>
+<pre lang="javascript"> .animate( properties [, duration ] [, easing ] [, complete ] ) .animate( properties, options )</pre>
+
+<p>参数分解：<br>**</p>
+<p><strong>
+</strong>properties：**一个或多个css属性的键值对所构成的Object对象。要特别注意所有用于动画的属性必须是数字的，除非另有说明；这些属性如果不是数字的将不能使用基本的jQuery功能。比如常见的，border、margin、padding、width、height、font、left、top、right、bottom、wordSpacing等等这些都是能产生动画效果的。background-color很明显不可以，因为参数是red或者GBG这样的值，非常用插件，否则正常情况下是不能只能动画效果的。注意，CSS 样式使用 DOM 名称（比如 “fontSize”）来设置，而非 CSS 名称（比如 “font-size”）。</p>
+<p>特别注意单位，属性值的单位像素（px）,除非另有说明。单位em 和 %需要指定使</p>
+<pre lang="javascript"> .animate({   left: 50,   width: '50px'   opacity: 'show',   fontSize: "10em", }, 500);</pre> 除了定义数值，每个属性能使用'show', 'hide', 和 'toggle'。这些快捷方式允许定制隐藏和显示动画用来控制元素的显示或隐藏
+
+<pre lang="javascript">.animate({   width: "toggle" });</pre> 如果提供一个以+= 或 -=开始的值，那么目标值就是以这个属性的当前值加上或者减去给定的数字来计算的 .animate({   left: '+50px' }, "slow");
+
+**duration时间**
+
+动画执行的时间，持续时间是以毫秒为单位的；值越大表示动画执行的越慢，不是越快。还可以提供'fast' 和 'slow'字符串，分别表示持续时间为200 和 600毫秒。
+
+**easing动画运动的算法**
+
+jQuery库中是默认的时调用 swing。在一个恒定的速度进行动画，如果需要其他的动画算法，请查找相关的插件
+
+**complete回调**
+
+动画完成时执行的函数，这个可以保证当前动画确定完成后发会触发
+
+<span>
+  **<pre lang="javascript">.animate( properties, options )</pre>**
+</span>animate在执行动画中，如果需要观察动画的一些执行情况，或者在动画进行中的某一时刻进行一些其他处理，我们可以通过animate的提供第二种设置语法，传递一个对象参数，可以拿到动画执行状态一些通知
+
+<pre lang="javascript">.animate( properties, options )</pre>
+
+<p><strong>options参数</strong></p>
+<p>duration - 设置动画执行的时间</p>
+<p>easing - 规定要使用的 easing 函数，过渡使用哪种缓动函数</p>
+<p>step：规定每个动画的每一步完成之后要执行的函数</p>
+<p>progress：每一次动画调用的时候会执行这个回调，就是一个进度的概念</p>
+<p>complete：动画完成回调</p>
+<p>其中最关键的一点就是：</p>
+<p><strong>如果多个元素执行动画，回调将在每个匹配的元素上执行一次，不是作为整个动画执行一次</strong></p>
+<p><span></span></p>
+<h2 id="停止动画stop"><a href="#停止动画stop" class="headerlink" title="停止动画stop"></a>停止动画stop</h2><p>语法：<pre lang="javascript"> .stop( [clearQueue ] [, jumpToEnd ] ) .stop( [queue ] [, clearQueue ] [, jumpToEnd ] )</pre></p>
+<p><span>1. stop() 停止当前动画</span></p>
+<p><span>2. stop(true) 停止当前执行动画元素的所有动画行为</span><br><span><br>  <span><br>    <span>3. stop(true,true)  停止当前执行动画元素的所有动画行为，并且直接到达当前动画最后一帧</span></span><br></span></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/08/18/ajax-e5-85-a8-e6-8e-a5-e8-a7-a6-ef-bc-88-e4-b8-80-ef-bc-89/" style="float: left;">
+        ← AJAX全接触（一）
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/07/14/jquery-e4-ba-8b-e4-bb-b6-e4-b8-80-e8-a7-88/">
+        jQuery事件一览 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/07/27/jquery-e5-8a-a8-e7-94-bb/" data-title="jQuery动画" data-url="http://yoursite.com/2016/07/27/jquery-e5-8a-a8-e7-94-bb/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

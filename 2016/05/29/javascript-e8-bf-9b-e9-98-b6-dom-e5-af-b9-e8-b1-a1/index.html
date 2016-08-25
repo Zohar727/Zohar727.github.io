@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>JavaScript进阶-DOM对象 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-29T11:21:19.000Z" itemprop="datePublished">
+          2016-05-29
+      </time>
+    
+</span>
+                <h1>JavaScript进阶-DOM对象</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="认识DOM"><a href="#认识DOM" class="headerlink" title="认识DOM"></a>认识DOM</h2><p>文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。</p>
+<p><strong>HTML**</strong>文档可以说由节点构成的集合，DOM节点有:**</p>
+<p><strong>1. **</strong>元素节点：**上图中&lt;html&gt;、&lt;body&gt;、&lt;p&gt;等都是元素节点，即标签。</p>
+<p><strong>2. **</strong>文本节点:**向用户展示的内容，如&lt;li&gt;…&lt;/li&gt;中的JavaScript、DOM、CSS等文本。</p>
+<p><strong>3. **</strong>属性节点:**元素属性，如&lt;a&gt;标签的链接属性href=&quot;<a href="http://www.imooc.com&quot;。" target="_blank" rel="external">http://www.imooc.com&quot;。</a></p>
+<p><strong>节点属性:</strong></p>
+<p><a href="http://img.mukewang.com/5375c953000117ee05240129.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/17ee1393d605d81e41dd21336b62d6cc.jpeg" alt=""></a></p>
+<p><strong>遍历节点树:</strong></p>
+<p><a href="http://img.mukewang.com/53f17a6400017d2905230219.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/7d29261ad338dbe42f3369c1dd01e499.jpeg" alt=""></a></p>
+<p><strong>以上图ul为例，它的父级节点body,它的子节点3个li,它的兄弟结点h2、P。</strong></p>
+<p><strong>DOM操作:</strong></p>
+<p><a href="http://img.mukewang.com/538d29da000152db05360278.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/52db4838f205d5073ad63d1d88a23008.jpeg" alt=""></a></p>
+<p><strong>注意:</strong>前两个是document方法。</p>
+<h2 id="getElementsByName-方法"><a href="#getElementsByName-方法" class="headerlink" title="getElementsByName()方法"></a>getElementsByName()方法</h2><p>返回带有指定名称的节点对象的集合。</p>
+<p><strong>语法：</strong></p>
+<pre>document.getElementsByName(name)</pre>
+
+<p>与getElementById() 方法不同的是，通过元素的 name 属性查询元素，而不是通过 id 属性。</p>
+<h2 id="getElementsByTagName-方法"><a href="#getElementsByTagName-方法" class="headerlink" title="getElementsByTagName()方法"></a>getElementsByTagName()方法</h2><p>返回带有指定标签名的节点对象的集合。返回元素的顺序是它们在文档中的顺序。</p>
+<p><strong>语法:</strong></p>
+<pre>getElementsByTagName(Tagname)</pre>
+
+<p><strong>注意:</strong></p>
+<ol>
+<li>因为文档中的 name 属性可能不唯一，所有 getElementsByName() 方法返回的是元素的数组，而不是一个元素。</li>
+</ol>
+<p>2.Tagname是标签的名称，如p、a、img等标签名。</p>
+<p>3. 和数组类似也有length属性，可以和访问数组一样的方法来访问，从0开始。</p>
+<h2 id="区别getElementByID-getElementsByName-getElementsByTagName"><a href="#区别getElementByID-getElementsByName-getElementsByTagName" class="headerlink" title="区别getElementByID,getElementsByName,getElementsByTagName"></a>区别getElementByID,getElementsByName,getElementsByTagName</h2><p>input标签就像人的类别。</p>
+<p>name属性就像人的姓名。</p>
+<p>id属性就像人的身份证。</p>
+<p><span>后两种方法返回的都是数组！</span></p>
+<p><strong>方法总结如下:</strong></p>
+<p><a href="http://img.mukewang.com/5405263300018bcf05760129.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/8bcfffd7eb3e321f1830cbb49f359586.jpeg" alt=""></a></p>
+<h2 id="getAttribute-方法"><a href="#getAttribute-方法" class="headerlink" title="getAttribute()方法"></a>getAttribute()方法</h2><p>通过元素节点的属性名称获取属性的值。</p>
+<p><strong>语法：</strong></p>
+<pre>elementNode.getAttribute(name)</pre>
+
+<p><strong>说明:</strong></p>
+<p>1. elementNode：使用getElementById()、getElementsByTagName()等方法，获取到的元素节点。</p>
+<p>2. name：要想查询的元素节点的属性名字</p>
+<h2 id="setAttribute-方法"><a href="#setAttribute-方法" class="headerlink" title="setAttribute()方法"></a>setAttribute()方法</h2><p>setAttribute() 方法增加一个指定名称和值的新属性，或者把一个现有的属性设定为指定的值。</p>
+<p><strong>语法：</strong></p>
+<pre>elementNode.setAttribute(name,value)</pre>
+
+<p><strong><span>注意：</span></strong></p>
+<p>1.把指定的属性设置为指定的值。如果不存在具有指定名称的属性，该方法将创建一个新属性。</p>
+<p>2.类似于getAttribute()方法，setAttribute()方法只能通过元素节点对象调用的函数。</p>
+<h2 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h2><p>在文档对象模型 (DOM) 中，每个节点都是一个对象。DOM 节点有三个重要的属性 ：</p>
+<p>1. nodeName : 节点的名称</p>
+<p>2. nodeValue ：节点的值</p>
+<p>3. nodeType ：节点的类型</p>
+<p><strong>一、nodeName 属性: </strong>节点的名称，是只读的。</p>
+<ol>
+<li>元素节点的 nodeName 与标签名相同<ol>
+<li>属性节点的 nodeName 是属性的名称</li>
+<li>文本节点的 nodeName 永远是 #text</li>
+<li>文档节点的 nodeName 永远是 #document</li>
+</ol>
+</li>
+</ol>
+<p><strong>二、nodeValue 属性：</strong><span>节点的值</span></p>
+<p>1. 元素节点的 nodeValue 是 undefined 或 null<br> 2. 文本节点的 nodeValue 是文本自身<br> 3. 属性节点的 nodeValue 是属性的值</p>
+<p><strong>三、nodeType 属性: </strong>节点的类型，是只读的。以下常用的几种结点类型:</p>
+<p><strong>元素类型    节点类型</strong><br>   元素          1<br>   属性          2<br>   文本          3<br>   注释          8<br>   文档          9</p>
+<h2 id="访问子结点childNodes"><a href="#访问子结点childNodes" class="headerlink" title="访问子结点childNodes"></a>访问子结点childNodes</h2><p>访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，他具有length属性。<span>(返回数组）</span></p>
+<p><strong>语法：</strong></p>
+<pre>elementNode.childNodes</pre>
+
+<pre>node.firstChild   //返回第一个子节点，若无则返回null
+</pre><pre>node.lastChild    //返回最后一个子节点</pre>
+<span>注意：节点之间的空白符，在firefox、chrome、opera、safari浏览器是文本节点，在IE中不算子节点
+
+</span>
+
+## 访问父节点parentNode
+
+获取指定节点的父节点
+
+**语法：** elementNode.parentNode
+
+**注意:父节点只能有一个。**
+<pre>nodeObject.nextSibling       //返回下一个兄弟节点</pre><pre>nodeObject.previousSibling   //返回上一个兄弟节点</pre><span>注意: 两<span>个属性获取的是节点。Internet Explorer 会忽略节点间生成的空白文本节点（例如，换行符号），而其它浏览器不</span>会忽略<span>。
+</span></span>
+
+## 插入节点appendChild()
+
+在指定节点的最后一个子节点列表之后添加一个新的子节点。
+
+**语法:**
+<pre>appendChild(newnode)
+</pre>
+
+<h2 id="插入节点insertBefore"><a href="#插入节点insertBefore" class="headerlink" title="插入节点insertBefore()"></a>插入节点insertBefore()</h2><p>insertBefore() 方法可在已有的子节点前插入一个新的子节点。</p>
+<p><strong>语法:</strong> insertBefore(newnode,node);</p>
+<p><strong>参数:</strong> newnode: 要插入的新节点。 node: 指定此节点前插入节点。</p>
+<h2 id="删除节点removeChild"><a href="#删除节点removeChild" class="headerlink" title="删除节点removeChild()"></a>删除节点removeChild()</h2><p>removeChild() 方法从子节点列表中删除某个节点。如删除成功，此方法可返回被删除的节点，如失败，则返回 NULL。</p>
+<p><strong>语法:</strong> nodeObject.removeChild(node)<br><span>注意：删除后节点只是不在DOM树中，仍然在内存中。</span></p>
+<h2 id="替换元素节点replaceChild"><a href="#替换元素节点replaceChild" class="headerlink" title="替换元素节点replaceChild()"></a>替换元素节点replaceChild()</h2><p>replaceChild 实现子节点(对象)的替换。<span>返回被替换对象的引用。 <span>!注意是替换子节点</span></span></p>
+<p><strong>语法：</strong></p>
+<pre>node.replaceChild (newnode,oldnew ) 
+</pre>
+
+<p><span>1. 当 oldnode 被替换时，所有与之相关的属性内容都将被移除。 </span></p>
+<p>2. newnode 必须先被建立。 </p>
+<h2 id="创建元素节点createElement"><a href="#创建元素节点createElement" class="headerlink" title="创建元素节点createElement"></a>创建元素节点createElement</h2><p>createElement()<span>方法</span><span>可创建元素节点。</span><span>此方法可返回一个 Element 对象。</span></p>
+<p><strong><span>语法：</span></strong></p>
+<pre>document.createElement(tagName)</pre>
+
+<p><strong>参数:</strong></p>
+<p>tagName：字符串值，这个字符串用来指明创建元素的类型。</p>
+<p><strong>注意：</strong>要与appendChild() 或 insertBefore()方法联合使用，将元素显示在页面中。</p>
+<h2 id="创建文本节点createTextNode"><a href="#创建文本节点createTextNode" class="headerlink" title="创建文本节点createTextNode"></a>创建文本节点createTextNode</h2><p>createTextNode() 方法创建新的文本节点，返回新创建的 Text 节点。</p>
+<p><strong><span>语法：</span></strong></p>
+<pre>document.createTextNode(data)</pre>
+
+<p><strong>参数：</strong></p>
+<p><span>data :</span><span> 字符串值，可规定此节点的文本。</span></p>
+<h2 id="浏览器窗口可视区域大小"><a href="#浏览器窗口可视区域大小" class="headerlink" title="浏览器窗口可视区域大小"></a>浏览器窗口可视区域大小</h2><p>获得浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）的方法:</p>
+<p><strong>一、对于IE9+、Chrome、Firefox、Opera 以及 Safari：</strong></p>
+<p>•  window.innerHeight - 浏览器窗口的内部高度</p>
+<p>•  window.innerWidth - 浏览器窗口的内部宽度</p>
+<p><strong>二、对于 Internet Explorer 8、7、6、5：</strong></p>
+<p>•  document.documentElement.clientHeight表示HTML文档所在窗口的当前高度。</p>
+<p>•  document.documentElement.clientWidth表示HTML文档所在窗口的当前宽度。</p>
+<p>或者</p>
+<p>Document对象的body属性对应HTML文档的&lt;body&gt;标签</p>
+<p>•  document.body.clientHeight</p>
+<p>•  document.body.clientWidth</p>
+<p><strong>在不同浏览器都实用的 JavaScript 方案：</strong></p>
+<pre>var w= document.documentElement.clientWidth
+      || document.body.clientWidth;
+var h= document.documentElement.clientHeight
+      || document.body.clientHeight;</pre>
+
+<h2 id="网页尺寸scrollHeight"><a href="#网页尺寸scrollHeight" class="headerlink" title="网页尺寸scrollHeight"></a>网页尺寸scrollHeight</h2><p>scrollHeight和scrollWidth，获取网页内容高度和宽度。<span>（网页内容尺寸）</span></p>
+<p><strong>一、针对IE、Opera:</strong></p>
+<p>scrollHeight 是网页内容实际高度，可以小于 clientHeight。</p>
+<p><strong>二、针对NS、FF:</strong></p>
+<p>scrollHeight 是网页内容高度，不过最小值是 clientHeight。也就是说网页内容实际高度小于 clientHeight 时，scrollHeight 返回 clientHeight 。</p>
+<p><strong>三、浏览器兼容性</strong></p>
+<pre>var w=document.documentElement.scrollWidth
+   || document.body.scrollWidth;
+var h=document.documentElement.scrollHeight
+   || document.body.scrollHeight;</pre>
+
+<p><strong>注意:区分大小写</strong></p>
+<p>scrollHeight和scrollWidth还可获取Dom元素中内容实际占用的高度和宽度。</p>
+<h2 id="网页尺寸offsetHeight"><a href="#网页尺寸offsetHeight" class="headerlink" title="网页尺寸offsetHeight"></a>网页尺寸offsetHeight</h2><p>offsetHeight和offsetWidth，获取网页内容高度和宽度(包括滚动条等边线，会随窗口的显示大小改变)。</p>
+<p><strong>一、值</strong></p>
+<p>offsetHeight = clientHeight + 滚动条 + 边框。</p>
+<p><strong>二、浏览器兼容性</strong></p>
+<pre>var w= document.documentElement.offsetWidth
+    || document.body.offsetWidth;
+var h= document.documentElement.offsetHeight
+    || document.body.offsetHeight;
+
+</pre>
+
+<h2 id="网页卷去的距离与偏移量"><a href="#网页卷去的距离与偏移量" class="headerlink" title="网页卷去的距离与偏移量"></a>网页卷去的距离与偏移量</h2><p><strong>我们先来看看下面的图：</strong></p>
+<p><a href="http://img.mukewang.com/5347b2b10001e1a307520686.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/e1a3a0efbd39f7c36991b1741c44fe43.jpeg" alt=""></a></p>
+<p><span><strong>scrollLeft:</strong>设置或获取位于给定对象左边界与窗口中目前可见内容的最左端之间的距离 ，即左边灰色的内容。</span></p>
+<p><strong>scrollTop:</strong>设置或获取位于对象最顶端与窗口中可见内容的最顶端之间的距离 ，即上边灰色的内容。</p>
+<p><span><strong>offsetLeft:</strong>获取指定对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置 。</span></p>
+<p><strong>offsetTop:</strong>获取指定对象相对于版面或由 <span>offsetParent</span> 属性指定的父坐标的计算顶端位置 。</p>
+<p><strong>注意:</strong></p>
+<p><strong>1. 区分大小写</strong></p>
+<p><strong>2. <span>offsetParent：布局中设置postion属性(</span>Relative、Absolute、fixed<span>)的父容器，从最近的父节点开始，一层层向上找，直到HTML的body。</span></strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/05/30/dom-e4-ba-8b-e4-bb-b6-e6-8f-ad-e7-a7-98-ef-bc-88-e4-b8-80-ef-bc-89/" style="float: left;">
+        ← DOM事件揭秘（一）
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/05/26/javascript-e8-bf-9b-e9-98-b6-e6-b5-8f-e8-a7-88-e5-99-a8-e5-af-b9-e8-b1-a1/">
+        JavaScript进阶-浏览器对象 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/29/javascript-e8-bf-9b-e9-98-b6-dom-e5-af-b9-e8-b1-a1/" data-title="JavaScript进阶-DOM对象" data-url="http://yoursite.com/2016/05/29/javascript-e8-bf-9b-e9-98-b6-dom-e5-af-b9-e8-b1-a1/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

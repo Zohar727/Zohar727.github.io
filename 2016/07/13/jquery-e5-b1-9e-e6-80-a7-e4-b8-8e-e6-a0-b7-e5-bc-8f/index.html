@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>jQuery属性与样式 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-13T01:11:35.000Z" itemprop="datePublished">
+          2016-07-13
+      </time>
+    
+</span>
+                <h1>jQuery属性与样式</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>## </p>
+<h2 id="attr-与-removeAttr"><a href="#attr-与-removeAttr" class="headerlink" title=".attr()与.removeAttr()"></a>.attr()与.removeAttr()</h2><p><strong>attr()有4个表达式</strong></p>
+<ol>
+<li>attr(传入属性名)：获取属性的值</li>
+<li>attr(属性名, 属性值)：设置属性的值</li>
+<li>attr(属性名,函数值)：设置属性的函数值  例： $(‘input:eq(2)’).attr(‘value’,function(i, val){<br>return ‘通过function设置’ + val<br>})</li>
+<li>attr(attributes)：给指定元素设置多个属性值，即：{属性名一: “属性值一” , 属性名二: “属性值二” , … … }<br><strong>removeAttr()删除方法</strong></li>
+</ol>
+<p>.removeAttr( attributeName ) : 为匹配的元素集合中的每个元素中移除一个属性（attribute）</p>
+<h2 id="html-及-text"><a href="#html-及-text" class="headerlink" title="html()及.text()"></a>html()及.text()</h2><p><strong>.html()方法</strong></p>
+<p>获取集合中第一个匹配元素的HTML内容 或 设置每一个匹配元素的html内容，具体有3种用法：</p>
+<ol>
+<li>.html() 不传入值，就是获取集合中第一个匹配元素的HTML内容</li>
+<li>.html( htmlString )  设置每一个匹配元素的html内容</li>
+<li>.html( function(index, oldhtml) ) 用来返回设置HTML内容的一个函数<br><strong>注意事项：</strong><br><pre>.htm()方法内部使用的是DOM的innerHTML属性来处理的，所以在设置与获取上需要注意的一个最重要的问题，<strong>这个操作是针对整个HTML内容（不仅仅只<br>是文本内容）</strong></pre><br><strong>.text()方法</strong></li>
+</ol>
+<p>得到匹配元素集合中每个元素的文本内容结合，包括他们的后代，或设置匹配元素集合中每个元素的文本内容为指定的文本内容。，具体有3种用法：</p>
+<ol>
+<li>.text() 得到匹配元素集合中每个元素的合并文本，包括他们的后代</li>
+<li><p>.text( textString ) 用于设置匹配元素内容的文本<br><strong>.html与.text的异同:</strong></p>
+</li>
+<li><p>.html与.text的方法操作是一样，只是在具体针对处理对象不同</p>
+</li>
+<li>.html处理的是元素内容，.text处理的是文本内容</li>
+<li>.html只能使用在HTML文档中，.text 在XML 和 HTML 文档中都能使用</li>
+<li>如果处理的对象只有一个子文本节点，那么html处理的结果与text是一样的</li>
+<li>火狐不支持innerText属性，用了类似的textContent属性，.text()方法综合了2个属性的支持，所以可以兼容所有浏览器<br>&nbsp;</li><br></ol>
+
+<h2 id="val-方法"><a href="#val-方法" class="headerlink" title=".val()方法"></a>.val()方法</h2><p>jQuery中有一个.val()方法主要是用于处理表单元素的值，比如 input, select 和 textarea。</p>
+<p><strong>.val()方法</strong></p>
+<ol>
+<li>.val()无参数，获取匹配的元素集合中第一个元素的当前值</li>
+<li>.val( value )，设置匹配的元素集合中每个元素的值</li>
+<li><p>.val( function ) ，一个用来返回设置值的函数<br><strong>注意事项：</strong><br><pre>.text()结果返回一个字符串，包含所有匹配元素的合并文本</pre><br><strong>.html(),.text()和.val()的差异总结： </strong></p>
+</li>
+<li><p>.html(),.text(),.val()三种方法都是用来读取选定元素的内容；只不过.html()是用来读取元素的html内容（包括html标签），.text()用来读取元素的纯文本内容，包括其后代元素，.val()是用来读取表单元素的”value”值。其中.html()和.text()方法不能使用在表单元素上,而.val()只能使用在表单元素上；另外.html()方法使用在多个元素上时，只读取第一个元素；.val()方法和.html()相同，如果其应用在多个元素上时，只能读取第一个表单元素的”value”值，但是.text()和他们不一样，如果.text()应用在多个元素上时，将会读取所有选中元素的文本内容。</p>
+</li>
+<li>.html(htmlString),.text(textString)和.val(value)三种方法都是用来替换选中元素的内容，如果三个方法同时运用在多个元素上时，那么将会替换所有选中元素的内容。</li>
+<li>.html(),.text(),.val()都可以使用回调函数的返回值来动态的改变多个元素的内容。</li>
+</ol>
+<h2 id="增加样式-addClass"><a href="#增加样式-addClass" class="headerlink" title="增加样式.addClass()"></a>增加样式.addClass()</h2><p><strong>.addClass( className )方法</strong></p>
+<ol>
+<li>.addClass( className ) : 为每个匹配元素所要增加的一个或多个样式名</li>
+<li>.addClass( function(index, currentClass) ) : 这个函数返回一个或更多用空格隔开的要增加的样式名<br>示例代码：<br><pre lang="javascript" line="1"><br>$(“div”).addClass(function(index,className) {<br>//找到类名中包含了imooc的元素<br>if(-1 !== className.indexOf(‘imooc’)){<br>//this指向匹配元素集合中的当前元素<br>$(this).addClass(‘imoocClass’)<br>}<br>});<br></pre><br>&nbsp;</li>
+</ol>
+<h2 id="删除样式-removeClass"><a href="#删除样式-removeClass" class="headerlink" title="删除样式.removeClass()"></a>删除样式.removeClass()</h2><p><strong>.removeClass( )方法</strong></p>
+<ol>
+<li>.removeClass( [className ] )：每个匹配元素移除的一个或多个用空格隔开的样式名</li>
+<li>.removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名<br><pre lang="javascript" line="1"><br><script type="text/javascript"><br>//.removeClass() 方法允许我们指定一个函数作为参数，返回将要被删除的样式<br>$(‘.right &gt; div:first’).removeClass(function(index,className){</li>
+</ol>
+<p>//className = aa bb imoocClass<br>//把div的className赋给下一个兄弟元素div上作为它的class<br>$(this).next().addClass(className)</p>
+<p>//删除自己本身的imoocClass<br>return ‘imoocClass’<br>})</p>
+<p></script><br></pre><br>&nbsp;<p></p>
+<h2 id="切换样式-toggleClass"><a href="#切换样式-toggleClass" class="headerlink" title="切换样式.toggleClass()"></a>切换样式.toggleClass()</h2><p>在做某些效果的时候，可能会针对同一节点的某一个样式不断的切换，也就是addClass与removeClass的互斥切换，比如隔行换色效果</p>
+<p>jQuery提供一个toggleClass方法用于简化这种互斥的逻辑，通过toggleClass方法动态添加删除Class，一次执行相当于addClass，再次执行相当于removeClass</p>
+<p><strong>.toggleClass( )方法：</strong>在匹配的元素集合中的每个元素上添加或删除一个或多个样式类,取决于这个样式类是否存在或值切换属性。即：如果存在（不存在）就删除（添加）一个类</p>
+<ol>
+<li>.toggleClass( className )：在匹配的元素集合中的每个元素上用来切换的一个或多个（用空格隔开）样式类名</li>
+<li>.toggleClass( className, switch )：一个布尔值，用于判断样式是否应该被添加或移除</li>
+<li>.toggleClass( [switch ] )：一个用来判断样式类添加还是移除的 布尔值</li>
+<li><p>.toggleClass( function(index, class, switch) [, switch ] )：用来返回在匹配的元素集合中的每个元素上用来切换的样式类名的一个函数。接收元素的索引位置和元素旧的样式类作为参数<br><strong>注意事项：</strong></p>
+</li>
+<li><p>toggleClass是一个互斥的逻辑，也就是通过判断对应的元素上是否存在指定的Class名，如果有就删除，如果没有就增加</p>
+</li>
+<li>toggleClass会保留原有的Class名后新增，通过空格隔开</li>
+</ol>
+<h2 id="样式操作-css"><a href="#样式操作-css" class="headerlink" title="样式操作.css()"></a>样式操作.css()</h2><p><strong>获取方法：</strong><br>1.     .css(propertyName):获取匹配元素集合中的第一个元素的单个样式属性的计算值<br>2.     .css(propertyNames):可以获取一组属性值，传递一组数组，返回一个对象<br>示例代码：</p>
+<p><pre lang="javascript"><br> var value  =  $(‘div’).css([‘width’,’height’]);<br>    $(‘p).text(‘width:’+value[0]+’height:’+value[1]);<br></pre><br><strong>设置方法：</strong><br>1.  .css(propertyName, value )：设置CSS<br>2   .css( propertyName, function )：可以传入一个回调函数，返回取到对应的值进行处理例： //获取到指定元素的宽度，在回调返回宽度值<br>示例代码：</p>
+<p><pre lang="javascript"><br>//通过处理这个value，重新设置新的宽度<br>$(‘.sixth’).css(“width”,function(index,value){<br>value=value.split(‘px’);<br>return (Number(value[0]+50)+value[1])})<br>3    .css( properties )：可以传一个对象，同时设置多个样式<br>例： //合并设置,通过对象传设置多个样式<br>$(‘.seventh’).css({<br>‘font-size’ :’15px’,<br>“backgroundColor” :”#40E0DO”,<br>“border” :”1px solid red”<br>})<br></pre><br>&nbsp;</p>
+<h2 id="元素的数据存储"><a href="#元素的数据存储" class="headerlink" title="元素的数据存储"></a>元素的数据存储</h2><p>jQuery提供的存储接口</p>
+<p><pre lang="javascript">jQuery.data( element, key, value )   //静态接口,存数据<br>jQuery.data( element, key )  //静态接口,取数据<br>.data( key, value ) //实例接口,存数据<br>.data( key ) //实例接口,存数据</pre><br>同样的也提供2个对应的删除接口，使用上与data方法其实是一致的，只不过是一个是增加一个是删除罢了</p>
+<p><pre lang="javascript">jQuery.removeData( element [, name ] )<br>.removeData( [name ] )</pre><br>示例代码：</p>
+<p><pre lang="javascript" line="1"><br>$(‘.left’).click(function() {<br>var ele = $(this);<br>//通过$.data方式设置数据<br>$.data(ele, “a”, “data test”)<br>$.data(ele, “b”, {<br>name : “慕课网”<br>})<br>//通过$.data方式取出数据<br>var reset = $.data(ele, “a”) + “&lt;/br&gt;” + $.data(ele, “b”).name<br>ele.find(‘span’).append(reset)<br>})<br>&lt;/script&gt;<br>&lt;script type=”text/javascript”&gt;<br>$(‘.right’).click(function() {<br>var ele = $(this);<br>//通过.data方式设置数据<br>ele.data(“a”, “data test”)<br>ele.data(“b”, {<br>name: “慕课网”<br>})<br>//通过.data方式取出数据<br>var reset = ele.data(“a”) + “&lt;/br&gt;” + ele.data(“b”).name<br>ele.find(‘span’).append(reset)<br>})<br></pre><br><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/07/ea2c3a0bd85e8471008c9f42e764e622.jpeg" alt=""></p>
+<p>&nbsp;</p>
+</li></ol>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/07/13/jquery-e4-b8-8edom-e6-93-8d-e4-bd-9c/" style="float: left;">
+        ← jQuery与DOM操作
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/06/11/jquery-e9-80-89-e6-8b-a9-e5-99-a8-e4-b8-80-e8-a7-88/">
+        jQuery选择器一览 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/07/13/jquery-e5-b1-9e-e6-80-a7-e4-b8-8e-e6-a0-b7-e5-bc-8f/" data-title="jQuery属性与样式" data-url="http://yoursite.com/2016/07/13/jquery-e5-b1-9e-e6-80-a7-e4-b8-8e-e6-a0-b7-e5-bc-8f/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

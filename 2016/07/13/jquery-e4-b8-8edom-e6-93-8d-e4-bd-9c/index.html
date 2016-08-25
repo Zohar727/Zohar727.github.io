@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>jQuery与DOM操作 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-13T02:39:03.000Z" itemprop="datePublished">
+          2016-07-13
+      </time>
+    
+</span>
+                <h1>jQuery与DOM操作</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="jQuery节点创建与属性的处理"><a href="#jQuery节点创建与属性的处理" class="headerlink" title="jQuery节点创建与属性的处理"></a>jQuery节点创建与属性的处理</h2><p>保留HTML的书写结构，简单方便如：</p>
+<pre>$("&lt;div id='test' class='aaron'&gt;我是文本节点&lt;/div&gt;")</pre>
+
+<h2 id="内部插入append-与appendTo-（父子节点之间的关系处理，在尾部追加）"><a href="#内部插入append-与appendTo-（父子节点之间的关系处理，在尾部追加）" class="headerlink" title="内部插入append()与appendTo()（父子节点之间的关系处理，在尾部追加）"></a>内部插入append()与appendTo()（父子节点之间的关系处理，在尾部追加）</h2><p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/07/7b41ef3444fbcd0820e390f8e8f1723b.jpeg" alt=""></p>
+<p>append：这个操作与对指定的元素执行原生的appendChild方法，将它们添加到文档中的情况类似。</p>
+<p>appendTo：实际上，使用这个方法是颠倒了常规的$(A).append(B)的操作，即不是把B追加到A中，而是把A追加到B中。</p>
+<p>简单的总结就是：</p>
+<p>.append()和.appendTo()两种方法功能相同，主要的不同是语法——内容和目标的位置不同</p>
+<pre>append()前面是要选择的对象，后面是要在对象内插入的元素内容（对象，内容）
+appendTo()前面是要插入的元素内容，而后面是要选择的对象（内容，对象）</pre>
+
+<h2 id="内部插入prepend-与prependTo-（父子节点之间的关系处理，在前面追加）"><a href="#内部插入prepend-与prependTo-（父子节点之间的关系处理，在前面追加）" class="headerlink" title="内部插入prepend()与prependTo()（父子节点之间的关系处理，在前面追加）"></a>内部插入prepend()与prependTo()（父子节点之间的关系处理，在前面追加）</h2><p>用法与上面想似，只是追加在节点之前；</p>
+<p>这里总结下内部操作四个方法的区别：</p>
+<ul>
+<li>append()向每个匹配的元素内部追加内容</li>
+<li>prepend()向每个匹配的元素内部前置内容</li>
+<li>appendTo()把所有匹配的元素追加到另一个指定元素的集合中</li>
+<li>prependTo()把所有匹配的元素前置到另一个指定的元素集合中</li>
+</ul>
+<h2 id="外部插入after-，insertAfter-与before-，insertBefore-（兄弟节点之间的关系处理）"><a href="#外部插入after-，insertAfter-与before-，insertBefore-（兄弟节点之间的关系处理）" class="headerlink" title="外部插入after()，insertAfter()与before()，insertBefore()（兄弟节点之间的关系处理）"></a>外部插入after()，insertAfter()与before()，insertBefore()（兄弟节点之间的关系处理）</h2><p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/07/8e34dde335c37990286b239d23d4d6f3.jpeg" alt=""></p>
+<p>注意点：</p>
+<ul>
+<li>after向元素的后边添加html代码，如果元素后面有元素了，那将后面的元素后移，然后将html代码插入</li>
+<li>before向元素的前边添加html代码，如果元素前面有元素了，那将前面的元素前移，然后将html代码插入</li>
+<li>after，before 2个方法都支持多个参数传递after(div1,div2,….)</li>
+<li>insertAfter,insertBefore不支持多参数<br>总结：采用<strong>（对象，内容）</strong>结构的方法：append()prepend()after()before()</li>
+</ul>
+<p>采用<strong>（内容，对象）</strong>结构的方法：appendTo()prependTo()insertAfter()insertBefore()</p>
+<h2 id="empty-的基本用法"><a href="#empty-的基本用法" class="headerlink" title="empty()的基本用法"></a>empty()的基本用法</h2><p>移除匹配元素的子节点，包括<strong>元素的文本</strong></p>
+<h2 id="remove-的有参用法和无参用法"><a href="#remove-的有参用法和无参用法" class="headerlink" title="remove()的有参用法和无参用法"></a>remove()的有参用法和无参用法</h2><p>remove会移除包括本身的所有节点，<strong>同时也会移除元素内部的一切，包括绑定的事件及与该元素相关的jQuery数据。（防止内存泄漏，绑定事件不用时，一定要删除）
+</strong></p>
+<p><strong><strong><strong> </strong></strong></strong></p>
+<p><strong><strong>remove表达式参数：</strong></strong></p>
+<p><strong>remove比empty好用的地方就是可以传递一个选择器表达式用来过滤将被移除的匹配元素集合，可以选择性的删除指定的节点</strong></p>
+<p><strong>我们可以通过$()选择一组相同的元素，然后通过remove（）传递筛选的规则，从而这样处理</strong></p>
+<p><strong>对比右边的代码区域，我们可以通过类似于这样处理</strong></p>
+<pre>**$("p").filter(":contains('3')").remove()**</pre>
+
+<h2 id="empty和remove区别"><a href="#empty和remove区别" class="headerlink" title="empty和remove区别"></a>empty和remove区别</h2><p>要用到移除指定元素的时候，jQuery提供了empty()与remove([expr])二个方法，两个都是删除元素，但是两者还是有区别</p>
+<p><strong>empty**</strong>方法**</p>
+<ul>
+<li>严格地讲，empty()方法并不是删除节点，而是清空节点，它能清空元素中的所有后代节点</li>
+<li>empty不能删除自己本身这个节点</li>
+</ul>
+<p><strong>remove**</strong>方法**</p>
+<ul>
+<li>该节点与该节点所包含的所有后代节点将同时被删除</li>
+<li>提供传递一个筛选的表达式，用来指定删除选中合集中的元素</li>
+</ul>
+<h2 id="保留数据的删除操作detach"><a href="#保留数据的删除操作detach" class="headerlink" title="保留数据的删除操作detach()"></a>保留数据的删除操作detach()</h2><p>detach从字面上就很容易理解。让一个web元素托管。即从当前页面中移除该元素，但保留这个元素的内存模型对象。</p>
+<h2 id="detach-和remove-区别"><a href="#detach-和remove-区别" class="headerlink" title="detach()和remove()区别"></a>detach()和remove()区别</h2><p>remove()和detach()可能就是其中的一个，可能remove()我们用得比较多，而detach()就可能会很少了</p>
+<p> 通过一张对比表来解释2个方法之间的不同</p>
+<table border="1" width="562" cellspacing="0" cellpadding="0"><br><tbody><br><tr><br><td colspan="1" rowspan="1"><br><br>方法名<br><br></td><br><td colspan="1" rowspan="1"><br><br>参数<br><br></td><br><td colspan="1" rowspan="1"><br><br>事件及数据是否也被移除<br><br></td><br><td colspan="1" rowspan="1"><br><br>元素自身是否被移除<br><br></td><br></tr><br><tr><br><td colspan="1" rowspan="1"><br><br>remove<br><br></td><br><td colspan="1" rowspan="1"><br><br>支持选择器表达<br><br></td><br><td colspan="1" rowspan="1"><br><br>是<br><br></td><br><td colspan="1" rowspan="1"><br><br>是（无参数时），有参数时要根据参数所涉及的范围<br><br></td><br></tr><br><tr><br><td colspan="1" rowspan="1"><br><br>detach<br><br></td><br><td colspan="1" rowspan="1"><br><br>参数同remove<br><br></td><br><td colspan="1" rowspan="1"><br><br>否<br><br></td><br><td colspan="1" rowspan="1"><br><br>情况同remove<br><br></td><br></tr><br></tbody><br></table>
+
+<p><strong>remove**</strong>：**移除节点</p>
+<ul>
+<li>无参数，移除自身整个节点以及该节点的内部的所有节点，包括节点上事件与数据</li>
+<li>有参数，移除筛选出的节点以及该节点的内部的所有节点，包括节点上事件与数据</li>
+</ul>
+<p><strong>detach**</strong>：**移除节点</p>
+<ul>
+<li>移除的处理与remove一致</li>
+<li>与remove()不同的是，所有绑定的事件、附加的数据等都会保留下来</li>
+<li>例如：$(“p”).detach()这一句会移除对象，仅仅是显示效果没有了。但是内存中还是存在的。当你append之后，又重新回到了文档流中。就又显示出来了。</li>
+</ul>
+<h2 id="DOM拷贝clone"><a href="#DOM拷贝clone" class="headerlink" title="DOM拷贝clone()"></a>DOM拷贝clone()</h2><p>clone（） 克隆结构<br>clone(true) 结构，数据，事件都保留</p>
+<h2 id="DOM替换replaceWith-和replaceAll"><a href="#DOM替换replaceWith-和replaceAll" class="headerlink" title="DOM替换replaceWith()和replaceAll()"></a>DOM替换replaceWith()和replaceAll()</h2><p><strong>.replaceWith( newContent )</strong>：用提供的内容替换集合中所有匹配的元素并且返回被删除元素的集合</p>
+<p>简单来说：用$()选择节点A，调用replaceWith方法，传入一个新的内容B（HTML字符串，DOM元素，或者jQuery对象）用来替换选中的节点A</p>
+<p><strong>.replaceAll( target ) **</strong>：**用集合的匹配元素替换每个目标元素</p>
+<p>.replaceAll()和.replaceWith()功能类似，但是目标和源相反，用上述的HTML结构，我们用replaceAll处理</p>
+<p><strong>replaceWith（对象，内容）</strong><br><strong><strong>replaceAll （内容，对象）</strong><br></strong><strong><strong>
+</strong></strong></p>
+<h2 id="DOM包裹wrap-方法-wrapAll-方法，wrapInner-方法-（给节点添加父元素）"><a href="#DOM包裹wrap-方法-wrapAll-方法，wrapInner-方法-（给节点添加父元素）" class="headerlink" title="DOM包裹wrap()方法,wrapAll()方法，wrapInner()方法 （给节点添加父元素）"></a><strong><strong>DOM包裹wrap()方法,wrapAll()方法，wrapInner()方法 （给节点添加父元素）</strong></strong></h2><h2 id="如果要将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法"><a href="#如果要将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法" class="headerlink" title="如果要将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法"></a><strong><strong>如果要将元素用其他元素包裹起来，也就是给它增加一个父元素，针对这样的处理，JQuery提供了一个wrap方法</strong></strong></h2><p><strong>.wrap( wrappingElement )</strong>：在集合中匹配的每个元素周围包裹一个HTML结构</p>
+<pre>$('p').wrap('&lt;div&gt;&lt;/div&gt;')</pre>
+**.wrap( function ) ****：**一个回调函数，返回用于包裹匹配元素的 HTML 内容或 jQuery 对象
+<pre>$('p').wrap(function() {
+    return '&lt;div&gt;&lt;div/&gt;';   //与第一种类似，只是写法不一样
+})</pre>
+wrap是针对单个dom元素处理，如果要将**集****合中**的元素用其他元素包裹起来，也就是给他们增加一个父元素，针对这样的处理，JQuery提供了一个**wrapAll方法**
+<pre>如果要将合集中的元素内部所有的子元素用其他元素包裹起来，并当作指定元素的子元素，针对这样的处理，JQuery提供了一个**wrapInner方法**</pre>
+&nbsp;
+
+## **<strong><strong>wrap()方法,wrapAll()方法，wrapInner()方法**</strong></strong>**三者区别详解：**
+
+<pre lang="html" line="1">
+
+*   苹果
+*   橘子
+*   菠萝
+
+1、$("li").wrap("<div></div>");
+每一个选择器都添加
+
+  <div>*   苹果
+</div>
+  <div>*   橘子
+</div>
+  <div>*   菠萝
+
+2、$("li").wrapAll("<div></div>");
+在所有选中的选择器最外面添加
+
+  <div>*   苹果
+*   橘子
+*   菠萝
+
+3、$("li").wrapInner("<div></div>");
+为选择器的内容添加
+
+*   <div>苹果</div>
+*   ><div>橘子</div>
+*   ><div>菠萝</div>
+</div></div></pre>
+
+<h2 id="DOM包裹unwrap-方法（删除父元素）"><a href="#DOM包裹unwrap-方法（删除父元素）" class="headerlink" title="DOM包裹unwrap()方法（删除父元素）"></a>DOM包裹unwrap()方法（删除父元素）</h2><p>用法与wrap（）类似</p>
+<h2 id="DOM包裹wrapAll-方法（给所有匹配元素分别添加父元素）"><a href="#DOM包裹wrapAll-方法（给所有匹配元素分别添加父元素）" class="headerlink" title="DOM包裹wrapAll()方法（给所有匹配元素分别添加父元素）"></a>DOM包裹wrapAll()方法（给所有匹配元素分别添加父元素）</h2><p>wrap是针对单个dom元素处理，如果要将<strong>集**</strong>合中**的元素用其他元素包裹起来，也就是给他们增加一个父元素，针对这样的处理，JQuery提供了一个wrapAll方法</p>
+<p>用法与wrap（）类似</p>
+<h2 id="DOM包裹wrapInner-方法"><a href="#DOM包裹wrapInner-方法" class="headerlink" title="DOM包裹wrapInner()方法"></a>DOM包裹wrapInner()方法</h2><p>如果要将合集中的元素内部所有的子元素用其他元素包裹起来，并当作指定元素的子元素，针对这样的处理，JQuery提供了一个wrapInner方法</p>
+<p><pre>用法与wrap（）类似</pre><br><strong><strong><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/07/3f676016f6bdaafa874603013ebff68f.jpeg" alt="">
+</strong></strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/07/14/jquery-e9-81-8d-e5-8e-86/" style="float: left;">
+        ← jQuery遍历
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/07/13/jquery-e5-b1-9e-e6-80-a7-e4-b8-8e-e6-a0-b7-e5-bc-8f/">
+        jQuery属性与样式 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/07/13/jquery-e4-b8-8edom-e6-93-8d-e4-bd-9c/" data-title="jQuery与DOM操作" data-url="http://yoursite.com/2016/07/13/jquery-e4-b8-8edom-e6-93-8d-e4-bd-9c/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

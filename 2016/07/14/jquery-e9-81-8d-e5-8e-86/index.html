@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>jQuery遍历 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-14T08:08:10.000Z" itemprop="datePublished">
+          2016-07-14
+      </time>
+    
+</span>
+                <h1>jQuery遍历</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="children-方法（只匹配儿子）"><a href="#children-方法（只匹配儿子）" class="headerlink" title="children()方法（只匹配儿子）"></a>children()方法（只匹配儿子）</h2><p><span>jQuery是一个合集对象，如果想快速查找合集里面的第一级子元素，此时可以用children()方法。这里需要注意：.children(selector) 方法是返回匹配元素集合中每个元素的所有子元素（</span><span>仅儿子辈</span><span>，</span><span>这里可以理解为就是父亲-儿子的关系</span><span>）</span></p>
+<p><strong>children()**</strong>无参数**</p>
+<p>允许我们通过在DOM树中对这些元素的直接子元素进行搜索，并且构造一个新的匹配元素的jQuery对象</p>
+<pre>**注意：jQuery是一个合集对象，所以通过children是匹配合集中每一给元素的第一级子元素**</pre>
+
+<p>.<strong>children()**</strong>方法选择性地接受同一类型选择器表达式**</p>
+<pre>$(&quot;div&quot;).children(&quot;.selected&quot;)</pre>
+
+<p>同样的也是因为jQuery是合集对象，可能需要对这个合集对象进行一定的筛选，找出目标元素，所以允许传一个选择器的表达式</p>
+<h2 id="find-方法"><a href="#find-方法" class="headerlink" title="find()方法"></a>find()方法</h2><p>查找所有后代必须带参数</p>
+<p><strong>find()方法要注意的知识点：</strong></p>
+<ul>
+<li>find是遍历当前元素集合中每个元素的后代。只要符合，不管是儿子辈，孙子辈都可以。</li>
+<li>与其他的树遍历方法不同，选择器表达式对于 .find() 是必需的参数。如果我们需要实现对所有后代元素的取回，可以传递通配选择器 ‘*’。</li>
+<li>find只在后代中遍历，不包括自己。</li>
+<li>选择器 context 是由 .find() 方法实现的；因此，$(‘li.item-ii’).find(‘li’) 等价于 $(‘li’, ‘li.item-ii’)。</li>
+</ul>
+<p><strong>注意重点：</strong></p>
+<pre>.find()和.children()方法是相似的
+1.children只查找第一级的子节点
+2.find查找范围包括子节点的所有后代节点</pre>
+
+<h2 id="parent-方法"><a href="#parent-方法" class="headerlink" title="parent()方法"></a>parent()方法</h2><p>查找父级，只往上查找一级用法与childern（）类似</p>
+<h2 id="parents-方法"><a href="#parents-方法" class="headerlink" title="parents()方法"></a>parents()方法</h2><p>查找所有父级，一直查到祖先节点用法与children()类似</p>
+<h2 id="closest-方法"><a href="#closest-方法" class="headerlink" title="closest()方法"></a>closest()方法</h2><p>向上匹配元素，匹配成功即停止<br><strong>parent，parents，closest区别：</strong></p>
+<p><strong>parent是找当前元素的第一个父节点，不管匹不匹配都不继续往下找</strong></p>
+<p><strong>parents是找当前元素的所有父节点 </strong></p>
+<p><strong>closest() 是找当前元素的所有父节点 ，直到找到第一个匹配的父节点</strong></p>
+<p><strong>
+</strong></p>
+<h2 id="next-方法"><a href="#next-方法" class="headerlink" title="next()方法"></a><strong>next()方法</strong></h2><p><strong><strong>往下查找兄弟节点</strong></strong><strong><strong><strong>
+</strong></strong></strong></p>
+<h2 id="prev-方法"><a href="#prev-方法" class="headerlink" title="prev()方法"></a><strong><strong><strong><strong>prev()方法</strong></strong></strong></strong></h2><p><strong><strong><strong><strong>往上查找兄弟节点</strong></strong></strong></strong><strong><strong><strong><strong><strong>
+</strong></strong></strong></strong></strong></p>
+<h2 id="siblings"><a href="#siblings" class="headerlink" title="siblings()"></a><strong><strong><strong><strong><strong><strong>siblings()</strong></strong></strong></strong></strong></strong></h2><p><strong>双向同时查找兄弟节点**</strong><strong><br>**</strong></p>
+<h2 id="add-方法"><a href="#add-方法" class="headerlink" title="add()方法"></a><strong><strong><strong>add()方法</strong></strong></strong></h2><p><strong><strong><strong>jQuery是一个合集对象，通过$()方法找到指定的元素合集后可以进行一系列的操作。$()之后就意味着这个合集对象已经是确定的，如果后期需要再往这个合集中添加一新的元素要如何处理？jQuery为此提供add方法，用来创建一个新的jQuery对象 ，元素添加到匹配的元素集合中</strong></strong></strong></p>
+<pre>**<strong><strong>.add()的参数可以几乎接受任何的$()，包括一个jQuery选择器表达式，DOM元素，或HTML片段引用。**</strong></strong></pre>
+
+<p><strong><strong><strong>简单的看一个案例：</strong></strong></strong></p>
+<p><strong><strong><strong>操作：选择所有的li元素，之后需要把p元素也加入到li的合集中</strong></strong></strong></p>
+<pre>**<strong><strong>&lt;ul&gt;
+    &lt;li&gt;list item 1&lt;/li&gt;
+    &lt;li&gt;list item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;新的p元素&lt;/p&gt;**</strong></strong></pre>
+
+<p><strong><strong><strong>处理一：传递选择器</strong></strong></strong></p>
+<pre>**<strong><strong>$('li').add('p')**</strong></strong></pre>
+
+<p><strong><strong><strong>处理二：传递dom元素</strong></strong></strong></p>
+<pre>**<strong><strong>$('li').add(document.getElementsByTagName('p')[0])**</strong></strong></pre>
+
+<p><strong><strong><strong>还有一种方式，就是动态创建P标签加入到合集，然后插入到指定的位置，但是这样就改变元素的本身的排列了</strong></strong></strong></p>
+<p><pre><strong><strong><strong> $(‘li’).add(‘&lt;p&gt;新的p元素&lt;/p&gt;’).appendTo(目标位置)</strong></strong></strong></pre><strong><strong><strong>
+</strong></strong></strong></p>
+<h2 id="each-常用于条件遍历）"><a href="#each-常用于条件遍历）" class="headerlink" title="each()(常用于条件遍历）"></a><strong><strong><strong><strong>each()(常用于条件遍历）</strong></strong></strong></strong></h2><p><strong><strong><strong><strong>jQuery是一个合集对象，通过$()方法找到指定的元素合集后可以进行一系列的操作。比如我们操作$(&quot;li&quot;).css(‘’) 给所有的li设置style值，因为jQuery是一个合集对象，所以css方法内部就必须封装一个遍历的方法，被称为隐式迭代的过程。要一个一个给合集中每一个li设置颜色，这里方法就是each</strong></strong></strong></strong></p>
+<p><strong><strong><strong><strong>.each() 方法就是一个for循环的迭代器，它会迭代jQuery对象合集中的每一个DOM元素。每次回调函数执行时，会传递当前循环次数作为参数(从0开始计数</strong></strong></strong></strong></p>
+<p><strong><strong><strong><strong>所以大体上了解3个重点：</strong></strong></strong></strong></p>
+<p><pre><strong><strong><strong><strong>each是一个for循环的包装迭代器<br>each通过回调的方式处理，并且会有2个固定的实参，索引与元素<br>each回调方法中的this指向当前迭代的dom元素</strong></strong></strong></strong></pre><strong><strong><strong><strong>
+</strong></strong></strong></strong><strong><strong><strong><strong><strong>示例代码：</strong></strong></strong></strong></strong><strong><strong><strong><strong><strong><strong>$(&quot;button:last&quot;).click(function() {<br>        //遍历所有的li<br>        //修改偶数li内的字体颜色<br>        $(&quot;li&quot;).each(function(index, element) {<br>            if (index % 2) {<br>                $(this).css(‘color’,’blue’)<br>            }<br>        })<br>    })
+</strong></strong></strong></strong></strong></strong><strong><strong><strong><strong><strong><strong><strong><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/07/710f7697e1e9fda1e3aadb15de717338.jpeg" alt="">
+</strong></strong></strong></strong></strong></strong></strong><strong>
+</strong></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/07/14/jquery-e4-ba-8b-e4-bb-b6-e4-b8-80-e8-a7-88/" style="float: left;">
+        ← jQuery事件一览
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/07/13/jquery-e4-b8-8edom-e6-93-8d-e4-bd-9c/">
+        jQuery与DOM操作 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/07/14/jquery-e9-81-8d-e5-8e-86/" data-title="jQuery遍历" data-url="http://yoursite.com/2016/07/14/jquery-e9-81-8d-e5-8e-86/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

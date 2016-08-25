@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>jQuery选择器一览 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-06-11T11:57:39.000Z" itemprop="datePublished">
+          2016-06-11
+      </time>
+    
+</span>
+                <h1>jQuery选择器一览</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="——基础选择器——"><a href="#——基础选择器——" class="headerlink" title="——基础选择器——"></a>——基础选择器——</h2><h2 id="id-选择器-使用身份证号来找人"><a href="#id-选择器-使用身份证号来找人" class="headerlink" title="#id 选择器(使用身份证号来找人)"></a>#id 选择器(使用身份证号来找人)</h2><p>$(“#my_id”)</p>
+<h2 id="element-选择器"><a href="#element-选择器" class="headerlink" title="element 选择器"></a>element 选择器</h2><p>$(“element”)</p>
+<h2 id="class-选择器"><a href="#class-选择器" class="headerlink" title=".class 选择器"></a>.class 选择器</h2><p>$(“.class”)</p>
+<h2 id="选择器-取走全部元素"><a href="#选择器-取走全部元素" class="headerlink" title="* 选择器(取走全部元素)"></a>* 选择器(取走全部元素)</h2><p>$(“<em>”)<br>实践证明，由于使用</em>选择器获取的是全部元素，因此，有些浏览器将会比较缓慢，这个选择器也需要谨慎使用。</p>
+<h2 id="sele1-sele2-seleN选择器（精确的选择任意多个指定的元素）"><a href="#sele1-sele2-seleN选择器（精确的选择任意多个指定的元素）" class="headerlink" title="sele1,sele2,seleN选择器（精确的选择任意多个指定的元素）"></a>sele1,sele2,seleN选择器（精确的选择任意<strong>多个指定的元素）</strong></h2><p>$(“sele1,sele2,seleN”)<br>其中参数sele1、sele2到seleN为有效选择器，每个选择器之间用“，”号隔开，它们可以是之前提及的各种类型选择器，如<code>$(“#id”)、$(“.class”)、$(“selector”)</code>选择器等。<br><strong>——层次选择器——</strong></p>
+<h2 id="ance-desc选择器（获取祖先的所有后代）"><a href="#ance-desc选择器（获取祖先的所有后代）" class="headerlink" title="ance desc选择器（获取祖先的所有后代）"></a><strong>ance desc选择器（获取祖先的所有后代）</strong></h2><p><code>$(&quot;ance desc&quot;)</code><br>其中ance desc是使用空格隔开的两个参数。ance参数（ancestor祖先的简写）表示父元素；desc参数（descendant后代的简写）表示后代元素，即包括子元素、孙元素等等。</p>
+<h2 id="parent-gt-child选择器（只获取子集，不包括孙集等）"><a href="#parent-gt-child选择器（只获取子集，不包括孙集等）" class="headerlink" title="parent &gt; child选择器（只获取子集，不包括孙集等）"></a>parent &gt; child选择器（只获取子集，不包括孙集等）</h2><p>$(“parent &gt; child”)</p>
+<h2 id="prev-next选择器（获取当前节点的近邻元素）"><a href="#prev-next选择器（获取当前节点的近邻元素）" class="headerlink" title="prev + next选择器（获取当前节点的近邻元素）"></a>prev + next选择器（获取当前节点的近邻元素）</h2><p>俗话说“远亲不如近邻”，而通过<code>prev + next</code>选择器就可以查找与“prev”元素紧邻的下一个“next”元素，格式如下：</p>
+<p><code>$(“prev + next”)</code></p>
+<h2 id="prev-siblings选择器（获取当前节点的所有邻居元素）"><a href="#prev-siblings选择器（获取当前节点的所有邻居元素）" class="headerlink" title="prev ~ siblings选择器（获取当前节点的所有邻居元素）"></a>prev ~ siblings选择器（获取当前节点的所有邻居元素）</h2><p>$(“prev ~ siblings”)<br>与<code>prev + next</code>层次选择器相同，<code>prev ~ siblings</code>选择器也是查找prev 元素之后的相邻元素，但前者只获取第一个相邻的元素，而后者则获取prev 元素后面全部相邻的元素</p>
+<p><strong>——过滤选择器——</strong></p>
+<h2 id="基本过滤选择器一览表："><a href="#基本过滤选择器一览表：" class="headerlink" title="基本过滤选择器一览表："></a>基本过滤选择器一览表：</h2><p><img src="http://img.mukewang.com/5590ee6b0001e3d206130456.jpg" alt=""></p>
+<h2 id="属性选择器一览表："><a href="#属性选择器一览表：" class="headerlink" title="属性选择器一览表："></a>属性选择器一览表：</h2><p><img src="http://img.mukewang.com/559100b80001b54006690538.jpg" alt=""></p>
+<h2 id="子元素筛选器一览表："><a href="#子元素筛选器一览表：" class="headerlink" title="子元素筛选器一览表："></a>子元素筛选器一览表：</h2><p><img src="http://img.mukewang.com/559105da0001301105960331.jpg" alt=""></p>
+<h2 id="表单元素选择器一览表"><a href="#表单元素选择器一览表" class="headerlink" title="表单元素选择器一览表"></a>表单元素选择器一览表</h2><p><img src="http://img.mukewang.com/5592040d0001f8eb04940441.jpg" alt=""></p>
+<h2 id="表单对象属性筛选选择器"><a href="#表单对象属性筛选选择器" class="headerlink" title="表单对象属性筛选选择器:"></a>表单对象属性筛选选择器:</h2><p><img src="http://img.mukewang.com/55920c2f0001198b04940201.jpg" alt=""></p>
+<h2 id="first过滤选择器（查找集合元素的第一个元素）"><a href="#first过滤选择器（查找集合元素的第一个元素）" class="headerlink" title=":first过滤选择器（查找集合元素的第一个元素）"></a>:first过滤选择器（查找集合元素的第一个元素）</h2><p>$(“li:first”)<br><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/06/adb166e83a57e480622e962b27c8af53.jpeg" alt=""></p>
+<p><strong>:last过滤选择器（查找集合元素的第一个元素）</strong></p>
+<h2 id="eq-index-过滤选择器（灵活定位集合元素中的某一个元素）"><a href="#eq-index-过滤选择器（灵活定位集合元素中的某一个元素）" class="headerlink" title=":eq(index)过滤选择器（灵活定位集合元素中的某一个元素）"></a><strong>:eq(index)过滤选择器（灵活定位集合元素中的某一个元素）</strong></h2><p>如果想从一组标签元素数组中，灵活选择任意的一个标签元素，我们可以使用</p>
+<p><code>:eq(index)</code></p>
+<p>其中参数index表示索引号（即：一个整数），它从0开始，如果index的值为3，表示选择的是第4个元素。</p>
+<p>&nbsp;</p>
+<h2 id="contains-text-过滤选择器（提取包含指定字符串的元素）"><a href="#contains-text-过滤选择器（提取包含指定字符串的元素）" class="headerlink" title=":contains(text)过滤选择器（提取包含指定字符串的元素）"></a><strong><strong>:contains(text)过滤选择器（提取包含指定字符串的元素）</strong></strong></h2><p>选择包含指定字符串的全部元素，它通常与其他元素结合使用，获取包含“text”字符串内容的全部元素对象。其中参数<code>text</code>表示页面中的文字。<br><strong><strong><strong><strong>
+</strong></strong></strong></strong><strong><strong>:has(selector)过滤选择器（在元素的后代中提取指定元素）</strong></strong><strong>
+</strong><code>:has(selector)</code>过滤选择器的功能是获取选择器中包含指定元素名称的全部元素，其中<code>selector</code>参数就是包含的元素名称，是被包含元素。</p>
+<h2 id="hidden过滤选择器（提取不可见的元素）"><a href="#hidden过滤选择器（提取不可见的元素）" class="headerlink" title=":hidden过滤选择器（提取不可见的元素）"></a>:hidden过滤选择器（提取不可见的元素）</h2><p><code>:hidden</code>过滤选择器的功能是获取全部不可见的元素，这些不可见的元素中包括type属性值为hidden的元素。</p>
+<h2 id="visible过滤选择器（提取可见的元素）"><a href="#visible过滤选择器（提取可见的元素）" class="headerlink" title=":visible过滤选择器（提取可见的元素）"></a>:visible过滤选择器（提取可见的元素）</h2><p>与<code>:hidden</code>过滤选择器相反，<code>:visible</code>过滤选择器获取的是全部可见的元素，也就是说，只要不将元素的display属性值设置为“none”，那么，都可以通过该选择器获取。</p>
+<h2 id="attribute-value-属性选择器（根据属性提取元素）"><a href="#attribute-value-属性选择器（根据属性提取元素）" class="headerlink" title="[attribute=value]属性选择器（根据属性提取元素）"></a>[attribute=value]属性选择器（根据属性提取元素）</h2><p><code>[attribute=value]</code>属性选择器的功能是获取与属性名和属性值完全相同的全部元素，其中[]是专用于属性选择器的括号符，参数attribute表示属性名称，value参数表示属性值。</p>
+<p>例如，使用<code>[attribute=value]</code>属性选择器，获取指定属性名和对应值的全部&lt;li&gt;元素，并设置它们显示的文字颜色，如图所示：</p>
+<p><a href="http://img.mukewang.com/52bcf22e0001409b03620209.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/06/409b1d6fec663dfb9598a938b5877287.jpeg" alt=""></a></p>
+<h2 id="attribute-value-属性选择器"><a href="#attribute-value-属性选择器" class="headerlink" title="[attribute!=value]属性选择器"></a>[attribute!=value]属性选择器</h2><p>与[attribute=value]属性选择器相反</p>
+<h2 id="attribute-value-属性选择器（提取属性值包含某些关键字的所有元素）"><a href="#attribute-value-属性选择器（提取属性值包含某些关键字的所有元素）" class="headerlink" title="[attribute*=value]属性选择器（提取属性值包含某些关键字的所有元素）"></a>[attribute*=value]属性选择器（提取属性值包含某些关键字的所有元素）</h2><p>获取属性值中包含指定内容的全部元素，其中[]是专用于属性选择器的括号符，参数attribute表示属性名称，value参数表示对应的属性值。</p>
+<p>例如，使用<code>[attribute*=value]</code>属性选择器，获取属性值中包含某一指定内容的全部&lt;li&gt;元素，并设置它们显示的文字颜色，如下图所示：</p>
+<p><a href="http://img.mukewang.com/529c27b600019c1b03500209.jpg" target="_blank" rel="external"><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/06/9c1ba29072fb8751b91c98cc57d13dc3.jpeg" alt=""></a></p>
+<p>&nbsp;</p>
+<h2 id="first-child子元素过滤选择器（返回首个子元素的集合）"><a href="#first-child子元素过滤选择器（返回首个子元素的集合）" class="headerlink" title=":first-child子元素过滤选择器（返回首个子元素的集合）"></a>:first-child子元素过滤选择器（返回首个子元素的集合）</h2><p><code>:first</code>过滤选择器可以获取指定父元素中的首个子元素，但该选择器返回的只有一个元素，并不是一个集合，而使用<code>:first-child</code>子元素过滤选择器则可以获取每个父元素中返回的首个子元素，它是一个集合，常用多个集合数据的选择处理。</p>
+<h2 id="last-child子元素过滤选择器（返回最后一个子元素的集合）"><a href="#last-child子元素过滤选择器（返回最后一个子元素的集合）" class="headerlink" title=":last-child子元素过滤选择器（返回最后一个子元素的集合）"></a>:last-child子元素过滤选择器（返回最后一个子元素的集合）</h2><p>与<code>:first-child</code>子元素过滤选择器功能相反，<code>:last-child</code>子元素过滤选择器的功能是获取每个父元素中返回的最后一个子元素，它也是一个集合，常用多个集合数据的选择处理。</p>
+<p><strong>——表单选择器——</strong></p>
+<h2 id="input表单选择器（获取表单的全部元素）"><a href="#input表单选择器（获取表单的全部元素）" class="headerlink" title=":input表单选择器（获取表单的全部元素）"></a><strong>:input表单选择器（获取表单的全部元素）</strong></h2><p><code>:input</code>表单选择器的功能是返回全部的表单元素，不仅包括所有&lt;input&gt;标记的表单元素，而且还包括&lt;textarea&gt;、&lt;select&gt; 和 &lt;button&gt;标记的表单元素，因此，它选择的表单元素是最广的。</p>
+<h2 id="text表单文本选择器"><a href="#text表单文本选择器" class="headerlink" title=":text表单文本选择器"></a>:text表单文本选择器</h2><p><code>:text</code>表单文本选择器可以获取表单中全部<strong>单行的文本输入框元素</strong>，单行的文本输入框就像一个不换行的字条工具，使用非常广泛。</p>
+<h2 id="password表单密码选择器"><a href="#password表单密码选择器" class="headerlink" title=":password表单密码选择器"></a>:password表单密码选择器</h2><p><code>:password</code>选择器，它的功能是获取表单中全部的密码输入文本框元素。</p>
+<h2 id="radio单选按钮选择器"><a href="#radio单选按钮选择器" class="headerlink" title=":radio单选按钮选择器"></a>:radio单选按钮选择器</h2><p>表单中的单选按钮常用于多项数据中仅选择其一，而使用<code>:radio</code>选择器可轻松获取表单中的<strong>全部单选按钮</strong>元素。</p>
+<h2 id="checkbox复选框选择器"><a href="#checkbox复选框选择器" class="headerlink" title=":checkbox复选框选择器"></a>:checkbox复选框选择器</h2><p>表单中的复选框常用于多项数据的选择，使用<code>:checkbox</code>选择器可以快速定位并获取表单中的复选框元素。</p>
+<h2 id="submit提交按钮选择器"><a href="#submit提交按钮选择器" class="headerlink" title=":submit提交按钮选择器"></a>:submit提交按钮选择器</h2><p>通常情况下，一个表单中只允许有一个“type”属性值为“submit”的提交按钮，使用<code>:submit</code>选择器可获取表单中的这个<strong>提交按钮</strong>元素。</p>
+<h2 id="image图像域选择器"><a href="#image图像域选择器" class="headerlink" title=":image图像域选择器"></a>:image图像域选择器</h2><p>当一个&lt;input&gt;元素的“type”属性值设为“image”时，该元素就是一个图像域，使用<code>:image</code>选择器可以快速获取该类全部元素。</p>
+<h2 id="button表单按钮选择器"><a href="#button表单按钮选择器" class="headerlink" title=":button表单按钮选择器"></a>:button表单按钮选择器</h2><p>表单中包含许多类型的按钮，而使用<code>:button</code>选择器能获取且只能获取“type”属性值为“button”的&lt;input&gt;和&lt;button&gt;这两类普通按钮元素。</p>
+<h2 id="checked选中状态选择器（复选框单选框选中）"><a href="#checked选中状态选择器（复选框单选框选中）" class="headerlink" title=":checked选中状态选择器（复选框单选框选中）"></a>:checked选中状态选择器（复选框单选框选中）</h2><p>有一些元素存在选中状态，如复选框、单选按钮元素，选中时“checked”属性值为“checked”，调用:checked可以获取处于选中状态的全部元素。</p>
+<h2 id="selected选中状态选择器（下拉框选中）"><a href="#selected选中状态选择器（下拉框选中）" class="headerlink" title=":selected选中状态选择器（下拉框选中）"></a>:selected选中状态选择器（下拉框选中）</h2><p>与<code>:checked</code>选择器相比，<code>:selected</code>选择器只能获取&lt;select&gt;下拉列表框中全部处于选中状态的&lt;option&gt;选项元素。</p>
+<h2 id="特殊选择器this"><a href="#特殊选择器this" class="headerlink" title="特殊选择器this"></a>特殊选择器this</h2><pre class="code">this，表示当前的上下文对象是一个html对象，可以调用html对象所拥有的属性和方法。
+$(this),代表的上下文对象是一个jquery的上下文对象，可以调用jQuery的方法和属性值。</pre>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/07/13/jquery-e5-b1-9e-e6-80-a7-e4-b8-8e-e6-a0-b7-e5-bc-8f/" style="float: left;">
+        ← jQuery属性与样式
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/06/11/json-e5-9f-ba-e7-a1-80/">
+        Json 基础 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/06/11/jquery-e9-80-89-e6-8b-a9-e5-99-a8-e4-b8-80-e8-a7-88/" data-title="jQuery选择器一览" data-url="http://yoursite.com/2016/06/11/jquery-e9-80-89-e6-8b-a9-e5-99-a8-e4-b8-80-e8-a7-88/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
