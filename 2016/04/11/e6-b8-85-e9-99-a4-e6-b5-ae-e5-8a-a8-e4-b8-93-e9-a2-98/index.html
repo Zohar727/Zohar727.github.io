@@ -246,18 +246,18 @@
 }</pre>
 
 <p><strong>DEMO效果</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/adccf510a40ea23f7d3e71f5b94129b9.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/adccf510a40ea23f7d3e71f5b94129b9.jpeg" alt=""></p>
 <p>有一种方法，在容器的结束标签前添加一个空标签，在空标签上直接设置样式“clear:both”。用这种方法来清除浮动，在大多数情况下是有效的，但这不太适合语义化。这取决于一个页面有多少浮动需要清除，这样造成页面上的空标签迅速堆积，而且在页面中没有上下文内容。</p>
 <p>幸运的是有几种不同<a href="http://www.ejeliot.com/blog/59" target="_blank" rel="external">方法</a>可以用来清除浮动，而其中用得最多的是“overflow”技巧和&quot;clearfix&quot;技巧。</p>
 <p><strong><span>Overflow技巧</span></strong><br><span> </span></p>
 <p><span>一种清除浮动的技巧是使用“overflow”属性。在具有浮动元素的父容器中设置“overflow”的属性值为“auto”，这样父容器就会有一个高度存在，在我们例子中的灰色背景也就能看得到了。</span><br><span> </span></p>
 <p><span>在IE6里面，父容器是需要设置一个“width”和“height”。因为高度可能是一个变量，宽度为100%，他们将能正常的工作。使用“overflow:auto;”,在IE浏览器中会给元素添加滚动条，这样一来，最好是直接使用“overflow:hidden;”来清除浮动。</span><br><span> </span><pre>.box-set {<br>  background: #404853;<br>  overflow: auto;<br>}    </pre><br><span> </span></p>
 <p><strong><span>清除浮动后效果</span></strong><br><span> </span></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/8c8a3855e11193f27eaf99c9f4efb6e7.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/8c8a3855e11193f27eaf99c9f4efb6e7.jpeg" alt=""></p>
 <p><span> </span></p>
 <p><span>使用“overflow”技巧清除浮动，确实存在一些缺点。例如：<span>当你添加样式，或者将嵌套在里面的“span”元素移动到父容器的外面，或者你想给元素添加一个盒子阴影和制作一个下拉菜单。在下面的演示例子中，你可以看到元素的盒子阴影被切断在父元素之内。</span></span><br><span> </span></p>
 <p><span>不同的浏览器对“overflow”属性解析不一样，在浏览器的显示风格也不一样。看看下面的例子，注意列在不同浏览器的显示效果。</span><br><span> </span></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/4dee96a3bd1654ad9202549ddd8d5590.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/4dee96a3bd1654ad9202549ddd8d5590.jpeg" alt=""></p>
 <p><span> </span></p>
 <p><strong><span>clearfix技巧</span></strong><br><span> </span></p>
 <p><span>根据上下文，清除浮动更好的方法是</span><a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank" rel="external"><span>clearfix</span></a><span>技巧。“clearfix”清除浮动的技术是有点复杂，但有有比使用“overflow”技巧清除浮动更好的方法？</span><br><span> </span></p>
@@ -265,7 +265,7 @@
 <p><span>在IE6和7的浏览器中，加上“*zoom”属性来触发父元素的</span><a href="http://www.satzansatz.de/cssd/onhavinglayout.html" target="_blank" rel="external"><span>hasLayout</span></a><span>的机制。决定了元素怎样渲染内容，以及元素与元素之间的相互影响。</span><br><span> </span></p>
 <p><span>采取上面同样的例子，你可以看到容器也清除了浮动，元素也可以移到父容器外面：</span><br><span> </span><pre>.box-set:before,<br>.box-set:after {<br>  content: &quot;&quot;;<br>  display: table;<br>}<br>.box-set:after {<br>  clear: both;<br>}<br>.box-set {<br>  *zoom: 1;<br>}</pre><br><span> </span></p>
 <p><strong><span>清除浮动后效果</span></strong><br><span> </span></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/16fb1bfa9c1846ef92341235c301acfe.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/16fb1bfa9c1846ef92341235c301acfe.jpeg" alt=""></p>
 <p><span> </span></p>
 <p><strong><span>有效的包含浮动</span></strong><br><span> </span></p>
 <p><span>使用哪种技巧来清除浮动，终究要看你自己喜好。有些人坚持使用“clearfix”来清除浮动，因为这种方法可以贯穿整个项目。有些人认为“clearfix”技巧使用的代码太多，他还是喜欢简单点的。至于使用什么技巧由您来决定，只要在运用了浮动的元素的父容器需要清除浮动。</span><br><span> </span></p>

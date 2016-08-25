@@ -310,8 +310,19 @@ sele1,sele2,seleN选择器（精确的选择任意多个指定的元素）$(“s
                     <p>
                       
                         当offset出现某些bug时，可使用getStyle函数调用获取样式！
-script type=&quot;text/javascript&quot;&gt;//哪个元素//哪个样式
-function getStyle(obj, attr){ if(obj.currentStyle) {  return obj.currentStyle[attr];//IE兼容处理 } else {  return getComputedStyle(
+script type=&quot;text/javascript&quot;&gt;
+//哪个元素
+//哪个样式
+
+function getStyle(obj, attr)
+{
+ if(obj.currentStyle)
+ {
+  return obj.currentStyle[attr];//IE兼容处理
+ }
+ else
+ {
+  return getCom
                       
                     </p>
                     
@@ -341,7 +352,10 @@ function getStyle(obj, attr){ if(obj.currentStyle) {  return obj.currentStyle[at
                 <div class="col-md-8">
                     <p>
                       
-                        键盘事件****onkeyDown 用户按下任意建触发，按住不放会重复触发onkeyPress 用户按下字符键触发 按住不放会重复触发onkeyup      用户释放键盘上的键触发event对象的keyCode属性用于得到键盘的对应键值
+                        ###键盘事件
+####onkeyDown 用户按下任意建触发，按住不放会重复触发
+####onkeyPress用户按下字符键触发 按住不放会重复触发
+####onkeyup用户释放键盘上的键触发event对象的keyCode属性用于得到键盘的对应键值
 
                       
                     </p>
@@ -372,14 +386,15 @@ function getStyle(obj, attr){ if(obj.currentStyle) {  return obj.currentStyle[at
                 <div class="col-md-8">
                     <p>
                       
-                        事件对象
-什么是事件对象：在触发DOM上的事件时都会产生一个对象事件对象event
+                        ###事件对象
+什么是事件对象：在触发DOM上的事件时都会产生一个对象
+事件对象event
 1.DOM中的事件对象
 a.type属性，用于获取事件类型
 b.target属性，用于获取事件目标（事件来自哪一个元素）
 c.stopPropagation()方法 用于阻止事件冒泡
 d.prevenrDefault()方法，阻止事件的默认行为2.IE中的事件对象
-a.type属性，用于获取事件类型b.srcElement,用于获取事件目标event=e
+a.type属性，用于获取事件类型b.srcElement,用于获取事件目标eve
                       
                     </p>
                     
@@ -409,13 +424,19 @@ a.type属性，用于获取事件类型b.srcElement,用于获取事件目标even
                 <div class="col-md-8">
                     <p>
                       
-                        事件流：****事件冒泡：事件捕获：
+                        ##三个基本概念
+###事件流：
+###事件冒泡：
+###事件捕获：
+
 添加事件的方法：
 1.HTML事件处理程序：js事件内嵌在html代码中
 2.DOM0级处理程序：把一个函数赋值给一个事件的处理程序的属性（较传统的方式）（常用，简单，跨浏览器）3.DOM2级事件处理程序
+
 HTML事件的缺点：HTML代码和JS代码紧密的耦合在一起
+
 DMO2级事件处理程序：
-定义了两个方法：用于处理指定和删除事件处理程序的操作addEventListener()和removeEven
+定义了两个方法：用于处理指定和删除事件处理程序的操作addEventLi
                       
                     </p>
                     
@@ -446,9 +467,9 @@ DMO2级事件处理程序：
                     <p>
                       
                         认识DOM文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。
-HTML**文档可以说由节点构成的集合，DOM节点有:**
-1. **元素节点：**上图中&lt;html&gt;、&lt;body&gt;、&lt;p&gt;等都是元素节点，即标签。
-2. **文本节点:**向用户展示的内容，如&lt;li&gt;…&lt
+HTML文档可以说由节点构成的集合，DOM节点有:
+1. *元素节点：*上图中&lt;html&gt;、&lt;body&gt;、&lt;p&gt;等都是元素节点，即标签。
+2. *文本节点:*向用户展示的内容，如&lt;li&gt;…&lt;/li&gt;
                       
                     </p>
                     

@@ -208,19 +208,28 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p><strong>事件流：<img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/49592637d5a91e5f29ce2d503da33a81.jpeg" alt="">**</strong><br>**事件冒泡：<img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/381d8f294ba403fb47ec14fe346bb2fc.jpeg" alt=""><br>事件捕获：<img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/05/536931176ba70a3ace2d6b18f6b07ce7.jpeg" alt=""></p>
+      		<p>##三个基本概念</p>
+<p>###事件流：<img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/05/49592637d5a91e5f29ce2d503da33a81.jpeg" alt=""></p>
+<p>###事件冒泡：<img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/05/381d8f294ba403fb47ec14fe346bb2fc.jpeg" alt=""></p>
+<p>###事件捕获：<img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/05/536931176ba70a3ace2d6b18f6b07ce7.jpeg" alt=""></p>
+<hr>
 <p><strong>添加事件的方法：</strong></p>
 <p>1.HTML事件处理程序：js事件内嵌在html代码中</p>
 <p>2.DOM0级处理程序：把一个函数赋值给一个事件的处理程序的属性（较传统的方式）（常用，简单，跨浏览器）3.DOM2级事件处理程序</p>
-<p><strong>HTML事件的缺点：</strong>HTML代码和JS代码紧密的耦合在一起</p>
+<hr>
+<p><strong>HTML事件的缺点：</strong><br>HTML代码和JS代码紧密的耦合在一起</p>
+<hr>
 <p><strong>DMO2级事件处理程序：</strong></p>
 <p>定义了两个方法：用于处理指定和删除事件处理程序的操作addEventListener()和removeEventListener()（必须把on去掉）</p>
 <p>接受三个参数：要处理的事件名，作为事件处理程序的函数和布尔值</p>
 <p>true表示在捕获阶段处理事件程序</p>
 <p>false表示在冒泡阶段处理事件程序（常用，兼容性好）</p>
-<p><strong>DOM0/DOM2级事件处理程序优点：</strong>可以为一个按钮添加多个事件处理程序<br><strong>IE事件处理程序</strong>（IE和opera支持）<strong>：</strong></p>
+<p><strong>DOM0/DOM2级事件处理程序优点：</strong>可以为一个按钮添加多个事件处理程序</p>
+<hr>
+<p><strong>IE事件处理程序</strong>（IE和opera支持）<strong>：</strong></p>
 <p>attachEvent()添加事件<br>detachEvent()删除事件（on要加上）</p>
 <p>接受两个参数：要处理的事件名，作为事件处理程序的函数</p>
+<hr>
 <p><strong>跨浏览器的事件处理程序：</strong>最好封装在一个对象内！</p>
 <p>示例程序：</p>
 <p><pre>&lt;!DOCTYPE html&gt;<br>&lt;html lang=”en”&gt;<br>&lt;head&gt;<br>    &lt;meta charset=”UTF-8”&gt;<br>    &lt;title&gt;dom事件处理程序&lt;/title&gt;<br>    &lt;script type=”text/javascript”&gt;<br>        //HTML事件<br>        function showMes() {<br>            alert(‘这是HTML事件’)<br>        }<br>        window.onload=function () {<br>            //DOM0级事件处理程序<br>            var btn2=document.getElementById(‘btn2’);<br>            btn2.onclick=function () {<br>                alert(‘这是DOM0级事件处理程序！’)<br>            }<br>            btn2.onclick=null;//删除事件<br>            //DOM2级事件处理程序<br>            function showMes2() {<br>                alert(‘这是DOM2级事件处理程序！’)<br>            }<br>            var btn3=document.getElementById(‘btn3’);<br>            btn3.addEventListener(‘click’,showMes2,false);<br>            btn3.removeEventListener(‘click’,showMes2,false);//删除事件<br>            //跨浏览器兼容<br>            var eventUtil={<br>                //添加句柄<br>                addHandler:function(element,type,handler) {    //type参数不带on<br>                    if(element.addEventListener){<br>                        element.addEventListener(type,handler,false);<br>                    }<br>                    else if(element.attachEvent){<br>                        element.attachEvent(‘on’+type,handler);//IE浏览器处理事件<br>                    }<br>                    else{<br>                        element[‘on’+type]=handler;<br>                    }<br>                }<br>                //删除句柄<br>                removeHandler:function(element,type,handler){<br>                    if(element.removeEventListener){<br>                        element.removeEventListener(type,handler,false);<br>                    }else if(element.detachEvent){<br>                        element.detachEvent(‘on’+type,handler);<br>                    }else{<br>                        element[‘on’+type]=null;<br>                    }<br>                }<br>            }<br>            eventUtil.addHandler(btn3,’clock’,showMes2());</pre></p>

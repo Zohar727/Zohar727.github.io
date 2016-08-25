@@ -231,7 +231,7 @@
 </pre>
 
 <p><strong>效果</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/84acc8976018cc7f61d8562a780719c3.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/84acc8976018cc7f61d8562a780719c3.jpeg" alt=""></p>
 <p><strong>Position relative</strong></p>
 <p>“relative”是“position”的另一个属性值，他和“static”属性值非常的相似。主要的区别是“relative”可以给元素设置位移（offset）“top、right、bottom和left”属性。通过这些位移属性设置可以给元素进行精确的定位。</p>
 <blockquote>
@@ -268,7 +268,7 @@
 </pre>
 
 <p><strong>效果：</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/31550b3389481b41ca4f9096824a7422.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/31550b3389481b41ca4f9096824a7422.jpeg" alt=""></p>
 <p>事实上，一个相对定位元素同时设置了“top”和“bottom”位移属性值，实际上<span>“top”优先级高于“bottom”</span>。然而，一个相对定位元素同时设置了“left”和“right”位移属性，他们的优先级取决于页面使用的是哪种语言，例如，如果你的页面是英文页面，那么<span>“left”位移属性优先级高</span>，如果你的页面是阿拉伯语，那么“right”的位移属性优先级高。</p>
 <p><strong>Position absolute</strong></p>
 <p>绝对定位元素也具有盒子位移属性，然而，<span>绝对定位元素会脱离文档流</span>。绝对定位元素直接从文档流中移出，绝对定位元素的位置直接和父容器是否设置了相对定位（绝对定位）有直接关系。绝对定位元素需要<span>至少一个祖先元素设置了相对定位</span>（绝对定位），<span>不然元素定位会相对于页面的主体进行定位。</span></p>
@@ -312,7 +312,7 @@
 }    </pre>
 
 <p><strong>效果</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/c6676baf19a9e3f06c166e498dc04118.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/c6676baf19a9e3f06c166e498dc04118.jpeg" alt=""></p>
 <p>当<span>一个绝对定位的元素有固定的高度和宽度，并且盒子位移同时设置了“top”和“bottom”时，“top”更具优先组</span>，另外和相对定位元素一样，当同时设置了“left”和“right”时，优先级取决于他的页面使用的语言。</p>
 <p>当一<span>个绝对定位的元素没有明确指定高度和宽度，同时使用盒子位移的“top”和“bottom”属性时，会使整个元素的高度跨越整个容器。</span>同样的，当这个元素同时使用位移“left”和“right”属性值，会使整个元素的宽度跨越整个容器。如果同时使用位移四个属性，可以指定一个宽度和高度显示元素。（这个时候绝对定位元素的宽度和高度都是100%。）</p>
 <p><strong>Position fixed</strong></p>
@@ -351,7 +351,7 @@
 }</pre>
 
 <p><strong>效果</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/c1a3f328ce0ed631d8aa04c707d1aeac.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/c1a3f328ce0ed631d8aa04c707d1aeac.jpeg" alt=""></p>
 <p><strong>固定页头和页脚</strong></p>
 <p>固定定位最常见的一种用途就是在页面中创建一个固定头部、或者脚部、或者固定页面的一个侧面。就算是用户移动浏览器的滚动条，还是固定在页现与用户交流。</p>
 <p>下面的示例代码能实现。注意如何设置“left”和“right”两个盒子位移，这使得“页脚”跨越了页面的整个宽度，而不需使用margin、border和padding来破坏盒模形就做了收缩自如。</p>
@@ -367,7 +367,7 @@
   right: 0;
 }</pre>
 
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/96622851f46b78eee362e54724c327ed.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/96622851f46b78eee362e54724c327ed.jpeg" alt=""></p>
 <h4 id="z-index属性"><a href="#z-index属性" class="headerlink" title="z-index属性"></a>z-index属性</h4><p>通常都认为Web页面是二维页面，显示的元素都在X轴和Y轴上。当你的元素有定位时，他们有时候会放置在另一个元素的顶部。要改变这些元素是一个 <a href="http://www.impressivewebs.com/a-detailed-look-at-the-z-index-css-property/" target="_blank" rel="external">怎么样的层叠顺序</a>，<span>要知道z轴，z轴是用“z-index”属性来控制的</span>。</p>
 <p>一般来说，在DOM中，元素出现的时候就放置在z轴上。在Dom中，元素在顶部的要低于底部的。改变这种层叠顺序可以直接使用“z-index”来控制。元素的“z-index”值越高将会出现在越上面，不管元素在Dom哪个位置上。</p>
 <p>给元素设置“z-index”属性<span>，首先要在这个元素上设置了“position”属性值为“relatvie”、“absolute”或者“fixed”之一</span>。同样的，你要使用盒子位移属性，你也要先确认元素设置了“positions”属性值为“relative”、“absolute”或者“fixed”之一。</p>
@@ -412,9 +412,9 @@
 } </pre>
 
 <p><strong>不设置z-index效果</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/620ddd2d02dc57a02f70459d6039ba7e.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/620ddd2d02dc57a02f70459d6039ba7e.jpeg" alt=""></p>
 <p><strong>设置z-index效果</strong></p>
-<p><img src="http://www.zohar.com.cn/wordpress/wp-content/uploads/2016/04/71bb15f3ce05c0382ede914b9cded82a.jpeg" alt=""></p>
+<p><img src="http://e.zohar.com.cn/wordpress/wp-content/uploads/2016/04/71bb15f3ce05c0382ede914b9cded82a.jpeg" alt=""></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
