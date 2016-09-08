@@ -218,14 +218,16 @@
 </blockquote>
 <hr>
 <h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><hr>
-<p>####盒子外边距 margin</p>
-<h5 id="叠加外边距"><a href="#叠加外边距" class="headerlink" title="叠加外边距"></a>叠加外边距</h5><p>当两个盒子的外边距相邻时，会发生外边距叠加，<strong>较宽的外边距最终决定两个元素离多远</strong></p>
-<h5 id="外边距的单位"><a href="#外边距的单位" class="headerlink" title="外边距的单位"></a>外边距的单位</h5><p>外边距的单位可以使用<code>px,em</code>等<br><em>使用em的好处是当字体变化时边距也会跟着变大，这样，页面的整体布局就会比较协调一致。</em></p>
+<h4 id="盒子外边距-margin"><a href="#盒子外边距-margin" class="headerlink" title="盒子外边距 margin"></a>盒子外边距 margin</h4><h4 id="叠加外边距"><a href="#叠加外边距" class="headerlink" title="叠加外边距"></a>叠加外边距</h4><p>当两个盒子的外边距相邻时，会发生外边距叠加，<strong>较宽的外边距最终决定两个元素离多远</strong></p>
+<h4 id="外边距的单位"><a href="#外边距的单位" class="headerlink" title="外边距的单位"></a>外边距的单位</h4><p>外边距的单位可以使用<code>px,em</code>等<br><em>使用em的好处是当字体变化时边距也会跟着变大，这样，页面的整体布局就会比较协调一致。</em></p>
 <hr>
 <h4 id="盒子有多大"><a href="#盒子有多大" class="headerlink" title="盒子有多大"></a>盒子有多大</h4><h5 id="没有宽度的盒子"><a href="#没有宽度的盒子" class="headerlink" title="没有宽度的盒子"></a>没有宽度的盒子</h5><p>当块级元素没有显式的设置<code>width属性</code>时，那么width属性的默认是<code>auto</code>，块级元素的宽度会扩展到与父元素同宽。<br><strong>此时给盒子设置内边距padding，<code>垂直边框border</code>则会挤压盒子的内容</strong></p>
 <blockquote>
 <p>一个小结论：没有宽度的元素始终会扩展到填满其元素的宽度为止。添加垂直边框，内边距和外边距，会导致内容宽度减少，减少量等于垂直边框，内边距和外边距的和。</p>
-<h5 id="有宽度的盒子"><a href="#有宽度的盒子" class="headerlink" title="有宽度的盒子"></a>有宽度的盒子</h5><p>内容宽度不变，添加边框，内/外边距只会增加盒子的宽度，不会挤压内容。<br>结论：盒子的width属性设定的只是盒子内容去的宽度，而非盒子要占据的水平宽度。</p>
+</blockquote>
+<h5 id="有宽度的盒子"><a href="#有宽度的盒子" class="headerlink" title="有宽度的盒子"></a>有宽度的盒子</h5><p>内容宽度不变，添加边框，内/外边距只会增加盒子的宽度，不会挤压内容。</p>
+<blockquote>
+<p>结论：盒子的width属性设定的只是盒子内容去的宽度，而非盒子要占据的水平宽度。</p>
 </blockquote>
 <hr>
 <h3 id="浮动与清除"><a href="#浮动与清除" class="headerlink" title="浮动与清除"></a>浮动与清除</h3><h4 id="清除浮动的三种方法"><a href="#清除浮动的三种方法" class="headerlink" title="清除浮动的三种方法"></a>清除浮动的三种方法</h4><blockquote>
