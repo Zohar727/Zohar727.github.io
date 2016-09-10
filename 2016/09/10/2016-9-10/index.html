@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>DOM事件揭秘（三） | Zohar&#39;s Blog</title>
+  <title>CSS查漏补缺（三）-背景属性 | Zohar&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -199,38 +199,77 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-05-31T02:30:04.000Z" itemprop="datePublished">
-          2016-05-31
+      <time datetime="2016-09-10T11:21:12.000Z" itemprop="datePublished">
+          2016-09-10
       </time>
     
+    
+    | 
+    <a href='/tags/CSS/'>CSS</a>
+    
+    
 </span>
-                <h1>DOM事件揭秘（三）</h1>
+                <h1>CSS查漏补缺（三）-背景属性</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>###键盘事件</p>
-<p>####onkeyDown<br> 用户按下任意建触发，按住不放会重复触发</p>
-<p>####onkeyPress<br>用户按下字符键触发 按住不放会重复触发<span></span></p>
-<p>####onkeyup<br>用户释放键盘上的键触发<br><strong><em>event对象的keyCode属性用于得到键盘的对应键值</em></strong></p>
+      		<blockquote>
+<p>最近在图书馆借了一本CSS方面的书想巩固下CSS基础，书名是<a href="https://book.douban.com/subject/23123255/" target="_blank" rel="external">《CSS设计指南》</a>,看完感觉是一本还错的CSS基础书籍，然后我便把自己CSS方面还比较薄弱的地方写到了笔记里，以后自己还可以复习下，嘻嘻~</p>
+</blockquote>
+<hr>
+<h3 id="CSS背景属性"><a href="#CSS背景属性" class="headerlink" title="CSS背景属性"></a>CSS背景属性</h3><ul>
+<li><code>background-color</code>  设置背景颜色</li>
+<li><code>background-image</code> 设置背景图片</li>
+<li><code>background-repeat</code> 设置背景重复<pre><code>`no-repeat repeat-x repeat-y`
+  注：CSS3提供了两个新属性（仅Chrome,Safari,Opera支持）
+   `round`：为确保图片不被剪切，通过调整图片大小来适应背景区域
+   `space`：为确保图片不被剪切，通过在图片间添加空白来适应背景区域
+</code></pre></li>
+<li><code>background-position</code> 设置背景位置<pre><code>该属性有5个关键字值：`top left bottom right center`
+</code></pre></li>
+<li><code>background-size</code>设置背景尺寸<pre><code>百分值：`50%`缩放图片，填充背景区的一半
+像素值：`100px 50px `设置图片宽100px,高50px
+`cover`：拉大图片，使其完全填满背景区，**保持宽高比   **    
+`contain`：缩放图片，使其恰好适合背景区，**保持宽高比   **    
+</code></pre></li>
+<li><code>background-attachment</code> 设置背景粘附<br>   <code>background-attachment:fixed</code>最常用于给body元素中心设置水印，让水印不随页面滚动而滚动</li>
+<li>CSS3设置多背景图片，同逗号隔开           <blockquote>
+<h4 id="厂商前缀VSP-Vendore-Specific-Prefixes-："><a href="#厂商前缀VSP-Vendore-Specific-Prefixes-：" class="headerlink" title="厂商前缀VSP(Vendore Specific Prefixes)："></a>厂商前缀VSP(Vendore Specific Prefixes)：</h4><p>某些CSS3属性还处于实验性属性，为保证在大多数浏览器以及它们的实验性中能够使用这个属性，应该针对想要支持的浏览器为该属性添加VSP。每个浏览器只能使用各自能理解的属性声明。</p>
+<ul>
+<li><code>-moz- /* Firefox*/</code></li>
+<li><code>-webkit- /* Chrome,safari*/</code></li>
+<li><code>-ms- /* 微软IE*/</code></li>
+<li><code>-o- /*Opera*/</code><br><strong>VSP的开头是一个连字符，然后是前缀名，接着又是一个连字符，最后是W3C属性名</strong><br><em>注：在带前缀的属性声明之后还要声明W3C标准属性</em><br>以下CSS属性必须加VSP：<br><code>border-image, translate,linear-gradient,transition,</code><br><code>radial-gradient,transform,transform-origin</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="CSS3背景渐变属性"><a href="#CSS3背景渐变属性" class="headerlink" title="CSS3背景渐变属性"></a>CSS3背景渐变属性</h4><hr>
+<h4 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h4><ul>
+<li><code>/*默认从上到下渐变*/</code><br><code>background: -webkit-linear-gradient(#FC1212,#EAD317);</code></li>
+<li><code>/*设置从左至右渐变*/</code><br><code>background:-webkit-linear-gradient(left,#FC1212,#EAD317);</code></li>
+<li><code>声明角度改变渐变起点</code><br><code>background: -webkit-linear-gradient(-45deg,#FC1212,#EAD317)</code><h5 id="设置渐变点"><a href="#设置渐变点" class="headerlink" title="设置渐变点"></a><strong>设置渐变点</strong></h5></li>
+<li><code>/*一个渐变点*//*起点颜色，渐变点，终点颜色*/</code><br><code>background: -webkit-linear-gradient(#03FDE1,#fff 50%,#03FDE1)</code></li>
+<li><code>/*两个渐变点，20%处，80%处*/</code><br><code>background: -webkit-linear-gradient(#03FDE1,#0BD924 20%,#FEE202 80%,#03FDE1)</code></li>
+<li><code>/*为同一个渐变点设置两种颜色可以得到突变效果*/</code><br><code>background: -webkit-linear-gradient(#03FDE1,#0BD924 25%,#0C11F0 25%,#F50A0A 75%,#FEE202 75%,#03FDE1)</code><h4 id="放射性渐变"><a href="#放射性渐变" class="headerlink" title="放射性渐变"></a>放射性渐变</h4></li>
+<li><code>/*默认形状填充元素*/</code><br><code>background: -webkit-radial-gradient(#fff,#64d1dd,#70aa25);</code></li>
+<li><code>/*放射点位置，形状，颜色*/</code><br><code>background: -webkit-radial-gradient(50px 30px,circle,#fff,#64d1dd,#70aa25);</code><h4 id="背景渐变DEMO"><a href="#背景渐变DEMO" class="headerlink" title="背景渐变DEMO"></a><a href="http://e.zohar.com.cn/CSS%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/%E8%83%8C%E6%99%AF%E6%B8%90%E5%8F%98.html" target="_blank" rel="external">背景渐变DEMO</a></h4></li>
+</ul>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/06/01/e5-b0-81-e8-a3-85getstyle-e8-8e-b7-e5-8f-96-e6-a0-b7-e5-bc-8f-ef-bc-89/" style="float: left;">
-        ← 封装getStyle(获取样式）
-    </a>
     
-    
-    <a class="pull-right" href="/2016/05/30/dom-e4-ba-8b-e4-bb-b6-e6-8f-ad-e7-a7-98-ef-bc-88-e4-ba-8c-ef-bc-89-e4-ba-8b-e4-bb-b6-e5-af-b9-e8-b1-a1/">
-        DOM事件揭秘（二）-事件对象 →
+    <a class="pull-right" href="/2016/09/08/2016-9-8/">
+        CSS查漏补缺（二）-盒子模型&定位元素 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/05/31/dom-e4-ba-8b-e4-bb-b6-e6-8f-ad-e7-a7-98-ef-bc-88-e4-b8-89-ef-bc-89/" data-title="DOM事件揭秘（三）" data-url="http://yoursite.com/2016/05/31/dom-e4-ba-8b-e4-bb-b6-e6-8f-ad-e7-a7-98-ef-bc-88-e4-b8-89-ef-bc-89/"></div>
+<div class="ds-thread" data-thread-key="2016/09/10/2016-9-10/" data-title="CSS查漏补缺（三）-背景属性" data-url="http://yoursite.com/2016/09/10/2016-9-10/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"zohar727"};
 (function() {
