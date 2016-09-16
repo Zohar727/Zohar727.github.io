@@ -105,7 +105,7 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(6)</small></a></li>
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(7)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(23)</small></a></li>
 				    
@@ -227,6 +227,43 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/07/14/jquery-e4-ba-8b-e4-bb-b6-e4-b8-80-e8-a7-88/">jQuery事件一览</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-07-14T08:08:12.000Z" itemprop="datePublished">
+          2016-07-14
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        鼠标事件click与dbclick事件方法一：$ele.click()
+绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少
+&lt;div id="test"&gt;点击触发&lt;div&gt;
+$("ele").click(function(){
+    alert('触发指定事件')
+})
+$("#text").click(function(){
+     $("ele").click()  //手动指定触发事件
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/07/14/jquery-e4-ba-8b-e4-bb-b6-e4-b8-80-e8-a7-88/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -546,39 +583,6 @@ DMO2级事件处理程序：
                     
                     <p class="pull-right readMore">
                         <a href="/2016/05/30/dom-e4-ba-8b-e4-bb-b6-e6-8f-ad-e7-a7-98-ef-bc-88-e4-b8-80-ef-bc-89/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/29/javascript-e8-bf-9b-e9-98-b6-dom-e5-af-b9-e8-b1-a1/">JavaScript进阶-DOM对象</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-29T11:21:19.000Z" itemprop="datePublished">
-          2016-05-29
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        认识DOM文档对象模型DOM（Document Object Model）定义访问和处理HTML文档的标准方法。DOM 将HTML文档呈现为带有元素、属性和文本的树结构（节点树）。
-HTML文档可以说由节点构成的集合，DOM节点有:
-1. *元素节点：*上图中&lt;html&gt;、&lt;body&gt;、&lt;p&gt;等都是元素节点，即标签。
-2. *文本节点:*向用户展示的内容，如&lt;li&gt;…&lt;/li&gt;
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/29/javascript-e8-bf-9b-e9-98-b6-dom-e5-af-b9-e8-b1-a1/">Read More...</a>
                     </p>
                     
                 </div>
