@@ -105,7 +105,7 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(7)</small></a></li>
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(8)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(23)</small></a></li>
 				    
@@ -227,6 +227,53 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2016/09/20/2016-9-20/">CSS查漏补缺（五）-页面布局 响应式设计</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2016-09-20T05:16:30.000Z" itemprop="datePublished">
+          2016-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/CSS/'>CSS</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+最近懒癌发作，《CSS设计指南》这本书花了几周终于看完了。这应该是最后一片CSS查漏补缺笔记了~
+
+
+三栏-固定宽度布局demo为固定宽度的盒子设置内外边距边框都会把盒子撑大，从而影响浮动效果。解决办法：
+
+重设宽度以抵消内外边距和边框
+给容器内部嵌套一个盒子，在此盒子上设置内外边距和边框
+使用CSS3的box-sizing:border-box;属性
+
+
+三栏-中栏流动布局-负外边距实现demoCSS代码
+1234567891011
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2016/09/20/2016-9-20/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -594,40 +641,6 @@ request.setRequestHeader(&quot;conte
                     
                     <p class="pull-right readMore">
                         <a href="/2016/08/18/ajax-e5-85-a8-e6-8e-a5-e8-a7-a6-ef-bc-88-e4-b8-80-ef-bc-89/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/07/27/jquery-e5-8a-a8-e7-94-bb/">jQuery动画</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-07-27T13:54:15.000Z" itemprop="datePublished">
-          2016-07-27
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        **
-隐藏元素的hide方法**$elem.hide()提供参数：
-.hide( options ) 当提供hide方法一个参数时，.hide()成为一个动画方法。.hide()方法将为匹配元素的宽度，高度，以及不透明度，同时进行动画操作
-快捷参数：
-.hide(fast / slow) 这是一个动画设置的快捷方式，’fast’ 和 ‘slow’ 分别代表200和600毫秒的延时，就是元素会执行200/600毫秒的动画后在隐藏默认400
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/07/27/jquery-e5-8a-a8-e7-94-bb/">Read More...</a>
                     </p>
                     
                 </div>

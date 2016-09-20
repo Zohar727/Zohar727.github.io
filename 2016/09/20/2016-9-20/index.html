@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>CSS查漏补缺（五）-页面布局 响应式设计 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(23)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-09-20T05:16:30.000Z" itemprop="datePublished">
+          2016-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/CSS/'>CSS</a>
+    
+    
+</span>
+                <h1>CSS查漏补缺（五）-页面布局 响应式设计</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p>最近懒癌发作，《CSS设计指南》这本书花了几周终于看完了。这应该是最后一片CSS查漏补缺笔记了~</p>
+</blockquote>
+<hr>
+<h4 id="三栏-固定宽度布局"><a href="#三栏-固定宽度布局" class="headerlink" title="三栏-固定宽度布局"></a>三栏-固定宽度布局</h4><p><a href="http://e.zohar.com.cn/CSS%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/%E4%B8%89%E6%A0%8F%E5%9B%BA%E5%AE%9A%E5%AE%BD%E5%BA%A6%E5%B8%83%E5%B1%80.html" target="_blank" rel="external">demo</a><br><strong>为固定宽度的盒子设置内外边距边框</strong>都会把盒子撑大，从而影响浮动效果。<br><strong>解决办法：</strong></p>
+<ul>
+<li>重设宽度以抵消内外边距和边框</li>
+<li>给容器内部嵌套一个盒子，在此盒子上设置内外边距和边框</li>
+<li>使用CSS3的<code>box-sizing:border-box;</code>属性</li>
+</ul>
+<hr>
+<h4 id="三栏-中栏流动布局-负外边距实现"><a href="#三栏-中栏流动布局-负外边距实现" class="headerlink" title="三栏-中栏流动布局-负外边距实现"></a>三栏-中栏流动布局-负外边距实现</h4><p><a href="http://e.zohar.com.cn/CSS%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/%E4%B8%89%E6%A0%8F-%E4%B8%AD%E6%A0%8F%E6%B5%81%E5%8A%A8%E5%B8%83%E5%B1%80-%E8%B4%9F%E8%BE%B9%E8%B7%9D%E5%AE%9E%E7%8E%B0.html" target="_blank" rel="external">demo</a><br><strong>CSS代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">          margin: 0;</div><div class="line">          padding: 0;</div><div class="line">      &#125;</div><div class="line">      #main_wrapper&#123;</div><div class="line">          min-width: 770px;</div><div class="line">          max-width: 1200px;</div><div class="line">          margin: 0 auto;</div><div class="line">      &#125;</div><div class="line">      header&#123;</div><div class="line">          background-color: #e02e1f;</div><div class="line">          height: 80px;</div><div class="line">      &#125;</div><div class="line">      header h1&#123;</div><div class="line">          line-height: 80px;</div><div class="line">          height: 80px;</div><div class="line">          text-align: center;</div><div class="line">          font-size: 2.5em;</div><div class="line">          color: #ffffff;</div><div class="line">          font-family: &apos;Dancing Script&apos;, cursive;</div><div class="line">      &#125;</div><div class="line">      #threecolwrap&#123;</div><div class="line">          float: left;</div><div class="line">          width: 100%;</div><div class="line">          background-color: #83e075;</div><div class="line">      &#125;</div><div class="line">      #twocolwrap&#123;</div><div class="line">          float: left;</div><div class="line">          width: 100%;</div><div class="line">          margin-right: -210px;</div><div class="line">      &#125;</div><div class="line">      nav&#123;</div><div class="line">          width: 150px;</div><div class="line">          float: left;</div><div class="line">          background-color: #83e075;</div><div class="line">          padding: 10px 0;</div><div class="line">      &#125;</div><div class="line">      nav &gt; *&#123;</div><div class="line">          margin: 0 10px;</div><div class="line">      &#125;</div><div class="line">      nav li&#123;</div><div class="line">          list-style: none;</div><div class="line">      &#125;</div><div class="line">      nav li a&#123;</div><div class="line">          color: #ffffff;</div><div class="line">          text-decoration: none;</div><div class="line">      &#125;</div><div class="line">      article&#123;</div><div class="line">          width: auto;</div><div class="line">          margin-left: 150px;</div><div class="line">          margin-right: 210px;</div><div class="line">          background-color: #e0c363;</div><div class="line">          padding: 10px 0;</div><div class="line">      &#125;</div><div class="line">      article &gt; *&#123;</div><div class="line">          margin: 0 10px;</div><div class="line">      &#125;</div><div class="line">      aside&#123;</div><div class="line">          width: 210px;</div><div class="line">          float: left;</div><div class="line">          padding: 10px;</div><div class="line">          box-sizing: border-box;</div><div class="line">      &#125;</div><div class="line">      footer&#123;</div><div class="line">          background-color: #787f6f;</div><div class="line">          width: 100%;</div><div class="line">          clear: both;</div><div class="line">      &#125;</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="三栏-中栏流动布局-CSS3单元格实现"><a href="#三栏-中栏流动布局-CSS3单元格实现" class="headerlink" title="三栏-中栏流动布局-CSS3单元格实现"></a>三栏-中栏流动布局-CSS3单元格实现</h4><p><a href="http://e.zohar.com.cn/CSS%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/%E4%B8%89%E6%A0%8F-%E4%B8%AD%E6%A0%8F%E6%B5%81%E5%8A%A8%E5%B8%83%E5%B1%80CSS3%E5%AE%9E%E7%8E%B0.html" target="_blank" rel="external">demo</a><br><strong>CSS代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">    margin: 0;</div><div class="line">    padding: 0;</div><div class="line">&#125;</div><div class="line">body&#123;</div><div class="line">    min-width: 760px;</div><div class="line">&#125;</div><div class="line">header&#123;</div><div class="line">    background-color: #e02e1f;</div><div class="line">    height: 80px;</div><div class="line">&#125;</div><div class="line">header h1&#123;</div><div class="line">    line-height: 80px;</div><div class="line">    height: 80px;</div><div class="line">    text-align: center;</div><div class="line">    font-size: 2.5em;</div><div class="line">    color: #ffffff;</div><div class="line">    font-family: &apos;Dancing Script&apos;, cursive;</div><div class="line">&#125;</div><div class="line">nav&#123;</div><div class="line">    width: 150px;</div><div class="line">    background-color: #83e075;</div><div class="line">    padding: 10px;</div><div class="line">    display: table-cell;</div><div class="line">&#125;</div><div class="line">nav li&#123;</div><div class="line">    list-style: none;</div><div class="line">&#125;</div><div class="line">nav li a&#123;</div><div class="line">    color: #ffffff;</div><div class="line">    text-decoration: none;</div><div class="line">&#125;</div><div class="line">article&#123;</div><div class="line">    background-color: #e0c363;</div><div class="line">    padding: 10px;</div><div class="line">    display:table-cell ;</div><div class="line">&#125;</div><div class="line">aside&#123;</div><div class="line">    width: 210px;</div><div class="line">    background-color: #e06470;</div><div class="line">    padding: 10px;</div><div class="line">    display: table-cell;</div><div class="line">&#125;</div><div class="line">footer&#123;</div><div class="line">    background-color: #787f6f;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h3><h4 id="响应式设计三要素"><a href="#响应式设计三要素" class="headerlink" title="响应式设计三要素"></a>响应式设计三要素</h4><ul>
+<li>媒体查询：是一种CSS语法，可以根据浏览器的特性，一般是屏幕或浏览器宽度提供CSS规则</li>
+<li>流式布局：是使用em或百分比等相对单位设定页面的总体宽度，让布局能够随屏幕大小而缩放；</li>
+<li>弹性图片：是使用相对单位确保图片再大也不会超过其容器<h4 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h4><strong>媒体类型：</strong></li>
+<li>all:匹配所有设备</li>
+<li>handler:匹配手持设备</li>
+<li>print:匹配打印预览模式</li>
+<li>screen:匹配屏幕大小（常用）</li>
+</ul>
+<p><strong>媒体特性：</strong></p>
+<ul>
+<li><code>min-device-width</code>和<code>max-device-width</code>:匹配设备屏幕尺寸</li>
+<li><code>min-width</code>和<code>max-width</code>：匹配视口的宽度，例如浏览器窗口的宽度</li>
+<li><code>orientation</code>（值为<code>portrait</code>和<code>landscape</code>）：匹配设备是横屏还是竖屏。<br><em>使用逻辑运算符<code>and,not,or</code>及关键字<code>all,only</code>组合媒体类型和媒体特性</em></li>
+</ul>
+<p><strong>用<meta>标签设定视口</strong><br><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width; maximumscale=1.0&quot; /&gt;</code><br>这个meta标签告诉浏览器按照屏幕宽度来显示网页，不要缩小网页。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/09/16/2016-9-16/">
+        CSS查漏补缺（四）-CSS3属性/居中 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/09/20/2016-9-20/" data-title="CSS查漏补缺（五）-页面布局 响应式设计" data-url="http://yoursite.com/2016/09/20/2016-9-20/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
