@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>初学CSS3 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(9)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(23)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-10-20T03:02:02.000Z" itemprop="datePublished">
+          2016-10-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/CSS3/'>CSS3</a>
+    
+    
+</span>
+                <h1>初学CSS3</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><h4 id="阴影-box-shadow"><a href="#阴影-box-shadow" class="headerlink" title="阴影 box-shadow"></a>阴影 box-shadow</h4><p>语法：<br><code>box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式]</code><br>参数：<br><img src="http://img.mukewang.com/54292d620001ffb107080250.jpg" alt="参数"></p>
+<h3 id="颜色相关"><a href="#颜色相关" class="headerlink" title="颜色相关"></a>颜色相关</h3><h4 id="rgba颜色值"><a href="#rgba颜色值" class="headerlink" title="rgba颜色值"></a>rgba颜色值</h4><p><code>rbga(r,g,b,a)</code><br>rgb就不用说了，a是指<code>alpha</code>透明度参数，比如0.5就是半透明</p>
+<hr>
+<h4 id="CSS3渐变色彩"><a href="#CSS3渐变色彩" class="headerlink" title="CSS3渐变色彩"></a>CSS3渐变色彩</h4><p><code>linear-gradient(a,b,c)</code></p>
+<ul>
+<li>a:渐变方向，可用<code>角度</code>或者<code>英文</code>来定义<br><img src="http://img.mukewang.com/542a25da00017e9406980223.jpg" alt="渐变方向定义"></li>
+<li>b:渐变的起始点</li>
+<li>c:渐变的结束点（在渐变的起始点和结束点之间可以添加多个颜色值）</li>
+</ul>
+<hr>
+<h3 id="文字与字体"><a href="#文字与字体" class="headerlink" title="文字与字体"></a>文字与字体</h3><h4 id="嵌入字体-font-face"><a href="#嵌入字体-font-face" class="headerlink" title="嵌入字体@font-face"></a>嵌入字体@font-face</h4><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@font-face &#123;</div><div class="line">    font-family : 字体名称;</div><div class="line">    src : 字体文件在服务器上的相对或绝对路径;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>注意：设置@font-face中font-family同样的值</strong></p>
+<hr>
+<h4 id="文本阴影text-shadow"><a href="#文本阴影text-shadow" class="headerlink" title="文本阴影text-shadow"></a>文本阴影text-shadow</h4><p>语法：<br><code>text-shadow: X-Offset Y-Offset blur color;</code></p>
+<ul>
+<li>X-Offset：表示阴影的水平偏移距离，其值为正值时阴影向右偏移，反之向左偏移；      </li>
+<li>Y-Offset：是指阴影的垂直偏移距离，如果其值是正值时，阴影向下偏移，反之向上偏移；</li>
+<li>Blur：是指阴影的模糊程度，其值不能是负值，如果值越大，阴影越模糊，反之阴影越清晰，如果不需要阴影模糊可以将Blur值设置为0；</li>
+<li>Color：是指阴影的颜色，其可以使用rgba色。</li>
+</ul>
+<hr>
+<h3 id="与背景相关的样式"><a href="#与背景相关的样式" class="headerlink" title="与背景相关的样式"></a>与背景相关的样式</h3><h4 id="background-origin"><a href="#background-origin" class="headerlink" title="background-origin"></a>background-origin</h4><p>用于设置背景图片的起始位置<br><strong>语法：</strong><br><code>background-origin ： border-box | padding-box | content-box;</code><br>参数分别表示背景图片是从<strong>边框</strong>，还是<strong>内边距（默认值）</strong>，或者是<strong>内容区域</strong>开始显示。<br><strong>效果图：</strong><br><img src="http://img.mukewang.com/531003de0001166903660166.jpg" alt="效果图:"></p>
+<hr>
+<h4 id="background-clip"><a href="#background-clip" class="headerlink" title="background-clip"></a>background-clip</h4><p>用于将背景图片做适当裁剪<br><strong>语法：</strong><br><code>background-clip:border-box | padding-box | content-box | no-clip</code><br><strong>参数解释：</strong><br>上面四个值分别表示从<code>边框，内边距，内容区域</code>向外裁剪背景，最后是不裁剪<br><strong>注意：</strong><br><code>border-box</code> <code>和 no-clip</code>效果相同，<strong>默认值</strong>为<code>border-box</code><br><strong>效果图：</strong><br><img src="http://img.mukewang.com/5310065d0001c95103660166.jpg" alt="效果"></p>
+<hr>
+<h4 id="background-size"><a href="#background-size" class="headerlink" title="background-size"></a>background-size</h4><p>用于设置背景图片的大小，可以用像素，百分比，cover,contain ,auto表示<br><strong>语法：</strong><br><code>background-size: auto | &lt;长度值&gt; | &lt;百分比&gt; | cover | contain</code><br><strong>取值说明：</strong><br>1、auto：默认值，不改变背景图片的原始高度和宽度；<br>2、&lt;长度值&gt;：成对出现如200px 50px，将背景图片宽高依次设置为前面两个值，当设置一个值时，将其作为图片宽度值来等比缩放；<br>3、&lt;百分比&gt;：0％~100％之间的任何值，将背景图片宽高依次设置为所在元素宽高乘以前面百分比得出的数值，当设置一个值时同上；<br>4、cover：顾名思义为覆盖，即将背景图片等比缩放以填满整个容器；<br>5、contain：容纳，即将背景图片等比缩放至某一边紧贴容器边缘为止。</p>
+<hr>
+<h4 id="multiple-background"><a href="#multiple-background" class="headerlink" title="multiple background"></a>multiple background</h4><p>设置多重背景属性<br><strong>语法缩写如下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],...</div></pre></td></tr></table></figure>
+<p><strong>可以把上面的缩写拆解成以下形式：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">background-image:url1,url2,...,urlN;</div><div class="line">background-repeat : repeat1,repeat2,...,repeatN;</div><div class="line">backround-position : position1,position2,...,positionN;</div><div class="line">background-size : size1,size2,...,sizeN;</div><div class="line">background-attachment : attachment1,attachment2,...,attachmentN;</div><div class="line">background-clip : clip1,clip2,...,clipN;</div><div class="line">background-origin : origin1,origin2,...,originN;</div><div class="line">background-color : color;</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="CSS3选择器"><a href="#CSS3选择器" class="headerlink" title="CSS3选择器"></a>CSS3选择器</h3><h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><p>CSS3新增了3个属性选择器，使得属性选择器有了<strong>通配符</strong>的概念<br>3个属性选择器：<br><img src="http://img.mukewang.com/56653eba0001b07004610215.jpg" alt="属性选择器"><br><code>^:匹配开头</code><br><code>$:匹配结尾</code><br><code>*:包含</code></p>
+<hr>
+<h4 id="结构伪类选择器——root"><a href="#结构伪类选择器——root" class="headerlink" title="结构伪类选择器——root"></a>结构伪类选择器——root</h4><p><code>:root选择器</code>，从字面上我们就可以很清楚的理解是根选择器，他的意思就是匹配元素E所在文档的根元素。在HTML文档中，根元素始终是html。<br>“:root”选择器等同于<html>元素，简单点说：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:root&#123;background:orange&#125;</div><div class="line">html &#123;background:orange;&#125;</div></pre></td></tr></table></figure></html></p>
+<p>得到的效果等同。<br>建议使用:root方法。<br><strong>另外在IE９以下还可以借助“:root”实现hack功能。</strong></p>
+<hr>
+<h4 id="结构化伪类选择器not"><a href="#结构化伪类选择器not" class="headerlink" title="结构化伪类选择器not"></a>结构化伪类选择器not</h4><p><code>:not选择器</code> ，顾名思义，就是选择除了某个元素之外的所有元素<br>比如在form中将除了submit按钮之外的所有input标签添加红色边框，代码可以这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">input:not([type=&quot;submit&quot;])&#123;</div><div class="line">					border:1px solid red</div><div class="line">						  &#125;</div></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="结构性伪类选择器—empty"><a href="#结构性伪类选择器—empty" class="headerlink" title="结构性伪类选择器—empty"></a>结构性伪类选择器—empty</h4><p>选择<code>内容为空</code>的元素，就算有一个空格也不算内容为空<br>比如：<br>HTML代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;我是一个段落&lt;/p&gt;</div><div class="line">&lt;p&gt; &lt;/p&gt;</div><div class="line">&lt;p&gt;&lt;/p&gt;​</div></pre></td></tr></table></figure></p>
+<p>CSS代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line"> background: orange;</div><div class="line"> min-height: 30px;</div><div class="line">&#125;</div><div class="line">p:empty &#123;</div><div class="line">  display: none;</div><div class="line">&#125;​</div></pre></td></tr></table></figure></p>
+<p>演示结果：<br><img src="http://img.mukewang.com/531eb55b0001d7d401580126.jpg" alt="结果"></p>
+<hr>
+<h4 id="结构性伪类选择器—target"><a href="#结构性伪类选择器—target" class="headerlink" title="结构性伪类选择器—target"></a>结构性伪类选择器—target</h4><p>这里我是这样理解的，target相对于一个点击事件，当一个ID绑定了点击事件，触发点击事件后为特定的目标元素设定样式。<br>比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#brand:target p&#123;</div><div class="line">background:red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面就是当href=”brand”的a标签被点击后，就会为id=”brand”的元素的下面的P元素设置背景色，<strong>注意：这里div的ID也必须为brand</strong></p>
+<hr>
+<h4 id="结构性伪类选择器—first-child"><a href="#结构性伪类选择器—first-child" class="headerlink" title="结构性伪类选择器—first-child"></a>结构性伪类选择器—first-child</h4><p>即选择第一个子元素</p>
+<hr>
+<h4 id="结构性伪类选择器—last-child"><a href="#结构性伪类选择器—last-child" class="headerlink" title="结构性伪类选择器—last-child"></a>结构性伪类选择器—last-child</h4><p>即选择最后一个子元素</p>
+<hr>
+<h4 id="结构性伪类选择器—nth-child-n"><a href="#结构性伪类选择器—nth-child-n" class="headerlink" title="结构性伪类选择器—nth-child(n)"></a>结构性伪类选择器—nth-child(n)</h4><p><code>:nth-child(n)</code>选择器用来定位某个父元素的一个或多个特定的子元素。其中“n”是其参数，而且可以是<code>整数值(1,2,3,4)</code>，也可以是<code>表达式(2n+1、-n+5)</code>和<code>关键词奇偶(odd、even)</code>，但参数<code>n的起始值始终是1</code>，而不是0。也就是说，<strong>参数n的值为0时，选择器将选择不到任何匹配的元素</strong>。<br><strong>注意：</strong>当n是表达式时，n的起始值是0，当表达式的值为0或小于0的时候，不选择任何匹配的元素。</p>
+<hr>
+<h4 id="结构性伪类选择器—nth-last-child-n"><a href="#结构性伪类选择器—nth-last-child-n" class="headerlink" title="结构性伪类选择器—nth-last-child(n)"></a>结构性伪类选择器—nth-last-child(n)</h4><p>与上面相反，就是从最后一个元素开始计算</p>
+<hr>
+<h4 id="first-of-type选择器-nth-of-type-n-选择器-last-of-type选择器，nth-last-of-type-n-选择器"><a href="#first-of-type选择器-nth-of-type-n-选择器-last-of-type选择器，nth-last-of-type-n-选择器" class="headerlink" title="first-of-type选择器,nth-of-type(n)选择器,last-of-type选择器，nth-last-of-type(n)选择器"></a>first-of-type选择器,nth-of-type(n)选择器,last-of-type选择器，nth-last-of-type(n)选择器</h4><p>与<code>first-child,nth-child(n),last-child，nth-last-child(n)</code>相似，但要匹配元素类型<br>比如：<br><code>div p:first-of-type</code>表示选择div子元素中第一个p元素</p>
+<hr>
+<h4 id="only-child选择器"><a href="#only-child选择器" class="headerlink" title="only-child选择器"></a>only-child选择器</h4><p>匹配的元素的父元素只有一个子元素</p>
+<hr>
+<h4 id="only-of-type选择器"><a href="#only-of-type选择器" class="headerlink" title="only-of-type选择器"></a>only-of-type选择器</h4><p>与only-child 相似，只是要匹配特定类型</p>
+<hr>
+<h4 id="enabled选择器-disabled选择器"><a href="#enabled选择器-disabled选择器" class="headerlink" title=":enabled选择器,:disabled选择器"></a>:enabled选择器,:disabled选择器</h4><p>选择form表单中处于enabled状态,disabled的元素</p>
+<hr>
+<h4 id="checked选择器"><a href="#checked选择器" class="headerlink" title=":checked选择器,"></a>:checked选择器,</h4><p>选择form表单中处于checked状态的元素</p>
+<hr>
+<h4 id="selection选择器"><a href="#selection选择器" class="headerlink" title="::selection选择器"></a>::selection选择器</h4><p>为鼠标选中的元素添加样式</p>
+<hr>
+<h4 id="read-only选择器-read-write选择器"><a href="#read-only选择器-read-write选择器" class="headerlink" title=":read-only选择器,:read-write选择器"></a>:read-only选择器,:read-write选择器</h4><p><code>:read-only</code>伪类选择器用来指定处于<strong>只读状态</strong>元素的样式。简单点理解就是，元素中设置了<code>readonly=’readonly’</code><br><code>:read-write</code>选择器刚好与<code>:read-only</code>选择器相反，主要用来指定当元素处于<strong>非只读状态</strong>时的样式。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/09/20/2016-9-20/">
+        CSS查漏补缺（五）-页面布局 响应式设计 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/10/20/2016-10-20/" data-title="初学CSS3" data-url="http://yoursite.com/2016/10/20/2016-10-20/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zohar727"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
