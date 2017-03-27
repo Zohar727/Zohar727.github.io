@@ -225,6 +225,7 @@
 </ul>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">	console.log(this.a);</div><div class="line">&#125;</div><div class="line">var obj = &#123;</div><div class="line">	a:2,</div><div class="line">	foo:foo</div><div class="line">&#125;;</div><div class="line">obj.foo();//隐式绑定 2</div><div class="line">var bar = obj.foo;//隐式绑定的函数会丢失绑定对象，这里 bar 是 obj.foo 的一个引用，但实际上它已经丢失了绑定对象，应用默认绑定</div><div class="line">var a = &quot;oops,global&quot;;</div><div class="line">bar();//&quot;oops,global&quot;</div></pre></td></tr></table></figure>
+<hr>
 <h4 id="硬绑定"><a href="#硬绑定" class="headerlink" title="硬绑定"></a>硬绑定</h4><ul>
 <li>使用 <code>call() apply()</code> 方法显式强制改变绑定对象</li>
 <li>ES6提供的内置方法 <code>Function.prototype.bind</code></li>
