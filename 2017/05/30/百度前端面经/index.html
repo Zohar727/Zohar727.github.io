@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>百度前端面经 | Zohar&#39;s Blog</title>
+  <title>百度前端实习面经 | Zohar&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -209,7 +209,7 @@
     
     
 </span>
-                <h1>百度前端面经</h1>
+                <h1>百度前端实习面经</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
@@ -217,7 +217,10 @@
 <h3 id="事件冒泡和事件捕获，不同浏览器的触发顺序"><a href="#事件冒泡和事件捕获，不同浏览器的触发顺序" class="headerlink" title="事件冒泡和事件捕获，不同浏览器的触发顺序"></a>事件冒泡和事件捕获，不同浏览器的触发顺序</h3><ul>
 <li><strong>捕获阶段</strong><br>事件的第一个阶段是捕获阶段。事件从文档的根节点流向目标对象节点。途中经过各个层次的DOM节点，并在各节点上触发捕获事件，直到到达事件的目标节点。捕获阶段的主要任务是建立传播路径，在冒泡阶段，事件会通过这个路径回溯到文档跟节点。</li>
 <li><strong>目标阶段</strong><br>当事件到达目标节点的，事件就进入了目标阶段。事件在目标节点上被触发，然后会逆向回流，直到传播至最外层的文档节点。</li>
-<li><strong>冒泡阶段</strong><br>事件在目标元素上触发后，并不在这个元素上终止。它会随着DOM树一层层向上冒泡，回溯到根节点。<h4 id="触发顺序"><a href="#触发顺序" class="headerlink" title="触发顺序"></a>触发顺序</h4>非目标元素捕获 -&gt; 目标元素代码顺序 -&gt; 非目标元素冒泡。<h3 id="阻止冒泡，不同浏览器怎么处理"><a href="#阻止冒泡，不同浏览器怎么处理" class="headerlink" title="阻止冒泡，不同浏览器怎么处理"></a>阻止冒泡，不同浏览器怎么处理</h3><code>e.stopPropagatin</code><br><code>window.event.cancelBuddle</code><h3 id="绑定click事件，解绑"><a href="#绑定click事件，解绑" class="headerlink" title="绑定click事件，解绑"></a>绑定click事件，解绑</h3></li>
+<li><strong>冒泡阶段</strong><br>事件在目标元素上触发后，并不在这个元素上终止。它会随着DOM树一层层向上冒泡，回溯到根节点。<h4 id="触发顺序"><a href="#触发顺序" class="headerlink" title="触发顺序"></a>触发顺序</h4>非目标元素捕获 -&gt; 目标元素代码顺序 -&gt; 非目标元素冒泡。</li>
+</ul>
+<h3 id="阻止冒泡，不同浏览器怎么处理"><a href="#阻止冒泡，不同浏览器怎么处理" class="headerlink" title="阻止冒泡，不同浏览器怎么处理"></a>阻止冒泡，不同浏览器怎么处理</h3><p><code>e.stopPropagatin</code><br><code>window.event.cancelBuddle</code></p>
+<h3 id="绑定click事件，解绑"><a href="#绑定click事件，解绑" class="headerlink" title="绑定click事件，解绑"></a>绑定click事件，解绑</h3><ul>
 <li>绑定<br><code>addEventListener</code> <code>attachEvent</code></li>
 <li>解绑<br><code>removeEventListener</code> <code>deattachEvent</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">var EventUtil=&#123;</div><div class="line">    /*检测绑定事件*/</div><div class="line">    addHandler:function(element,type,handler)&#123;</div><div class="line">        if(element.addEventListener)&#123;</div><div class="line">            element.addEventListener(type,handler,false);</div><div class="line">        &#125;</div><div class="line">        else if(element.attachEvent)&#123;</div><div class="line">            element.attachEvent(&apos;on&apos;+type,handler);</div><div class="line">        &#125;</div><div class="line">        else&#123;</div><div class="line">            element[&quot;on&quot;+type]=handler /*直接赋给事件*/</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;,</div><div class="line">    /*通过removeHandler*/</div><div class="line">    removeHandler:function(element,type,handler) &#123;   /*Chrome*/</div><div class="line">        if (element.removeEventListener)</div><div class="line">            element.removeEventListener(type, handler, false);</div><div class="line">        else if (element.deattachEvent) &#123;               /*IE*/</div><div class="line">            element.deattachEvent(&apos;on&apos; + type, handler);</div><div class="line">        &#125;</div><div class="line">        else &#123;</div><div class="line">            element[&quot;on&quot; + type] = null;</div><div class="line">            /*直接赋给事件*/</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 </li>
@@ -312,7 +315,7 @@
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2017/05/30/百度前端面经/" data-title="百度前端面经" data-url="http://yoursite.com/2017/05/30/百度前端面经/"></div>
+<div class="ds-thread" data-thread-key="2017/05/30/百度前端面经/" data-title="百度前端实习面经" data-url="http://yoursite.com/2017/05/30/百度前端面经/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"zohar727"};
 (function() {
