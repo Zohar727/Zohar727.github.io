@@ -107,7 +107,9 @@
 				  	
 				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(10)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(26)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/其他/" class="animsition-link">其他<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
 				    
@@ -227,6 +229,85 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/07/16/初始正则表达式/">初始正则表达式</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-07-16T13:51:37.000Z" itemprop="datePublished">
+          2017-07-16
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        初始正则表达式
+之前对正则表达是一直处于一知半解的状态，今天抽空系统学习下正则表达式
+
+元字符
+\b 匹配单词边界（开始或结束）
+. 匹配除换行外的所有字符
+* 匹配所有字符
+\d 匹配数字 
+\s 匹配任意空白符(空格，制表符，换行符)
+\w 匹配字母、数字、下划线、汉字等
+^ 匹配字符串的开始
+$ 匹配字符串的结束
+\f 匹配换页符
+\n 匹配换行
+\r 匹配回车
+\t 匹配制表符
+
+常用限定符
+* 表示重复任意次（可以是0）\d*
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/07/16/初始正则表达式/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/07/16/vue-router之参数传递/">vue-router之参数传递</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-07-16T13:43:31.000Z" itemprop="datePublished">
+          2017-07-16
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        vue-router 参数传递相关
+使用query传递参数首先新建两个vue文件，它们可以是父子组件关系也可以不是hello.vue123&lt;div class=&quot;hello&quot;&gt; &lt;router-link :to=&quot;&#123;path: &apos;/child&apos;, query: &#123;id: &apos;123&apos;&#125;&#125;&quot;&gt;que
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/07/16/vue-router之参数传递/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -639,94 +720,6 @@ ID和类选择符标签
                     
                     <p class="pull-right readMore">
                         <a href="/2016/09/05/2016-9-5/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/08/25/new/">博客二三事</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-08-25T06:30:01.000Z" itemprop="datePublished">
-          2016-08-25
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        博客2.0终于完成撒花
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/08/25/new/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/08/24/160824c/">关于JSON跨域</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-08-24T07:49:18.000Z" itemprop="datePublished">
-          2016-08-24
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        JS跨域利用了script src没有同源限制，进行跨域请求。例如，www.a.com 想请求 www.b.com 的内容
-
-//a网站的请求页：
-
- function jsonp(json){
-    //对返回的json数据的处理
-}
-
-
-
-//b网站的jsonp.js 响应页
-jsonp({'name':'amy',age:22})
-
-
-要点
-a网站定义jsonp的回调处理。
-a网站jsonp跨域请求
-b网站使用a网站的同名函数处
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/08/24/160824c/">Read More...</a>
                     </p>
                     
                 </div>
