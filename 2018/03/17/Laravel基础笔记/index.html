@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Laravel基础笔记 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/HTTP/" class="animsition-link">HTTP<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/Laravel/" class="animsition-link">Laravel<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/MySql/" class="animsition-link">MySql<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/PHP/" class="animsition-link">PHP<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/其他/" class="animsition-link">其他<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/求职/" class="animsition-link">求职<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/生活/" class="animsition-link">生活<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://blog.jeongen.com/" class="animsition-link">jeongen</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-03-17T08:48:49.000Z" itemprop="datePublished">
+          2018-03-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/PHP/'>PHP</a>,
+    
+    <a href='/tags/Laravel/'>Laravel</a>,
+    
+    <a href='/tags/后端开发/'>后端开发</a>
+    
+    
+</span>
+                <h1>Laravel基础笔记</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p>laravel中最基础的部分笔记</p>
+</blockquote>
+<h3 id="laravel-路由"><a href="#laravel-路由" class="headerlink" title="laravel 路由"></a>laravel 路由</h3><h4 id="路由简介"><a href="#路由简介" class="headerlink" title="路由简介"></a>路由简介</h4><ul>
+<li>将用户的请求转发给相应的程序进行处理</li>
+<li>建立url和程序之间的映射</li>
+<li>请求类型：get,post,put,patch,delete</li>
+</ul>
+<h4 id="基本路由"><a href="#基本路由" class="headerlink" title="基本路由"></a>基本路由</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">// 多请求路由</div><div class="line">Route::match([&apos;get&apos;, &apos;post&apos;], &apos;multy1&apos;, function() &#123;</div><div class="line">  return &apos;multy1&apos;;</div><div class="line">&#125;);</div><div class="line">// 非指定多请求路由</div><div class="line">Route::any(&apos;multy2&apos;, function() &#123;</div><div class="line">  return &apos;multy2&apos;;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 路由参数</div><div class="line">Route::get(&apos;user/&#123;id&#125;&apos;, function($id) &#123;</div><div class="line">  return &apos;user-id&apos;.$id;</div><div class="line">&#125;);</div><div class="line">// 设置路由可选参数</div><div class="line">Route::get(&apos;user/&#123;name?&#125;&apos;, function($name) &#123;</div><div class="line">  return &apos;user-name&apos;.$name;</div><div class="line">&#125;);</div><div class="line">// 设置路由默认参数</div><div class="line">Route::get(&apos;username/&#123;name?&#125;&apos;, function($name = &apos;0&apos;) &#123;</div><div class="line">  return &apos;user-name:&apos;.$name;</div><div class="line">&#125;)-&gt;where(&apos;name&apos;,&apos;[A-Za-z]+&apos;);</div></pre></td></tr></table></figure>
+<h4 id="路由别名"><a href="#路由别名" class="headerlink" title="路由别名"></a>路由别名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 路由别名</div><div class="line">Route::get(&apos;user/member-center&apos;, [&apos;as&apos; =&gt; &apos;center&apos;, function() &#123;</div><div class="line">  return route(&apos;center&apos;);</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+<h4 id="路由群组"><a href="#路由群组" class="headerlink" title="路由群组"></a>路由群组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 路由群组</div><div class="line">Route::group([&apos;prefix&apos; =&gt; &apos;member&apos;], function() &#123;</div><div class="line">  Route::get(&apos;user/member-center&apos;, [&apos;as&apos; =&gt; &apos;center&apos;, function() &#123;</div><div class="line">    return route(&apos;center&apos;);</div><div class="line">  &#125;]);</div><div class="line">  Route::get(&apos;user/&#123;id&#125;&apos;, function($id) &#123;</div><div class="line">  return &apos;user-id&apos;.$id;</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="路由输出视图"><a href="#路由输出视图" class="headerlink" title="路由输出视图"></a>路由输出视图</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 路由中输出视图</div><div class="line">Route::get(&apos;/view&apos;, function() &#123;</div><div class="line">  return view(&apos;welcome&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="laravel-控制器"><a href="#laravel-控制器" class="headerlink" title="laravel 控制器"></a>laravel 控制器</h3><h4 id="控制器基本写法"><a href="#控制器基本写法" class="headerlink" title="控制器基本写法"></a>控制器基本写法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">class MemberController extends Controller</div><div class="line">&#123;</div><div class="line">  public function info()</div><div class="line">  &#123;</div><div class="line">    return &apos;member-info&apos;;</div><div class="line">  &#125;</div><div class="line">  public function info2($id)</div><div class="line">  &#123;</div><div class="line">    return &apos;member-info: &apos;.$id;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="路由关联控制器"><a href="#路由关联控制器" class="headerlink" title="路由关联控制器"></a>路由关联控制器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 路由关联控制器</div><div class="line">Route::get(&apos;member/info&apos;, &apos;MemberController@info&apos;);</div><div class="line"></div><div class="line">// 路由关联控制器并起别名</div><div class="line">Route::get(&apos;member/info2&apos;, [&apos;uses&apos; =&gt; &apos;MemberController@info&apos;,&apos;as&apos; =&gt; &apos;memberinfo&apos;]);</div><div class="line"></div><div class="line">// 路由管理控制器传递参数</div><div class="line">Route::get(&apos;member/&#123;id&#125;&apos;, &apos;MemberController@info2&apos;);</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="laravel-视图"><a href="#laravel-视图" class="headerlink" title="laravel 视图"></a>laravel 视图</h3><p>略…</p>
+<h3 id="laravel-模型"><a href="#laravel-模型" class="headerlink" title="laravel 模型"></a>laravel 模型</h3><h4 id="新建Model"><a href="#新建Model" class="headerlink" title="新建Model"></a>新建Model</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">namespace App;</div><div class="line">use Illuminate\Database\Eloquent\Model;</div><div class="line">class Member extends Model</div><div class="line">&#123;</div><div class="line">  public static function getMember()</div><div class="line">  &#123;</div><div class="line">    return &apos;member name is zohar&apos;;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="在控制器中调用Model"><a href="#在控制器中调用Model" class="headerlink" title="在控制器中调用Model"></a>在控制器中调用Model</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// MemberContriller.php</div><div class="line">// 控制器里调用模型</div><div class="line">  public function info3()</div><div class="line">  &#123;</div><div class="line">    return Member::getMember();</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="laravel-数据库操作"><a href="#laravel-数据库操作" class="headerlink" title="laravel 数据库操作"></a>laravel 数据库操作</h3><h4 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h4><p><code>config/database.php</code>文件中配置即可<br><code>env</code>文件里有默认配置，进行修改</p>
+<h4 id="原生sql语句操作数据库"><a href="#原生sql语句操作数据库" class="headerlink" title="原生sql语句操作数据库"></a>原生sql语句操作数据库</h4><h5 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$bool = DB::insert(&apos;insert into article(title, author,description,content,dateline) value(?,?,?,?,?)&apos;,</div><div class="line">          [&apos;ailpay&apos;, &apos;zohar&apos;, &apos;alipay tent&apos;, &apos;alipay aplipay in japan&apos;, time()]);</div><div class="line">var_dump($bool);</div></pre></td></tr></table></figure>
+<h5 id="更新操作"><a href="#更新操作" class="headerlink" title="更新操作"></a>更新操作</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$update = DB::update(&apos;update article set author = ? where id = ?&apos;, [&apos;francis&apos;, 1]);</div><div class="line">var_dump($update);</div></pre></td></tr></table></figure>
+<h5 id="查询操作"><a href="#查询操作" class="headerlink" title="查询操作"></a>查询操作</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$update = DB::update(&apos;update article set author = ? where id = ?&apos;, [&apos;francis&apos;, 1]);</div><div class="line">var_dump($update);</div></pre></td></tr></table></figure>
+<h4 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$delete = DB::delete(&apos;delete from article where id = ?&apos;, [3]);</div><div class="line">var_dump($delete);</div></pre></td></tr></table></figure>
+<h4 id="查询构造器操作数据库"><a href="#查询构造器操作数据库" class="headerlink" title="查询构造器操作数据库"></a>查询构造器操作数据库</h4><h5 id="查询构造器-添加数据"><a href="#查询构造器-添加数据" class="headerlink" title="查询构造器-添加数据"></a>查询构造器-添加数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">$bool = DB::table(&apos;article&apos;)-&gt;insert(</div><div class="line">  [&apos;author&apos; =&gt; &apos;zohar&apos;, &apos;title&apos; =&gt; &apos;laravel&apos;]</div><div class="line">);</div><div class="line">var_dump($bool);</div><div class="line">// 获取自增ID</div><div class="line">$id = DB::table(&apos;article&apos;)-&gt;insertGetId(</div><div class="line">  [&apos;author&apos; =&gt; &apos;zohar&apos;, &apos;title&apos; =&gt; &apos;laravel2&apos;]</div><div class="line">);</div><div class="line">var_dump($id);</div><div class="line">// 插入多条数据</div><div class="line">$bool2 = DB::table(&apos;article&apos;)-&gt;insert([</div><div class="line">  [&apos;author&apos; =&gt; &apos;zohar&apos;, &apos;title&apos; =&gt; &apos;laravel3&apos;],</div><div class="line">  [&apos;author&apos; =&gt; &apos;zohar&apos;, &apos;title&apos; =&gt; &apos;laravel4&apos;]</div><div class="line">]);</div><div class="line">var_dump($bool2);</div></pre></td></tr></table></figure>
+<h5 id="查询构造器-更新数据"><a href="#查询构造器-更新数据" class="headerlink" title="查询构造器-更新数据"></a>查询构造器-更新数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 返回值为影响行数</div><div class="line">$num = DB::table(&apos;article&apos;)</div><div class="line">    -&gt;where(&apos;id&apos;, 12)</div><div class="line">    -&gt;update([&apos;author&apos; =&gt; &apos;francis&apos;]);</div><div class="line">var_dump($num);</div><div class="line">// 自增的方式更新</div><div class="line">$num2 = DB::table(&apos;article&apos;)-&gt;increment(&apos;age&apos;, &apos;1&apos;); // 自增数默认为1</div><div class="line">// 自减的方式更新</div><div class="line">$num3 = DB::table(&apos;article&apos;)-&gt;decrement(&apos;age&apos;, &apos;1&apos;);</div><div class="line">// 在自增或自减的条件下同时更新其他数据</div><div class="line">$num4 = DB::table(&apos;article&apos;)-&gt;decrement(&apos;age&apos;, &apos;2&apos;, [&apos;author&apos; =&gt; &apos;francis&apos;]);</div></pre></td></tr></table></figure>
+<h5 id="查询构造器-删除数据"><a href="#查询构造器-删除数据" class="headerlink" title="查询构造器-删除数据"></a>查询构造器-删除数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 返回值为影响的行数</div><div class="line">$num = DB::table(&apos;article&apos;)</div><div class="line">    -&gt;where(&apos;id&apos;, 15) // where(&apos;id&apos;, &apos;&gt;=&apos;, 15)  大于小于的条件这样写</div><div class="line">    -&gt;delete();</div><div class="line"></div><div class="line">// 方法二 很危险</div><div class="line">DB::table(&apos;article&apos;)-&gt;truncate(); // 删除表的所有值</div></pre></td></tr></table></figure>
+<h5 id="查询构造器-查询数据"><a href="#查询构造器-查询数据" class="headerlink" title="查询构造器-查询数据"></a>查询构造器-查询数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">// get()方法 获取所有数据</div><div class="line">$data = DB::table(&apos;article&apos;)</div><div class="line">  -&gt;whereRaw(&apos;id &gt;= ? and age &gt;= ?&apos;, [5, 20]) // 多个条件筛选的写法</div><div class="line">  -&gt;get();</div><div class="line">dd($data);</div><div class="line"></div><div class="line">// first()方法 获取结果集第一条数据</div><div class="line">$data2 = DB::table(&apos;article&apos;)</div><div class="line">  -&gt;orderBy(&apos;id&apos;,&apos;desc&apos;)</div><div class="line">  -&gt;first();</div><div class="line">dd($data2);</div><div class="line"></div><div class="line">// pluck方法 返回结果集的指定字段</div><div class="line">$data3 = DB::table(&apos;article&apos;)</div><div class="line">  -&gt;pluck(&apos;title&apos;);</div><div class="line">dd($data3);</div><div class="line"></div><div class="line">// lists方法 返回结果集的指定字段，并可指定字段为下标</div><div class="line">$data4 = DB::table(&apos;article&apos;)</div><div class="line">  -&gt;lists(&apos;title&apos;, &apos;id&apos;); // 第二个参数为指定的字段作为下标</div><div class="line"></div><div class="line">// select 返回结果集多个指定字段</div><div class="line">$data5 = DB::table(&apos;article&apos;)</div><div class="line">  -&gt;select(&apos;id&apos;, &apos;title&apos;, &apos;author&apos;)</div><div class="line">  -&gt;get();</div><div class="line"></div><div class="line">// chunk()方法 查询大数据时分段查询返回结果</div><div class="line">DB::table(&apos;article&apos;)-&gt;chunk(5, function($data6) &#123; // 第一个参数为每段的数量</div><div class="line">  var_dump($data6);</div><div class="line">  return false; // 在条件下停止查询</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h5 id="查询构造器-聚合函数"><a href="#查询构造器-聚合函数" class="headerlink" title="查询构造器-聚合函数"></a>查询构造器-聚合函数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// count() 返回表的记录数</div><div class="line">$num = DB::table(&apos;article&apos;) -&gt; count();</div><div class="line">// max() 返回最大值</div><div class="line">$max = DB::table(&apos;article&apos;) -&gt; max(&apos;age&apos;);</div><div class="line">// min() 返回最小值</div><div class="line">$min = DB::table(&apos;article&apos;) -&gt; min(&apos;age&apos;);</div><div class="line">// avg() 返回平均值</div><div class="line">$avg = DB::table(&apos;article&apos;) -&gt; avg(&apos;age&apos;);</div><div class="line">// sum() 返回总数</div><div class="line">$sum = DB::table(&apos;article&apos;) -&gt; sum(&apos;age&apos;);</div></pre></td></tr></table></figure>
+<h4 id="使用Eloquent-ORM操作数据库"><a href="#使用Eloquent-ORM操作数据库" class="headerlink" title="使用Eloquent ORM操作数据库"></a>使用Eloquent ORM操作数据库</h4><h4 id="ORM-简介"><a href="#ORM-简介" class="headerlink" title="ORM 简介"></a>ORM 简介</h4><ul>
+<li>ORM 是一个优美、简洁的 ActiveRecord 实现，用来实现数据库操作</li>
+<li>每个数据表都有一个与之相对于的模型Model用于和数据表数据交互</li>
+</ul>
+<h4 id="为数据表建立对应模型用于数据交互"><a href="#为数据表建立对应模型用于数据交互" class="headerlink" title="为数据表建立对应模型用于数据交互"></a>为数据表建立对应模型用于数据交互</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">// 指定绑定的表名</div><div class="line">protected $table = &apos;article&apos;;</div><div class="line">// 指定主键</div><div class="line">protected $primaryKey = &apos;id&apos;;</div><div class="line">// 指定允许批量赋值的字段</div><div class="line">protected $fillable = [&apos;title&apos;,&apos;author&apos;,&apos;description&apos;,&apos;content&apos;,&apos;dateline&apos;];</div><div class="line">// 指定不允许批量赋值的字段</div><div class="line">protected $guarded = [];</div><div class="line">// 时间戳设置</div><div class="line">public $timestamps = false; // true为记录时间戳，false则相反</div><div class="line">// 重写格式化时间戳函数</div><div class="line">protected function getDateFormat()</div><div class="line">&#123;</div><div class="line">  return time();</div><div class="line">&#125;</div><div class="line">// 取消自动格式化时间戳</div><div class="line">protected function asDateTime($val)</div><div class="line">&#123;</div><div class="line">  return $val;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="orm-查询数据"><a href="#orm-查询数据" class="headerlink" title="orm 查询数据"></a>orm 查询数据</h4><h5 id="orm-all-查询所有数据"><a href="#orm-all-查询所有数据" class="headerlink" title="orm all() 查询所有数据"></a>orm all() 查询所有数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// all()方法 查询所有数据</div><div class="line">$article1 = Article::all();</div><div class="line">dd($article1);</div></pre></td></tr></table></figure>
+<h5 id="orm-find-根据主键查询一条数据"><a href="#orm-find-根据主键查询一条数据" class="headerlink" title="orm find() 根据主键查询一条数据"></a>orm find() 根据主键查询一条数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// find()方法 根据主键查询一条数据</div><div class="line">$article2 = Article::find(1);</div><div class="line">dd($article2);</div></pre></td></tr></table></figure>
+<h5 id="orm-使用查询构造器查询"><a href="#orm-使用查询构造器查询" class="headerlink" title="orm 使用查询构造器查询"></a>orm 使用查询构造器查询</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 使用查询构造器操作</div><div class="line">$article3 = Article::where(&apos;id&apos;,&apos;&gt;&apos;,&apos;1&apos;)</div><div class="line">  -&gt;orderBy(&apos;dateline&apos;,&apos;desc&apos;)</div><div class="line">  -&gt;first();</div><div class="line">dd($article3);</div></pre></td></tr></table></figure>
+<h5 id="orm-使用chunk-查询"><a href="#orm-使用chunk-查询" class="headerlink" title="orm 使用chunk()查询"></a>orm 使用chunk()查询</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 使用chunk操作</div><div class="line">Article::chunk(2, function($article4) &#123;</div><div class="line">  dd($article4);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="orm-添加数据"><a href="#orm-添加数据" class="headerlink" title="orm 添加数据"></a>orm 添加数据</h4><h5 id="使用模型添加数据"><a href="#使用模型添加数据" class="headerlink" title="使用模型添加数据"></a>使用模型添加数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 使用模型添加数据 返回创建结果的布尔值</div><div class="line">$article5 = new Article();</div><div class="line">$article5-&gt;title = &apos;霍金昨日去世&apos;;</div><div class="line">$article5-&gt;author = &apos;路透社&apos;;</div><div class="line">$article5-&gt;description = &apos;霍金于昨日去世&apos;;</div><div class="line">$article5-&gt;content = &apos;据英国天空新闻等多家媒体，史蒂芬·霍金去世，享年76岁。&apos;;</div><div class="line">$bool = $article5-&gt;save();</div><div class="line">dd($bool);</div></pre></td></tr></table></figure>
+<h5 id="使用模型的create方法添加数据"><a href="#使用模型的create方法添加数据" class="headerlink" title="使用模型的create方法添加数据"></a>使用模型的create方法添加数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 使用模型的create方法添加数据,要在模型中提前指定批量赋值的字段,返回刚刚添加的数据</div><div class="line">$article6 = Article::create(</div><div class="line">  [&apos;title&apos; =&gt; &apos;test&apos;, &apos;author&apos; =&gt; &apos;zohar&apos;, &apos;description&apos; =&gt; &apos;testtest&apos;, &apos;content&apos; =&gt; &apos;test-test&apos;,</div><div class="line">  &apos;dateline&apos; =&gt; time()]</div><div class="line">);</div><div class="line">dd($article6);</div></pre></td></tr></table></figure>
+<h5 id="firstOrCreate"><a href="#firstOrCreate" class="headerlink" title="firstOrCreate()"></a>firstOrCreate()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// firstOrCreate() 以属性查找数据，若无则新增</div><div class="line">$article7 = Article::firstOrCreate(</div><div class="line">  [&apos;author&apos; =&gt; &apos;zohar&apos;]</div><div class="line">);</div><div class="line">dd($article7);</div></pre></td></tr></table></figure>
+<h5 id="firstOrNew"><a href="#firstOrNew" class="headerlink" title="firstOrNew()"></a>firstOrNew()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// firstOrNew() 以属性查找数据，若无则新增，但要手动save()</div><div class="line">$article8 = Article::firstOrNew(</div><div class="line">  [&apos;author&apos; =&gt; &apos;francis&apos;]</div><div class="line">);</div><div class="line">$bool = $article8-&gt;save();</div><div class="line">dd($bool);</div></pre></td></tr></table></figure>
+<h4 id="orm-更新数据"><a href="#orm-更新数据" class="headerlink" title="orm 更新数据"></a>orm 更新数据</h4><h5 id="使用模型更新数据"><a href="#使用模型更新数据" class="headerlink" title="使用模型更新数据"></a>使用模型更新数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 使用模型更新数据</div><div class="line">$article9 = Article::find(6);</div><div class="line">$article9-&gt;title=&apos;王俊凯发微致霍金&apos;;</div><div class="line">$bool = $article9-&gt;save();</div><div class="line">var_dump($bool);</div></pre></td></tr></table></figure>
+<h5 id="结合查询操作器批量更新数据"><a href="#结合查询操作器批量更新数据" class="headerlink" title="结合查询操作器批量更新数据"></a>结合查询操作器批量更新数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 结合查询操作器批量更新数据 返回受影响的行数</div><div class="line">$article10 = Article::where(&apos;id&apos;, &apos;=&apos;, 6)-&gt;update(</div><div class="line">  [&apos;content&apos;=&gt;&apos;王俊凯昨日发微博致霍金&apos;, &apos;dateline&apos;=&gt;time()]</div><div class="line">);</div></pre></td></tr></table></figure>
+<h4 id="orm-删除数据"><a href="#orm-删除数据" class="headerlink" title="orm 删除数据"></a>orm 删除数据</h4><h5 id="通过模型删除"><a href="#通过模型删除" class="headerlink" title="通过模型删除"></a>通过模型删除</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 通过模型删除</div><div class="line">$article11 = Article::find(6);</div><div class="line">$bool = $article11-&gt;delete();</div><div class="line">var_dump($article11);</div></pre></td></tr></table></figure>
+<h5 id="通过模型指定条件删除"><a href="#通过模型指定条件删除" class="headerlink" title="通过模型指定条件删除"></a>通过模型指定条件删除</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 通过模型指定条件删除</div><div class="line">$num = Article::where(&apos;id&apos;, &apos;&gt;&apos;, 2)-&gt;delete();</div><div class="line">var_dump($num);</div></pre></td></tr></table></figure>
+<h5 id="通过主键删除"><a href="#通过主键删除" class="headerlink" title="通过主键删除"></a>通过主键删除</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 通过主键删除</div><div class="line">$article12 = Article::destory(6);</div><div class="line">var_dump($article12);</div></pre></td></tr></table></figure>
+<h5 id="通过主键删除多条数据"><a href="#通过主键删除多条数据" class="headerlink" title="通过主键删除多条数据"></a>通过主键删除多条数据</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 通过主键删除多条数据</div><div class="line">$article13 = Article::destory([5,6]);</div><div class="line">var_dump($article13);</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="laravel-控制器（2）"><a href="#laravel-控制器（2）" class="headerlink" title="laravel-控制器（2）"></a>laravel-控制器（2）</h3><h4 id="controller-request"><a href="#controller-request" class="headerlink" title="controller-request"></a>controller-request</h4><h5 id="request简介"><a href="#request简介" class="headerlink" title="request简介"></a>request简介</h5><ul>
+<li>Laravel中请求使用的是symfony/http-foundation组件</li>
+<li>请求里面存放了$_GET,$_POST,$_COOKIE,$FILES,$_SERVER等数据</li>
+<li>基础写法<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">use Illuminate\Http\Request;</div><div class="line">public function request1(Request $request)&#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="request-input-取值"><a href="#request-input-取值" class="headerlink" title="request input() 取值"></a>request input() 取值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $request-&gt;input(&apos;name&apos;,&apos;undefined&apos;); // 第二个参数为默认值</div></pre></td></tr></table></figure>
+<h5 id="request-has-判断是否有该值"><a href="#request-has-判断是否有该值" class="headerlink" title="request has() 判断是否有该值"></a>request has() 判断是否有该值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 判断是否有值</div><div class="line">if ($request-&gt;has(&apos;name&apos;)) &#123;</div><div class="line">  echo $request-&gt;input(&apos;name&apos;);</div><div class="line">&#125; else &#123;</div><div class="line">  echo &apos;无该参数&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="request-all-取所有参数"><a href="#request-all-取所有参数" class="headerlink" title="request all()  取所有参数"></a>request all()  取所有参数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// 取所有参数</div><div class="line">$res = $request-&gt;all();</div><div class="line">echo $res;</div></pre></td></tr></table></figure>
+<h5 id="request-method-isMethod-判断请求类型"><a href="#request-method-isMethod-判断请求类型" class="headerlink" title="request method()/isMethod() 判断请求类型"></a>request method()/isMethod() 判断请求类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 2.判断请求类型</div><div class="line">echo $request-&gt;method();</div><div class="line">if ($request-&gt;isMethod(&apos;POST&apos;)) &#123;</div><div class="line">  echo &apos;yes&apos;;</div><div class="line">&#125; else &#123;</div><div class="line">  echo &apos;no&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="request-ajax-判断请求为ajax"><a href="#request-ajax-判断请求为ajax" class="headerlink" title="request ajax() 判断请求为ajax"></a>request ajax() 判断请求为ajax</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$res = $request-&gt;ajax();</div><div class="line">var_dump($res);</div></pre></td></tr></table></figure>
+<h5 id="request-is-url-判断-获取请求路径"><a href="#request-is-url-判断-获取请求路径" class="headerlink" title="request is()/url() 判断/获取请求路径"></a>request is()/url() 判断/获取请求路径</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$res = $request-&gt;is(&apos;student/*&apos;);</div><div class="line">var_dump($res);</div><div class="line">// 获取当前请求路径</div><div class="line">$url = $request-&gt;url();</div></pre></td></tr></table></figure>
+<h4 id="controller-session"><a href="#controller-session" class="headerlink" title="controller-session"></a>controller-session</h4><h4 id="HTTP-request-session"><a href="#HTTP-request-session" class="headerlink" title="HTTP request session()"></a>HTTP request session()</h4><h5 id="put-赋值"><a href="#put-赋值" class="headerlink" title="put()赋值"></a>put()赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$request-&gt;session()-&gt;put(&apos;key1&apos;, &apos;value1&apos;);</div></pre></td></tr></table></figure>
+<h5 id="get-取值"><a href="#get-取值" class="headerlink" title="get()取值"></a>get()取值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $request-&gt;session()-&gt;get(&apos;key1&apos;);</div></pre></td></tr></table></figure>
+<h4 id="session-辅助函数"><a href="#session-辅助函数" class="headerlink" title="session 辅助函数"></a>session 辅助函数</h4><h5 id="session-gt-put-赋值"><a href="#session-gt-put-赋值" class="headerlink" title="session()-&gt;put()赋值"></a>session()-&gt;put()赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">session()-&gt;put(&apos;key2&apos;, &apos;value2&apos;);</div></pre></td></tr></table></figure>
+<h5 id="session-get-取值"><a href="#session-get-取值" class="headerlink" title="session()-get()取值"></a>session()-get()取值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo session()-&gt;get(&apos;key2&apos;);</div></pre></td></tr></table></figure>
+<h4 id="Session-静态方法"><a href="#Session-静态方法" class="headerlink" title="Session 静态方法"></a>Session 静态方法</h4><h5 id="put-赋值-1"><a href="#put-赋值-1" class="headerlink" title="put()赋值"></a>put()赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 3. Session 静态方法</div><div class="line">Session::put(&apos;key3&apos;, &apos;value3&apos;);</div><div class="line">// session存入数组值</div><div class="line">Session::put([&apos;key4&apos; =&gt; &apos;value4&apos;, &apos;key5&apos; =&gt; &apos;value5&apos;]);</div></pre></td></tr></table></figure>
+<h5 id="get-取值-1"><a href="#get-取值-1" class="headerlink" title="get()取值"></a>get()取值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo Session::get(&apos;key4&apos;, &apos;default&apos;); // 第二个参数为默认值</div></pre></td></tr></table></figure>
+<h5 id="push-存入数组"><a href="#push-存入数组" class="headerlink" title="push() 存入数组"></a>push() 存入数组</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 把数据放到Session数组中</div><div class="line">Session::push(&apos;student&apos;, &apos;sean&apos;);</div><div class="line">Session::push(&apos;student&apos;, &apos;imooc&apos;);</div><div class="line">$res = Session::get(&apos;student&apos;);</div><div class="line">var_dump($res);</div></pre></td></tr></table></figure>
+<h5 id="pull-取值后并删除session中的该值"><a href="#pull-取值后并删除session中的该值" class="headerlink" title="pull() 取值后并删除session中的该值"></a>pull() 取值后并删除session中的该值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// pull() 从session中取出数据，取完则删除</div><div class="line">$res2 = Session::pull(&apos;student&apos;, &apos;default&apos;);</div><div class="line">var_dump($res2);</div></pre></td></tr></table></figure>
+<h5 id="all-取出所有值"><a href="#all-取出所有值" class="headerlink" title="all() 取出所有值"></a>all() 取出所有值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$res = Session::all();</div><div class="line">dd($res);</div></pre></td></tr></table></figure>
+<h5 id="has-判断某个值是否存在"><a href="#has-判断某个值是否存在" class="headerlink" title="has()  判断某个值是否存在"></a>has()  判断某个值是否存在</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if (Session::has(&apos;key11&apos;)) &#123;</div><div class="line">  $res = Session::all();</div><div class="line">  dd($res);</div><div class="line">&#125; else &#123;</div><div class="line">  echo &apos;key11不存在&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="flash-暂存数据，只能访问-获得一次"><a href="#flash-暂存数据，只能访问-获得一次" class="headerlink" title="flash() 暂存数据，只能访问/获得一次"></a>flash() 暂存数据，只能访问/获得一次</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Session::flash(&apos;flashkey&apos;, &apos;flash-value&apos;);</div></pre></td></tr></table></figure>
+<h5 id="forget-删除某个值"><a href="#forget-删除某个值" class="headerlink" title="forget() 删除某个值"></a>forget() 删除某个值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Session::forget(&apos;key1&apos;);</div><div class="line">$bool = Session::has(&apos;key1&apos;);</div><div class="line">var_dump($bool);</div></pre></td></tr></table></figure>
+<h5 id="flush-删除所有值"><a href="#flush-删除所有值" class="headerlink" title="flush() 删除所有值"></a>flush() 删除所有值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Session::flush();</div></pre></td></tr></table></figure>
+<h4 id="controller-middleware"><a href="#controller-middleware" class="headerlink" title="controller-middleware"></a>controller-middleware</h4><h5 id="中间件的作用"><a href="#中间件的作用" class="headerlink" title="中间件的作用"></a>中间件的作用</h5><p>Laravel中间件提供一个方便的机制来过滤进入应用程序的HTTP请求</p>
+<h5 id="新建中间件"><a href="#新建中间件" class="headerlink" title="新建中间件"></a>新建中间件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">// Activity.php</div><div class="line">namespace App\Http\Middleware;</div><div class="line">use Closure;</div><div class="line"></div><div class="line">class Activity</div><div class="line">&#123;</div><div class="line">  // 活动页面的中间件</div><div class="line">  public function handle($request, Closure $next)</div><div class="line">  &#123;</div><div class="line">    // 前置操作</div><div class="line">    if (time() &lt; strtotime(&apos;2018-03-20&apos;)) &#123;</div><div class="line">      return redirect(&apos;activity0&apos;);</div><div class="line">    &#125;</div><div class="line">    return $next($request);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="在路由中使用中间件"><a href="#在路由中使用中间件" class="headerlink" title="在路由中使用中间件"></a>在路由中使用中间件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// routes.php</div><div class="line">// 中间件讲解路由</div><div class="line">// 使用Activity中间件</div><div class="line">Route::any(&apos;activity0&apos;, [&apos;uses&apos; =&gt; &apos;StudentController@activity0&apos;]);</div><div class="line">Route::group([&apos;middleware&apos; =&gt; [&apos;activity&apos;]], function() &#123; // 这里使用中间件activity拦截路由</div><div class="line">  Route::any(&apos;activity1&apos;, [&apos;uses&apos; =&gt; &apos;StudentController@activity1&apos;]);</div><div class="line">  Route::any(&apos;activity2&apos;, [&apos;uses&apos; =&gt; &apos;StudentController@activity2&apos;]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h5 id="注册中间件"><a href="#注册中间件" class="headerlink" title="注册中间件"></a>注册中间件</h5><p>**在kernel.php 文件中配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">protected $routeMiddleware = [</div><div class="line">    // 注册刚刚写的中间件</div><div class="line">    &apos;activity&apos; =&gt; \App\Http\Middleware\Activity::class,      </div><div class="line">];</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="laravel-表单验证"><a href="#laravel-表单验证" class="headerlink" title="laravel 表单验证"></a>laravel 表单验证</h3><h4 id="控制器验证"><a href="#控制器验证" class="headerlink" title="控制器验证"></a>控制器验证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$this-&gt;validate($request, [</div><div class="line">    &apos;Student.name&apos; =&gt; &apos;required|min:2|max:8&apos;,</div><div class="line">    &apos;Student.age&apos; =&gt; &apos;required|integer&apos;,</div><div class="line">    &apos;Student.sex&apos; =&gt; &apos;required|integer&apos;</div><div class="line">], [</div><div class="line">    &apos;required&apos; =&gt; &apos;:attribute 为必填项&apos;,</div><div class="line">    &apos;min&apos; =&gt; &apos;:attribute 长度不符合要求&apos;,</div><div class="line">    &apos;integer&apos; =&gt; &apos;:attribute 必须为整数&apos;</div><div class="line">], [</div><div class="line">    &apos;Student.name&apos; =&gt; &apos;姓名&apos;,</div><div class="line">    &apos;Student.age&apos; =&gt; &apos;年龄&apos;,</div><div class="line">    &apos;Student.sex&apos; =&gt; &apos;性别&apos;</div><div class="line">]);</div></pre></td></tr></table></figure>
+<h4 id="Validator类验证"><a href="#Validator类验证" class="headerlink" title="Validator类验证"></a>Validator类验证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$validator = \Validator::make($request-&gt;input(), [</div><div class="line">    &apos;Student.name&apos; =&gt; &apos;required|min:2|max:8&apos;,</div><div class="line">    &apos;Student.age&apos; =&gt; &apos;required|integer&apos;,</div><div class="line">    &apos;Student.sex&apos; =&gt; &apos;required|integer&apos;</div><div class="line">], [</div><div class="line">    &apos;required&apos; =&gt; &apos;:attribute 为必填项&apos;,</div><div class="line">    &apos;min&apos; =&gt; &apos;:attribute 长度不符合要求&apos;,</div><div class="line">    &apos;integer&apos; =&gt; &apos;:attribute 必须为整数&apos;</div><div class="line">], [</div><div class="line">    &apos;Student.name&apos; =&gt; &apos;姓名&apos;,</div><div class="line">    &apos;Student.age&apos; =&gt; &apos;年龄&apos;,</div><div class="line">    &apos;Student.sex&apos; =&gt; &apos;性别&apos;</div><div class="line">]);</div><div class="line">if ($validator-&gt;fails()) &#123;</div><div class="line">    return redirect()-&gt;back()-&gt;withErrors($validator);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/03/18/Laravel进阶笔记/" style="float: left;">
+        ← Laravel进阶笔记
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/03/14/php进阶笔记二/">
+        php进阶笔记二 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+                <div class="coding">
+                    <img src="https://dn-coding-net-production-static.qbox.me/static/ca94f7abde90327b683f1eb5f01a81b7.svg" height="40">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

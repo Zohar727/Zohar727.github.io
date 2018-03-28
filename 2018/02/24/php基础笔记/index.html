@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>php基础笔记 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/HTTP/" class="animsition-link">HTTP<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/Laravel/" class="animsition-link">Laravel<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/MySql/" class="animsition-link">MySql<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/PHP/" class="animsition-link">PHP<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/其他/" class="animsition-link">其他<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/求职/" class="animsition-link">求职<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/生活/" class="animsition-link">生活<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://blog.jeongen.com/" class="animsition-link">jeongen</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-02-24T11:46:10.000Z" itemprop="datePublished">
+          2018-02-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/PHP/'>PHP</a>,
+    
+    <a href='/tags/后端开发/'>后端开发</a>
+    
+    
+</span>
+                <h1>php基础笔记</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="php变量规范"><a href="#php变量规范" class="headerlink" title="php变量规范"></a>php变量规范</h3><ul>
+<li>字母或_开头</li>
+<li>变量名只能由<code>字母</code>，<code>数字</code>，<code>下划线</code>组成</li>
+<li>区分大小写</li>
+<li>变量名不能有<strong>空格</strong></li>
+</ul>
+<h3 id="php变量数据类型"><a href="#php变量数据类型" class="headerlink" title="php变量数据类型"></a>php变量数据类型</h3><p>在PHP中，支持8种原始类型，其中包括四种标量类型、两种复合类型和两种特殊类型。</p>
+<h4 id="四种标量类型"><a href="#四种标量类型" class="headerlink" title="四种标量类型"></a>四种标量类型</h4><ol>
+<li>布尔类型（boolean）<blockquote>
+<p>只有<code>ture</code>和<code>false</code>两种值，echo 输出时<code>ture</code>为<code>1</code>，<code>false</code>不输出值</p>
+</blockquote>
+</li>
+<li>整型（integer）</li>
+<li><p>浮点型（浮点数、双精度数或实数）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$num_float = 1.234;    //小数点  </div><div class="line">$num_float = 1.2e3;    //科学计数法，小写e  </div><div class="line">$num_float = 7.0E-10;     //科学计数法，大写E  </div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串</p>
+<blockquote>
+<p>字符串型可以用三种方法定义：单引号形式、双引号形式和Heredoc结构形式。<strong>字符串中包含变量时，需要使用双引号定义</strong></p>
+<h5 id="Heredoc结构形式定义"><a href="#Heredoc结构形式定义" class="headerlink" title="Heredoc结构形式定义"></a>Heredoc结构形式定义</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$str = &lt;&lt;&lt;GOD   </div><div class="line">&apos;要定义的长串字符&apos; </div><div class="line">GOD</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<h4 id="两种特殊类型"><a href="#两种特殊类型" class="headerlink" title="两种特殊类型"></a>两种特殊类型</h4><ol>
+<li>资源（resource）<blockquote>
+<p>由专门的函数建立使用，例如打开文件，连数据库，图形画布等。可以对资源进行创建、使用和释放。资源不用时要及时释放，否则系统也会启动垃圾回收机制</p>
+</blockquote>
+</li>
+<li>空类型（NULL）<blockquote>
+<p>NULL类型只有一个取值，表示一个变量没有值，当被赋值为NULL，或者尚未被赋值，或者被unset()，这三种情况下变量被认为为NULL。</p>
+<h4 id="两种复合类型"><a href="#两种复合类型" class="headerlink" title="两种复合类型"></a>两种复合类型</h4></blockquote>
+</li>
+<li><p>自定义常量</p>
+<ul>
+<li>常量，即值预先定义好，不可改变</li>
+<li><p>定义方法：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">define($string contant_name, mixed $value[, $case_sensitive = true])</div></pre></td></tr></table></figure>
+<p>  参数解释：  </p>
+<pre><code>contant_name: 常量名，必选  
+value: 常量值，必选  
+case_sensitive: 大小写敏感，可选，默认false 
+</code></pre></li>
+<li>取值方法：<br>  直接使用常量名；使用constant()函数，<code>mixed constant(string constant_name)</code></li>
+<li><p>判断常量名是否已经定义：  </p>
+  <figure class="highlight plain"><figcaption><span>define($string contant_name)```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">        返回值为ture或false</div><div class="line">2. 系统常量 &lt;br/&gt;</div><div class="line">    常见系统常量：</div><div class="line">    - `__FILE__`:php程序文件名。它可以帮助我们获取当前文件在服务器的物理位置。</div><div class="line"></div><div class="line">    - `__LINE__`:PHP程序文件行数。它可以告诉我们，当前代码在第几行。</div><div class="line">    </div><div class="line">    - `PHP_VERSION`:当前解析器的版本号。它可以告诉我们当前PHP解析器的版本号，我们可以提前知道我们的PHP代码是否可被该PHP解析器解析。</div><div class="line">    </div><div class="line">    - `PHP_OS`：执行当前PHP版本的操作系统名称。它可以告诉我们服务器所用的操作系统名称，我们可以根据该操作系统优化我们的代码。</div><div class="line">    </div><div class="line">***</div><div class="line">### PHP运算符</div><div class="line">#### 算术运算符</div><div class="line">![img](http://img.mukewang.com/5333bfdb0001a27a05300240.jpg)</div><div class="line"></div><div class="line">#### 赋值运算符</div><div class="line">- `=`：传值</div><div class="line">- `&amp;`：传地址</div><div class="line"></div><div class="line">#### 比较运算符</div><div class="line">![](http://img.mukewang.com/533a0af30001e75c06600409.jpg)</div><div class="line"></div><div class="line">#### 三元运算符</div><div class="line">`(“?:”)`三元运算符也是一个比较运算符，对于表达式`(expr1)?(expr2):(expr3)`，如果expr1的值为true，则此表达式的值为expr2，否则为expr3</div><div class="line"></div><div class="line">#### 逻辑运算符</div><div class="line">![](http://img.mukewang.com/533e0fbe0001c56f06080279.jpg)</div><div class="line"></div><div class="line">#### 字符串连接运算符</div><div class="line">- `.` : 字符串连接</div><div class="line">- `.=` : 字符串连接并赋值</div><div class="line"></div><div class="line">#### 错误控制运算符@</div><div class="line">PHP中提供了一个错误控制运算符“@”，对于一些可能会在运行过程中出错的表达式时，我们不希望出错的时候给客户显示错误信息，这样对用户不友好。于是，可以将@放置在一个PHP表达式之前，该表达式可能产生的任何错误信息都被忽略掉；</div><div class="line"></div><div class="line">如果激活了track_error（这个玩意在php.ini中设置）特性，表达式所产生的任何错误信息都被存放在变量$php_errormsg中，此变量在每次出错时都会被覆盖，所以如果想用它的话必须尽早检查。</div><div class="line"></div><div class="line">需要注意的是：错误控制前缀“@”不会屏蔽解析错误的信息，不能把它放在函数或类的定义之前，也不能用于条件结构例如if和foreach等。</div><div class="line"></div><div class="line">***</div><div class="line">### PHP语言结构语句</div><div class="line">- 顺序结构</div><div class="line">- if...else</div><div class="line">- if...else if...else</div><div class="line">- switch...case...default</div><div class="line">- while</div><div class="line">- do...while</div><div class="line">- for(...;...;...)</div><div class="line">- foreach  </div><div class="line">    `foreach`一般用于遍历数组，语法格式有两种：</div></pre></td></tr></table></figure>
+<p>foreach(array as value) // 只取值不取下标<br>foreach(array as index =&gt; value) // 同时取值和下标<br>```</p>
+</li>
+</ul>
+</li>
+</ol>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/03/12/php进阶笔记一/" style="float: left;">
+        ← php进阶笔记一
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/12/13/20171213/">
+        HTTP首部字段详解 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+                <div class="coding">
+                    <img src="https://dn-coding-net-production-static.qbox.me/static/ca94f7abde90327b683f1eb5f01a81b7.svg" height="40">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

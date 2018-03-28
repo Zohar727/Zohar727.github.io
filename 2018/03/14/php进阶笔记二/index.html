@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>php进阶笔记二 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/HTTP/" class="animsition-link">HTTP<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/Laravel/" class="animsition-link">Laravel<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/MySql/" class="animsition-link">MySql<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/PHP/" class="animsition-link">PHP<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/其他/" class="animsition-link">其他<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/求职/" class="animsition-link">求职<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/生活/" class="animsition-link">生活<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://blog.jeongen.com/" class="animsition-link">jeongen</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-03-14T08:48:29.000Z" itemprop="datePublished">
+          2018-03-14
+      </time>
+    
+    
+    | 
+    <a href='/tags/PHP/'>PHP</a>,
+    
+    <a href='/tags/后端开发/'>后端开发</a>
+    
+    
+</span>
+                <h1>php进阶笔记二</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="PHP字符串"><a href="#PHP字符串" class="headerlink" title="PHP字符串"></a>PHP字符串</h3><h4 id="字符串定界符"><a href="#字符串定界符" class="headerlink" title="字符串定界符"></a>字符串定界符</h4><ul>
+<li>单引号</li>
+<li>双引号<blockquote>
+<p>双引号解析变量，单引号不解析变量(执行效率高)</p>
+</blockquote>
+</li>
+<li><p>heredoc写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 相当于双引号的作用</div><div class="line">$str = &lt;&lt;&lt;EOF</div><div class="line">// content</div><div class="line">EOF;</div></pre></td></tr></table></figure>
+</li>
+<li><p>nowdoc写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 相当于单引号的作用，不解析变量</div><div class="line">$str = &lt;&lt;&lt;&apos;EOF&apos;</div><div class="line">// content</div><div class="line">EOF;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="花括号的作用"><a href="#花括号的作用" class="headerlink" title="花括号的作用"></a>花括号的作用</h4><blockquote>
+<p>用法一：用于包裹变量整体</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$name = &apos;zohar&apos;;</div><div class="line">echo &apos;my name is &#123;$name&#125;s&apos;;//my name is zohars;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>用法二：对字符串的字符作增删改查的操作</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$str = &apos;abcdef&apos;;</div><div class="line">echo $str&#123;0&#125;; // a</div><div class="line">// 只能用一个字符修改一个字符</div><div class="line">$str&#123;0&#125; = &apos;z&apos;;</div><div class="line">echo $str&#123;0&#125;; // z</div><div class="line">// 删除</div><div class="line">$str&#123;1&#125; = &apos;&apos;;</div><div class="line">echo $str; // zcdef;</div><div class="line">// 添加</div><div class="line">$str&#123;6&#125;= &apos;g&apos;;</div><div class="line">echo $str; // zbcdefg</div></pre></td></tr></table></figure>
+<h4 id="字符串类型转换"><a href="#字符串类型转换" class="headerlink" title="字符串类型转换"></a>字符串类型转换</h4><h5 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h5><ul>
+<li>数值转字符串<br>数值型 -&gt; 数值本身</li>
+<li><p>布尔型转字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ture -&gt; 1</div><div class="line">false -&gt; 空字符串</div></pre></td></tr></table></figure>
+</li>
+<li><p>null转字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">null -&gt; 空字符串</div></pre></td></tr></table></figure>
+</li>
+<li><p>数组转字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">数组 -&gt; Array</div></pre></td></tr></table></figure>
+</li>
+<li><p>资源转字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">资源 -&gt; Resource id #数字</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象不能直接转字符串</p>
+</li>
+</ul>
+<h5 id="临时转换"><a href="#临时转换" class="headerlink" title="临时转换"></a>临时转换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(string) strval()</div><div class="line">$var = 23.3;</div><div class="line">$res = (string)$var; // 不会改变变量本身的类型</div><div class="line">var_dump($res,$var); // string(4) &quot;23.3&quot; float(23.3)</div></pre></td></tr></table></figure>
+<h5 id="永久转换"><a href="#永久转换" class="headerlink" title="永久转换"></a>永久转换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 设置变量类型</div><div class="line">settpe()</div><div class="line"></div><div class="line">$var = 12;</div><div class="line">settype($var, &apos;string&apos;);</div><div class="line">var_dump($var); //  string(2) &quot;12&quot;</div></pre></td></tr></table></figure>
+<h5 id="字符串转换为其他类型"><a href="#字符串转换为其他类型" class="headerlink" title="字符串转换为其他类型"></a>字符串转换为其他类型</h5><ul>
+<li><p>取合法数字，如果不是合法数字开始，转化为0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">echo 1+&apos;3zohar&apos;; //4</div><div class="line">echo 1.2+&apos;4zohar&apos;; // 5.2</div><div class="line">echo 3 + &apos;2e2&apos;; // 203</div><div class="line">echo 2+ &apos;true&apos; // 0</div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串转布尔类型规律：空字符串或者字符串是’0’, “0.0”,null，array() -&gt; false，其他-&gt;true</p>
+</li>
+</ul>
+<h4 id="常用字符串函数"><a href="#常用字符串函数" class="headerlink" title="常用字符串函数"></a>常用字符串函数</h4><ul>
+<li><p>检测变量是否为字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">is_string()</div></pre></td></tr></table></figure>
+</li>
+<li><p>得到字符串长度</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">strlen($str)</div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串转大小写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">strtolower()</div><div class="line">strtoupper()</div></pre></td></tr></table></figure>
+</li>
+<li><p>ASCLL码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ord($str) // 返回字符的ASCLL码</div><div class="line">chr($int) // 返回ASCLL码对应的字符</div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串截取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 后两个参数为负数时代表位置</div><div class="line">substr($str, $start , $length)</div></pre></td></tr></table></figure>
+</li>
+<li><p>比较字符串大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">strcmp($str1,$str2) // 区分大小写</div><div class="line">strcasecamp($str1,$str2) // 不区分大小写</div><div class="line">// str1&lt;str2 返回&lt;0</div><div class="line">// str1&gt;str2 返回&gt;0</div><div class="line">// str1=str2 返回0</div></pre></td></tr></table></figure>
+</li>
+<li><p>查找字符串出现的位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">strpos($str,$search,$offset) // 区分大小写</div><div class="line">stripos($str,$search,$offset)// 忽略大小写</div><div class="line">// 返回字符串首次出现的位置</div><div class="line">strrops($str,$search,$offset)</div><div class="line">strripos($str,$search,$offset)</div><div class="line">// 返回字符串最后一次出现的位置</div></pre></td></tr></table></figure>
+</li>
+<li><p>过滤字符串中的html标记</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">strip_tags($str[,$allowTags]);</div></pre></td></tr></table></figure>
+</li>
+<li><p>过滤字符串空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ltrim() // 左端空格</div><div class="line">rtrim() // 右端空格</div><div class="line">trim() // 两端空格</div></pre></td></tr></table></figure>
+</li>
+<li><p>数组转字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">join($glue,$array) // $glue指定的分隔符</div><div class="line">impload($glue, $array)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="PHP函数"><a href="#PHP函数" class="headerlink" title="PHP函数"></a>PHP函数</h3><h4 id="函数参数的要求"><a href="#函数参数的要求" class="headerlink" title="函数参数的要求"></a>函数参数的要求</h4><ul>
+<li>以逗号为分隔符，从左向右求职</li>
+<li>可以带有零个或多个参数</li>
+<li>可以为任意数据类型</li>
+<li>参数分为必选和可选参数(可选参数会设置默认值 <code>$param = &#39;defalut&#39;</code>)</li>
+</ul>
+<h4 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h4><h5 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h5><p><strong>定义：</strong> 函数体内声明的变量为局部变量</p>
+<ul>
+<li>动态变量<br>函数执行完毕之后立即释放</li>
+<li>静态变量<br>static关键字声明的变量为静态变量，当函数执行完毕之后静态变量不会释放，而是保存在静态内存中，当再次调用函数的时候首先从静态内存中取出变量的值接着执行。</li>
+</ul>
+<h5 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h5><p><strong>定义：</strong> 在函数外声明或在函数内使用<code>global</code>关键字修饰的变量为全局变量<br><strong>如何在函数体内使用全局变量：</strong> </p>
+<ul>
+<li>通过<code>global</code>关键字</li>
+<li>通过<code>$GBLOBALS</code>超全局变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$i=1;</div><div class="line">$j=2;</div><div class="line">function test1()&#123;</div><div class="line">    global $i;</div><div class="line">    global $j; // 通过global使用</div><div class="line">    $j = 10; // 修改值</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 通过$GBLOBALS超全局变量</div><div class="line">$username = &apos;zohar&apos;;</div><div class="line">$age = 10;</div><div class="line">$email = &apos;asd@qq.com&apos;;</div><div class="line">function test2()&#123;</div><div class="line">    echo &apos;用户名为:&apos;.$GLOBALS[&apos;username&apos;];</div><div class="line">    $GLOBALS[&apos;age&apos;] = 20; // 修改值</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="函数传值与引用的区别"><a href="#函数传值与引用的区别" class="headerlink" title="函数传值与引用的区别"></a>函数传值与引用的区别</h4><ul>
+<li><p>传值</p>
+<blockquote>
+<p>默认情况下，函数通过值传递，即使在函数内部改变参数的值也不会改变函数外部的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function test($m)&#123;</div><div class="line">  $m+=10;</div><div class="line">  return $m;</div><div class="line">&#125;</div><div class="line">$m = 2;</div><div class="line">echo test($m); // 12</div><div class="line">echo &apos;&lt;/br&gt;&apos;;</div><div class="line">echo $m; // 2</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>传引用</p>
+<blockquote>
+<p>在参数前添加<code>&amp;</code>符号，即通过引用（传递参数地址）传递参数，在函数内部对其所操作影响变量本身</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function test2(&amp;$n)&#123;</div><div class="line">  $n+=10;</div><div class="line">  return $n;</div><div class="line">&#125;</div><div class="line">$n = 2;</div><div class="line">echo test2($n); // 12</div><div class="line">echo &apos;&lt;/br&gt;&apos;;</div><div class="line">echo $n; // 12</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="特殊形式的函数"><a href="#特殊形式的函数" class="headerlink" title="特殊形式的函数"></a>特殊形式的函数</h4><h5 id="可变函数"><a href="#可变函数" class="headerlink" title="可变函数"></a>可变函数</h5><p>相当于等量代换，将函数名称赋给字符串变量，在使用该变量是，如果带小括号，则会解析函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$funcName = &apos;md5&apos;;</div><div class="line">echo $funcName(&apos;zohar&apos;); //md5(&apos;zohar&apos;)</div><div class="line">// get_defined_functions  得到所有内置函数</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>可变函数不能用于像echo,print,unset类似的语言结构</p>
+</blockquote>
+<h5 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h5><ul>
+<li>定义：<br>回调函数就是调用函数的时候将另外一个函数的名称作为参数传递进去，并在函数体中调用</li>
+<li>如何调用：  <ol>
+<li>通过可变函数的形式调用；  </li>
+<li>通过<code>call_user_func()</code>和<code>call_user_func_array()</code>调用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function study($username)&#123;</div><div class="line">  echo $username.&apos; is study..&lt;/br&gt;&apos;;</div><div class="line">&#125;</div><div class="line">function eat($username)&#123;</div><div class="line">  echo $username.&apos; is eat..&lt;/nr&gt;&apos;;</div><div class="line">&#125;</div><div class="line">// 可变函数形式</div><div class="line">function doWhat($funcName,$param)&#123;</div><div class="line">  $funcName($param);</div><div class="line">&#125;</div><div class="line">doWhat(&apos;study&apos;, &apos;zohar&apos;); // zohar is study..</div><div class="line">// call_user_func形式</div><div class="line">call_user_func(&apos;study&apos;,&apos;zohar&apos;); // zohar is study..</div><div class="line">call_user_func_array(&apos;study&apos;, array(&apos;king&apos;)); // king is study..</div><div class="line">echo call_user_func(&apos;md5&apos;, &apos;zohar&apos;); // 5c1a2ff12e5e462fddfb05b09d94ae96</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h5><ul>
+<li>定义：<br>也叫<strong>闭包</strong>函数，允许临时创建一个没有指定名称的函数，常用作回调函数的参数值，也可做变量的值来使用</li>
+<li>创建方式：<ol>
+<li>function(){}</li>
+<li>create_function()<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// 匿名函数的形式</div><div class="line">$func = function()&#123;</div><div class="line">  return &apos;this is a clouse&apos;;</div><div class="line">&#125;;</div><div class="line">echo $func(); // this is a clouse</div><div class="line">$func = create_function(&apos;&apos;, &apos;echo &quot;this is a test&quot;;&apos;);</div><div class="line">echo $func(); // this is a test</div><div class="line">// 匿名函数在当做回调使用</div><div class="line">call_user_func(function($username)&#123;echo &quot;hello &#123;$username&#125;&quot;;&#125;, &apos;zohar&apos;); // hello zohar</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h5><p>函数体自己调用自己<br><strong>用处：</strong></p>
+<ul>
+<li>实现目录的遍历，复制，删除非空目录</li>
+<li>无限极分类</li>
+</ul>
+<hr>
+<h3 id="PHP日期时间函数"><a href="#PHP日期时间函数" class="headerlink" title="PHP日期时间函数"></a>PHP日期时间函数</h3><h4 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h4><ul>
+<li><p>通过php配置文件<code>date.timezone</code>设置时区</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">date.timezone = PRC</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>date_default_timezone_set()</code>设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">date_default_timezone_set(&apos;Asia/Shanghai&apos;);</div><div class="line">date_default_timezone_get(); // Asia/Shanghai</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>ini_set</code> 脚本运行时配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ini_set(&apos;date.timezone&apos;, &apos;Asia/Shanghai&apos;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="格式化本地时间"><a href="#格式化本地时间" class="headerlink" title="格式化本地时间"></a>格式化本地时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">date(format[, timestamp]) // 格式，时间戳</div></pre></td></tr></table></figure>
+<p><img src="https://img1.sycdn.imooc.com/5aa615fe00018b7e12800800.jpg" alt="常用参数"></p>
+<h4 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h4><ul>
+<li><p>获取时间戳</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">time()</div></pre></td></tr></table></figure>
+</li>
+<li><p>日期转时间戳</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mktime(h,i,s,n,j,Y)</div><div class="line">mktime(0,0,0,8,3,2018);</div></pre></td></tr></table></figure>
+</li>
+<li><p>时间戳转日期</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">date(&apos;Y-m-d H:i:s&apos;, timestamp)</div></pre></td></tr></table></figure>
+</li>
+<li><p>英文文本日期转时间戳</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">strtotime()</div><div class="line">echo strtotime(&apos;now&apos;) // 显示当前时间戳</div><div class="line">echo strtotime(&apos;next monday&apos;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="微秒的使用"><a href="#微秒的使用" class="headerlink" title="微秒的使用"></a>微秒的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// 返回值：程序执行时间，当前时间戳</div><div class="line">microtime() // 0.08223700 1520835438</div></pre></td></tr></table></figure>
+<h4 id="其他常用日期函数"><a href="#其他常用日期函数" class="headerlink" title="其他常用日期函数"></a>其他常用日期函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 返回时间数组</div><div class="line">print_r(getdate());</div><div class="line">// 验证日期合法</div><div class="line">var_dump(checkdate(29,2,2018)); // bool(false)</div></pre></td></tr></table></figure>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/03/17/Laravel基础笔记/" style="float: left;">
+        ← Laravel基础笔记
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/03/12/php进阶笔记一/">
+        php进阶笔记一 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+                <div class="coding">
+                    <img src="https://dn-coding-net-production-static.qbox.me/static/ca94f7abde90327b683f1eb5f01a81b7.svg" height="40">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

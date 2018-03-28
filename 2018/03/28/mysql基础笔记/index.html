@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>mysql基础笔记 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/HTTP/" class="animsition-link">HTTP<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/Laravel/" class="animsition-link">Laravel<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/MySql/" class="animsition-link">MySql<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/PHP/" class="animsition-link">PHP<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/其他/" class="animsition-link">其他<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/求职/" class="animsition-link">求职<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/生活/" class="animsition-link">生活<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://blog.jeongen.com/" class="animsition-link">jeongen</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-03-28T08:47:23.000Z" itemprop="datePublished">
+          2018-03-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/后端开发/'>后端开发</a>,
+    
+    <a href='/tags/MySql/'>MySql</a>
+    
+    
+</span>
+                <h1>mysql基础笔记</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="mysql目录结构"><a href="#mysql目录结构" class="headerlink" title="mysql目录结构"></a>mysql目录结构</h3><ul>
+<li><code>bin</code>：存储可执行文件</li>
+<li><code>data</code>：存储数据文件</li>
+<li><code>docs</code>：文档</li>
+<li><code>include</code>：存储包含的头文件</li>
+<li><code>lib</code>：存储库文件</li>
+<li><code>share</code>：错误消息和字符集文件</li>
+</ul>
+<h3 id="mysql相关配置"><a href="#mysql相关配置" class="headerlink" title="mysql相关配置"></a>mysql相关配置</h3><ul>
+<li>修改编码方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">default-character-set=utf-8</div><div class="line">default-set-server = utf-8</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="mysql相关指令"><a href="#mysql相关指令" class="headerlink" title="mysql相关指令"></a>mysql相关指令</h3><ul>
+<li><p>启动mysql服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net start mysql</div></pre></td></tr></table></figure>
+</li>
+<li><p>mysql 登录参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -D -h -P -p -u -v --prompt</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="https://img.mukewang.com/5a94c6830001911d12800720.jpg" alt="img"></p>
+<ul>
+<li><p>mysql退出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mysql &gt; exit;</div><div class="line">mysql &gt; quit;</div><div class="line">mysql &gt; \q;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改mysql提示符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">prompt 提示符</div><div class="line">/*提示符参数*/</div><div class="line">-D // 完整日期</div><div class="line">-d // 当前数据库</div><div class="line">-u // 当前用户</div><div class="line">-h //当前服务器</div></pre></td></tr></table></figure>
+</li>
+<li><p>常用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT VERSION() //显示服务器版本</div><div class="line">SELECT NOW()   // 显示当前时间</div><div class="line">SELECT USER()  // 显示当前用户</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="mysql指令"><a href="#mysql指令" class="headerlink" title="mysql指令"></a>mysql指令</h3><h4 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h4><ul>
+<li><p>创建数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CREATE DATABASE &#123;IF NOT EXISTS&#125; db_name [DEFAULT] CHARACTER SET &#123;=&#125; charset_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看数据库列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW DATABASES</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER DATABASE [db_name] [DEFAULT] CHARACTER SET &#123;=&#125; charset_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DROP DATABASE &#123;IF EXIST&#125; db_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>打开数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">USE db_name</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="数据表操作"><a href="#数据表操作" class="headerlink" title="数据表操作"></a>数据表操作</h4><ul>
+<li><p>查看数据表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW TABLES [FROM db_name]</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看数据表结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW COLUMNS FROM tb_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建数据表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE [IF NOT EXISTS] table_name (</div><div class="line">    column_name date_type,</div><div class="line">    ...</div><div class="line">)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>创建数据表的几个参数可选项  </p>
+<pre><code>- 主键 : PRIMARY KEY  
+- 空值 : NULL /  NOT NULL  
+- 自动编号 : AUTO_INCREMENT  
+</code></pre></blockquote>
+<ul>
+<li><p>插入记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 方式一</div><div class="line">INSERT [INTO] tb_name [(col_name)] VALUES(val,...)</div><div class="line">// 方式二,与前者区别在于此方法可以使用子查询</div><div class="line">INSERT [INTO] tb_name SET col_name=&#123;expr | DEFAULT&#125;,...</div><div class="line">// 方式三，此方式可以将查询结果插入到指定数据表</div><div class="line">INSERT [INTO] tb_name [(col_name,...)] SELECT...</div></pre></td></tr></table></figure>
+</li>
+<li><p>查找记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELECT expr.. FROM tb_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>单表更新记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UPDATE table_name SET col_name1=&#123;expr1|DEFAULT&#125;... &#123;WHERE where_condition&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>单表删除记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DELETE FROM tb_name [WHERE where_condition]</div></pre></td></tr></table></figure>
+</li>
+<li><p>编辑数据表的默认存储引擎</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">default-storage-engine=INNODB //在配置文件中</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-添加单列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name ADD [COLUMN] col_name column_definition [FIRST|AFTER col_name]</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-删除列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name DROP [COLUMN] col_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-添加主键约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name ADD [CONSTRAINT [symbol]] PRIMARY KEY [index_type] (index_col_name,...)</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-添加外键约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name [CONSTRAINT [symbol]] FOREIGN KEY [index_name] (index_col_name,...) reference_definition</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-添加/删除默认约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name ALTER [COLUMN] col_name &#123;SET DEFAULT literal | DROP DEFAULT&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-删除主键约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name DROP PRIMARY KEY</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-删除外键约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name DROP FOREIGN KEY fk_symbol</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-删除唯一约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name DROP &#123;INDEX|KEY&#125; index_name</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-列定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name MODIFY [COLUMN] col_name column_definition &#123;FIRST|AFTER col_name&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据表-列名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name CHANGE [COLUMN] old_col_name new_col_name column_definition &#123;FIRST|AFTER col_name&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>数据表更名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name RENAME [TO | AS] new_tb_name;</div><div class="line">ALTER TABLE tb_name TO new_tb_name</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="数据表查找操作"><a href="#数据表查找操作" class="headerlink" title="数据表查找操作"></a>数据表查找操作</h4><p><img src="https://img.mukewang.com/5a9d5d0f0001605512800720.jpg" alt="img"></p>
+<ul>
+<li>查询表达式书写规范<br><img src="https://img.mukewang.com/5a9d5d4c00014f4512800720.jpg" alt="img"></li>
+<li><p>WHERE 条件查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WHERE where_condition]</div></pre></td></tr></table></figure>
+</li>
+<li><p>GROUP BY 查询结果分组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[GROUP BY &#123;col_name | position&#125; [ASC | DESC]]</div></pre></td></tr></table></figure>
+</li>
+<li><p>HAVING 设置分组条件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[HAVING where_condition]</div></pre></td></tr></table></figure>
+</li>
+<li><p>ORDER BY 查询排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ORDER BY &#123;col_name | expr | position&#125; [ASC | DESC]]</div></pre></td></tr></table></figure>
+</li>
+<li><p>LIMIT 限制查询数量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[LIMIT [起始偏移位置，偏移长度]]</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="mysql语句规范"><a href="#mysql语句规范" class="headerlink" title="mysql语句规范"></a>mysql语句规范</h3><ul>
+<li>必须以分号结尾</li>
+<li>关键字、函数大写（小写也没有影响）</li>
+<li>各种名称小写</li>
+</ul>
+<h3 id="mysql数据类型"><a href="#mysql数据类型" class="headerlink" title="mysql数据类型"></a>mysql数据类型</h3><ul>
+<li>整型<br><img src="https://img.mukewang.com/5a94cf94000144ff12800720.jpg" alt="整型"></li>
+<li>浮点型<br><img src="https://img.mukewang.com/5a94d02c0001ae3012800720.jpg" alt="浮点型"></li>
+<li>字符型<br><img src="https://img.mukewang.com/5a94d1710001a6b112800720.jpg" alt="字符型"></li>
+<li>日期时间型<br><img src="https://img.mukewang.com/5a94d0e60001aec512800720.jpg" alt="日期时间"></li>
+</ul>
+<h3 id="mysql约束"><a href="#mysql约束" class="headerlink" title="mysql约束"></a>mysql约束</h3><h4 id="约束类型"><a href="#约束类型" class="headerlink" title="约束类型"></a>约束类型</h4><ul>
+<li>默认约束 DEFAULT<br>为字段设置默认值，如果没有明确为字段赋值，则自动赋予默认值</li>
+<li>唯一约束 UNIQUE KEY<br>保证记录的唯一性，可以为空</li>
+<li>外键约束 FOREIGN KEY<br>实现一对一或一对多的关系<blockquote>
+<h5 id="外键约束的要求"><a href="#外键约束的要求" class="headerlink" title="外键约束的要求"></a>外键约束的要求</h5><p><img src="https://img1.sycdn.imooc.com/5a960f35000133a912800720.jpg" alt="img"></p>
+<h5 id="外键约束的参照操作"><a href="#外键约束的参照操作" class="headerlink" title="外键约束的参照操作"></a>外键约束的参照操作</h5><p><img src="https://img1.sycdn.imooc.com/5a9612780001597712800720.jpg" alt="img"></p>
+</blockquote>
+</li>
+<li>主键约束 PRIMARY KEY</li>
+<li>非空约束 NOT NULL</li>
+</ul>
+<h4 id="表级约束与列级约束"><a href="#表级约束与列级约束" class="headerlink" title="表级约束与列级约束"></a>表级约束与列级约束</h4><p><img src="https://img1.sycdn.imooc.com/5a9614320001f6df12800720.jpg" alt="img"></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/03/28/php与mysql数据库/" style="float: left;">
+        ← php与mysql数据库
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/03/25/dingo-api安装报错/">
+        dingo-api安装报错的解决办法 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+                <div class="coding">
+                    <img src="https://dn-coding-net-production-static.qbox.me/static/ca94f7abde90327b683f1eb5f01a81b7.svg" height="40">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

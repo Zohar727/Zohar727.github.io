@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Laravel进阶笔记 | Zohar&#39;s Blog</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Zohar's Blog">
+    <meta name="author" content="Zohar">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Zohar&#39;s Blog" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='/css/Montserrat-400-700.css' rel='stylesheet' type='text/css'>
+    <link href='/css/Open+Sans-400-600.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/CSS相关/" class="animsition-link">CSS相关<small>(10)</small></a></li>
+				    
+				    <li><a href="/categories/HTTP/" class="animsition-link">HTTP<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/Laravel/" class="animsition-link">Laravel<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/MySql/" class="animsition-link">MySql<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/PHP/" class="animsition-link">PHP<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/其他/" class="animsition-link">其他<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/求职/" class="animsition-link">求职<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/生活/" class="animsition-link">生活<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/百度前端技术学院/" class="animsition-link">百度前端技术学院<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://blog.jeongen.com/" class="animsition-link">jeongen</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Zohar's Blog</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-03-18T08:49:06.000Z" itemprop="datePublished">
+          2018-03-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/PHP/'>PHP</a>,
+    
+    <a href='/tags/Laravel/'>Laravel</a>,
+    
+    <a href='/tags/后端开发/'>后端开发</a>
+    
+    
+</span>
+                <h1>Laravel进阶笔记</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<blockquote>
+<p>虽然是进阶笔记，但记录的知识点还是相对基础的</p>
+</blockquote>
+<h3 id="composer"><a href="#composer" class="headerlink" title="composer"></a>composer</h3><h4 id="composer安装"><a href="#composer安装" class="headerlink" title="composer安装"></a>composer安装</h4><p><a href="http://blog.csdn.net/crazywoniu/article/details/73432291" target="_blank" rel="external">windows下安装composer</a></p>
+<h4 id="composer全局配置中国镜像"><a href="#composer全局配置中国镜像" class="headerlink" title="composer全局配置中国镜像"></a>composer全局配置中国镜像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</div><div class="line">// 查看当前镜像地址</div><div class="line">config -gl</div></pre></td></tr></table></figure>
+<h3 id="composer安装laravel"><a href="#composer安装laravel" class="headerlink" title="composer安装laravel"></a>composer安装laravel</h3><h4 id="Composer-Create-Project"><a href="#Composer-Create-Project" class="headerlink" title="Composer Create-Project"></a>Composer Create-Project</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">composer create-project --prefer-dist laravle/laravel [别名] [版本号]</div><div class="line">// for exampe:</div><div class="line">composer create-project --prefer-dist laravel/laravel blog &quot;5.2.*&quot;</div></pre></td></tr></table></figure>
+<h4 id="Laravel-安装器"><a href="#Laravel-安装器" class="headerlink" title="Laravel 安装器"></a>Laravel 安装器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">composer global require &quot;laravel/installer&quot;</div><div class="line">laravel new project-name</div></pre></td></tr></table></figure>
+<blockquote>
+<p>需要配置环境变量： ~/.composer/vendor/bin</p>
+</blockquote>
+<h3 id="Laravel-Artisan"><a href="#Laravel-Artisan" class="headerlink" title="Laravel Artisan"></a>Laravel Artisan</h3><h4 id="Artisan-简介"><a href="#Artisan-简介" class="headerlink" title="Artisan 简介"></a>Artisan 简介</h4><ul>
+<li>artisan 是 laravel 中自带的命令行工具的名称</li>
+<li>由强大的 Symfony Console 组件驱动</li>
+<li>提供了一些对应用开发有帮助的指令<h4 id="Artisan-使用帮助"><a href="#Artisan-使用帮助" class="headerlink" title="Artisan 使用帮助"></a>Artisan 使用帮助</h4></li>
+<li>查看所有可用的Artisan命令<br>  <code>php artisan list</code></li>
+<li>查看命令帮助信息<br>  <code>php artisan help migrate</code><h4 id="Artisan-常用命令"><a href="#Artisan-常用命令" class="headerlink" title="Artisan 常用命令"></a>Artisan 常用命令</h4></li>
+<li>创建控制器<br>  <code>php artisan make:controller StudentController</code></li>
+<li>创建模型<br>  <code>php artisan make:Model Article</code></li>
+<li>创建中间件<br>  <code>php artisan make:middleware Activity</code></li>
+</ul>
+<h3 id="Laravel-Auth"><a href="#Laravel-Auth" class="headerlink" title="Laravel Auth"></a>Laravel Auth</h3><h4 id="Auth-简介"><a href="#Auth-简介" class="headerlink" title="Auth 简介"></a>Auth 简介</h4><p>Auth可以方便快速的生成一个用户注册登录的模块</p>
+<h4 id="创建Auth"><a href="#创建Auth" class="headerlink" title="创建Auth"></a>创建Auth</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan make:auth</div></pre></td></tr></table></figure>
+<h3 id="Laravel-数据迁移"><a href="#Laravel-数据迁移" class="headerlink" title="Laravel 数据迁移"></a>Laravel 数据迁移</h3><h4 id="新建迁移文件"><a href="#新建迁移文件" class="headerlink" title="新建迁移文件"></a>新建迁移文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 方法一：</div><div class="line">php artisan make:migration create_student_table --table=students</div><div class="line">// create_student_table:迁移文件的名称</div><div class="line">// --table=students: students 表示要新建一个students表</div><div class="line">// 方法二：生成模型同时生成迁移文件</div><div class="line">php artisan make:model Student -m</div></pre></td></tr></table></figure>
+<blockquote>
+<p>生成的迁移文件在<code>database/migration</code>下，我们在迁移文件中新建数据表</p>
+</blockquote>
+<h4 id="执行数据迁移文件"><a href="#执行数据迁移文件" class="headerlink" title="执行数据迁移文件"></a>执行数据迁移文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">php artisan migrate</div><div class="line">// 即根据迁移文件生成了相应的数据表</div></pre></td></tr></table></figure>
+<h3 id="laravel-数据填充"><a href="#laravel-数据填充" class="headerlink" title="laravel 数据填充"></a>laravel 数据填充</h3><h4 id="数据填充简介"><a href="#数据填充简介" class="headerlink" title="数据填充简介"></a>数据填充简介</h4><p>数据迁移只是建立了数据表，还需要通过数据填充批量插入数据</p>
+<h4 id="新建填充文件"><a href="#新建填充文件" class="headerlink" title="新建填充文件"></a>新建填充文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan make:seeder StudentTableSeeder[填充文件名]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>生成的填充文件在<code>database/seeds</code>下，我们在填充文件中执行插入数据</p>
+</blockquote>
+<h4 id="执行数据填充文件"><a href="#执行数据填充文件" class="headerlink" title="执行数据填充文件"></a>执行数据填充文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 执行单个填充文件</div><div class="line">php artisan db:seed --class=StudentTableSeeder[填充文件名]</div><div class="line"></div><div class="line">// 批量执行填充文件</div><div class="line">// 需要先在在database/seeds/DatabaseSeeder.php 文件中输入需要批量填充的文件</div><div class="line">$this-&gt;call(UsersTableSeeder::class);</div><div class="line">// 在批量执行填充</div><div class="line">php artisan db:seed</div></pre></td></tr></table></figure>
+<h3 id="Laravel-文件系统"><a href="#Laravel-文件系统" class="headerlink" title="Laravel 文件系统"></a>Laravel 文件系统</h3><h4 id="文件系统简介"><a href="#文件系统简介" class="headerlink" title="文件系统简介"></a>文件系统简介</h4><ul>
+<li>Laravel的文件系统是基于Frank de Jonge 的 Flysystem 扩展包</li>
+<li>提供了简单的接口，可以操作本地端控件，Amazon S3，Rackspace Cloud Storage</li>
+<li>可以非常简单的切换不同的保存方式，但仍使用相同的API操作</li>
+</ul>
+<h4 id="文件系统配置文件位置"><a href="#文件系统配置文件位置" class="headerlink" title="文件系统配置文件位置"></a>文件系统配置文件位置</h4><p><code>config/fielsystems.php</code></p>
+<h4 id="新建一个文件上传目录"><a href="#新建一个文件上传目录" class="headerlink" title="新建一个文件上传目录"></a>新建一个文件上传目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// config/filesystems/php</div><div class="line">&apos;uploads&apos; =&gt; [</div><div class="line">          &apos;driver&apos; =&gt; &apos;local&apos;, // 文件存储位置：本地/云服务器</div><div class="line">          &apos;root&apos; =&gt; storage_path(&apos;app/uploads&apos;), // 文件存储路径</div><div class="line">             ],</div></pre></td></tr></table></figure>
+<h4 id="文件系统常用API"><a href="#文件系统常用API" class="headerlink" title="文件系统常用API"></a>文件系统常用API</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">// 原生PHP的API</div><div class="line">$_FILRS</div><div class="line">// 获取文件资源</div><div class="line">$file = $request-&gt;file(&apos;source&apos;);</div><div class="line">// 判断文件是否上传成功</div><div class="line">$file-&gt;isValid()</div><div class="line">// 原文件名</div><div class="line">$originalName = $file-&gt;getClientOriginalName();</div><div class="line">// 扩展名</div><div class="line">$ext = $file-&gt;getClientOriginalExtension();</div><div class="line">// MimeType</div><div class="line">$type = $file-&gt;getClientMimeType();</div><div class="line">// 绝对路径</div><div class="line">$realPath = $file-&gt;getRealPath();</div><div class="line">// 取文件名</div><div class="line">$filename = date(&apos;Y-m-d-H-i-s&apos;).&apos;-&apos;.uniqid().&apos;.&apos;.$ext;</div><div class="line">// 将文件存入指定目录</div><div class="line">$bool = Storage::disk(&apos;uploads&apos;)-&gt;put($filename, file_get_contents($realPath));</div></pre></td></tr></table></figure>
+<h3 id="Laravel-邮件-SwiftMailer"><a href="#Laravel-邮件-SwiftMailer" class="headerlink" title="Laravel 邮件(SwiftMailer)"></a>Laravel 邮件(SwiftMailer)</h3><h4 id="Laravel邮件简介"><a href="#Laravel邮件简介" class="headerlink" title="Laravel邮件简介"></a>Laravel邮件简介</h4><ul>
+<li>Laravel 的邮件功能基于热门的 SwiftMailer 函数库之上，提供了一个简洁的API</li>
+<li>Laravel为SMTP、Mailgun、Mandrill、Amazon SES、PHP的mail函数，以及sendmail提供了驱动从而允许你快速通过本地或云服务发送邮件</li>
+</ul>
+<h4 id="Laravel邮件配置文件"><a href="#Laravel邮件配置文件" class="headerlink" title="Laravel邮件配置文件"></a>Laravel邮件配置文件</h4><p><code>config/mail.php</code><br><strong> 邮箱参数在<code>.env</code>文件中设置</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 这里是腾讯企业邮箱的示例</div><div class="line">MAIL_DRIVER=smtp</div><div class="line">MAIL_HOST=smtp.exmail.qq.com</div><div class="line">MAIL_PORT=465</div><div class="line">MAIL_USERNAME=xx@xx.com</div><div class="line">MAIL_PASSWORD=password</div><div class="line">MAIL_ENCRYPTION=ssl</div></pre></td></tr></table></figure></p>
+<h4 id="发送邮件"><a href="#发送邮件" class="headerlink" title="发送邮件"></a>发送邮件</h4><h5 id="Mail-raw-发送纯文本邮件"><a href="#Mail-raw-发送纯文本邮件" class="headerlink" title="Mail::raw() 发送纯文本邮件"></a>Mail::raw() 发送纯文本邮件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Mail::raw(&apos;邮件内容&apos;, function($message) &#123;</div><div class="line">        // 发送人</div><div class="line">        $message-&gt;from(&apos;admin@zohar.com.cn&apos;, &apos;zohar&apos;);</div><div class="line">        // 邮件主题</div><div class="line">        $message-&gt;subject(&quot;欢迎注册&quot;);</div><div class="line">        // 收件人</div><div class="line">        $message-&gt;to([&apos;xx@qq.com&apos;, &apos;xxx@qq.com&apos;, &apos;xxx@qq.com&apos;]);    </div><div class="line">      &#125;);</div></pre></td></tr></table></figure>
+<h5 id="Mail-send-发送html邮件"><a href="#Mail-send-发送html邮件" class="headerlink" title="Mail::send() 发送html邮件"></a>Mail::send() 发送html邮件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Mail::send(&apos;students.mail&apos;,[&apos;name&apos; =&gt; &apos;zohar&apos;],  function($message) &#123;&#125;);</div><div class="line">// 参数一：html模版文件</div><div class="line">// 参数二：要传给html的值</div></pre></td></tr></table></figure>
+<h3 id="Laravel-缓存"><a href="#Laravel-缓存" class="headerlink" title="Laravel 缓存"></a>Laravel 缓存</h3><h4 id="Larvael缓存简介"><a href="#Larvael缓存简介" class="headerlink" title="Larvael缓存简介"></a>Larvael缓存简介</h4><ul>
+<li>Laravel为各种不同的缓存系统提供一致的API</li>
+<li>Laravel支持常见的后端缓存系统，File、Memcached、Redis</li>
+</ul>
+<h4 id="缓存的主要方法"><a href="#缓存的主要方法" class="headerlink" title="缓存的主要方法"></a>缓存的主要方法</h4><h5 id="设置缓存"><a href="#设置缓存" class="headerlink" title="设置缓存"></a>设置缓存</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// put() 设置缓存</div><div class="line">Cache::put(&apos;key1&apos;, &apos;val1&apos;, 10);</div><div class="line"></div><div class="line">// add() 设置缓存，返回值为boolean</div><div class="line">$bool = Cache::add(&apos;key1&apos;, &apos;val2&apos;, 10);</div><div class="line">var_dump($bool);</div><div class="line"></div><div class="line">// forever() 设置永久保存的缓存</div><div class="line">Cache::forever(&apos;key2&apos;, &apos;val2&apos;);</div></pre></td></tr></table></figure>
+<h5 id="获取缓存"><a href="#获取缓存" class="headerlink" title="获取缓存"></a>获取缓存</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// get() 获取缓存</div><div class="line">$val = Cache::get(&apos;key1&apos;);</div><div class="line">var_dump($val);</div><div class="line"></div><div class="line">// pull() 获取缓存并删除该缓存</div><div class="line">var_dump(Cache::pull(&apos;key1&apos;));</div></pre></td></tr></table></figure>
+<h5 id="删除缓存"><a href="#删除缓存" class="headerlink" title="删除缓存"></a>删除缓存</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// forget() 删除缓存 返回boolean</div><div class="line">$bool = Cache::forget(&apos;key1&apos;);</div><div class="line">var_dump($bool);</div></pre></td></tr></table></figure>
+<h4 id="查找缓存的key是否存在"><a href="#查找缓存的key是否存在" class="headerlink" title="查找缓存的key是否存在"></a>查找缓存的key是否存在</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// has() 判断key存在</div><div class="line">if (Cache::has(&apos;key1&apos;)) &#123;</div><div class="line">  var_dump(Cache::get(&apos;key1&apos;));</div><div class="line">&#125; else &#123;</div><div class="line">  echo &apos;不存在&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Laravel-异常错误"><a href="#Laravel-异常错误" class="headerlink" title="Laravel 异常错误"></a>Laravel 异常错误</h3><h4 id="debug模式配置"><a href="#debug模式配置" class="headerlink" title="debug模式配置"></a>debug模式配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// config/app.php</div><div class="line">// .env</div><div class="line">APP_DEBUG=true //上线环境，值永远为false</div></pre></td></tr></table></figure>
+<h4 id="HTTP异常抛出异常页面"><a href="#HTTP异常抛出异常页面" class="headerlink" title="HTTP异常抛出异常页面"></a>HTTP异常抛出异常页面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$student = null;</div><div class="line">if ($student == null) &#123;</div><div class="line">  // 抛出异常页面</div><div class="line">  abort(&apos;503&apos;); //跳转至error下的503页面</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Laravel-日志"><a href="#Laravel-日志" class="headerlink" title="Laravel 日志"></a>Laravel 日志</h3><h4 id="日志简介"><a href="#日志简介" class="headerlink" title="日志简介"></a>日志简介</h4><ul>
+<li>Laravel日志工具基于Monolog库，提供了single,daily,syslog,errorlog日志模式</li>
+<li>debug、info、notice、warning、error、critical、alert七个错误级别</li>
+</ul>
+<h4 id="输出日志"><a href="#输出日志" class="headerlink" title="输出日志"></a>输出日志</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 输出日志 single模式 daily模式（按日期输出日志文件）</div><div class="line">Log::info(&apos;info:日志&apos;);</div><div class="line">Log::warning(&apos;warning:日志&apos;);</div><div class="line">// 输出日志传参</div><div class="line">Log::error(&apos;error:日志&apos;, [&apos;name&apos; =&gt; &apos;zohar&apos;]);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>输出的日志文件在 <code>storage/app/logs</code>下</p>
+</blockquote>
+<h3 id="Laravel-队列"><a href="#Laravel-队列" class="headerlink" title="Laravel 队列"></a>Laravel 队列</h3><blockquote>
+<p>非常基础的一点笔记</p>
+</blockquote>
+<h4 id="队列简介"><a href="#队列简介" class="headerlink" title="队列简介"></a>队列简介</h4><ul>
+<li>队列服务为各种不同的后台队列提供了统一的API</li>
+<li>允许推迟耗时任务的执行，从而大幅提高web请求速度</li>
+</ul>
+<h4 id="队列配置文件"><a href="#队列配置文件" class="headerlink" title="队列配置文件"></a>队列配置文件</h4><p><code>config/queue.php</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// .env</div><div class="line">QUEUE_DRIVER=database // 配置队列的存储位置</div></pre></td></tr></table></figure></p>
+<h4 id="队列的主要步骤"><a href="#队列的主要步骤" class="headerlink" title="队列的主要步骤"></a>队列的主要步骤</h4><h5 id="迁移队列需要的数据表"><a href="#迁移队列需要的数据表" class="headerlink" title="迁移队列需要的数据表"></a>迁移队列需要的数据表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">php artisan queue:table</div><div class="line">php artisan migrate</div><div class="line">// 会自动生成队列迁移文件并建立队列任务数据表</div></pre></td></tr></table></figure>
+<h5 id="编写任务类"><a href="#编写任务类" class="headerlink" title="编写任务类"></a>编写任务类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">// 生成任务文件</div><div class="line">php artisan make:job SendEmail</div><div class="line">// app/Jobs/SendEmail.php </div><div class="line">class SendEmail extends Job implements ShouldQueue</div><div class="line">&#123;</div><div class="line">    use InteractsWithQueue, SerializesModels;</div><div class="line"></div><div class="line">    protected $email;</div><div class="line">    /**</div><div class="line">     * Create a new job instance.</div><div class="line">     *</div><div class="line">     * @return void</div><div class="line">     */</div><div class="line">    public function __construct($email)</div><div class="line">    &#123;</div><div class="line">        //</div><div class="line">        $this-&gt;email = $email;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * Execute the job.</div><div class="line">     *</div><div class="line">     * @return void</div><div class="line">     */</div><div class="line">    public function handle()</div><div class="line">    &#123;</div><div class="line">        //</div><div class="line">        Mail::raw(&apos;队列测试&apos;, function($message) &#123;</div><div class="line">          $message-&gt;from(&apos;admin@zohar.com.cn&apos;, &apos;zohar&apos;);</div><div class="line">          $message-&gt;subject(&quot;Study in Zohar&apos;s blog&quot;);</div><div class="line">          $message-&gt;to($this-&gt;email);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="推送任务到队列"><a href="#推送任务到队列" class="headerlink" title="推送任务到队列"></a>推送任务到队列</h5><p>此时数据表中已经插入了队列任务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">use App\Jobs\SendEmail;</div><div class="line">dispatch(new SendEmail([&apos;xxx@qq.com&apos;, &apos;xxx@qq.com&apos;, &apos;xxx@qq.com&apos;]));</div></pre></td></tr></table></figure></p>
+<h5 id="运行队列监听器"><a href="#运行队列监听器" class="headerlink" title="运行队列监听器"></a>运行队列监听器</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan queue:listen</div></pre></td></tr></table></figure>
+<h5 id="处理失败任务"><a href="#处理失败任务" class="headerlink" title="处理失败任务"></a>处理失败任务</h5><p>```<br>// 建立队列失败任务数据表<br>php artisan queue:failed-table<br>php artisan mirgate<br>// 显示失败的队列任务<br>php artisan queue:failed<br>// 重推失败任务<br>php artisan queue:retry 1[失败id]<br>// 删除失败任务<br>php artisan queue:forget 1[失败id]<br>// 删除所有失败任务<br>php artisan queue:flush</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2018/03/25/dingo-api安装报错/" style="float: left;">
+        ← dingo-api安装报错的解决办法
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/03/17/Laravel基础笔记/">
+        Laravel基础笔记 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo"></div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+             <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zohar. All Rights Reserved.
+                </p>
+
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/Zohar727" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+                <div class="coding">
+                    <img src="https://dn-coding-net-production-static.qbox.me/static/ca94f7abde90327b683f1eb5f01a81b7.svg" height="40">
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
