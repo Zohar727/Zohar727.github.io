@@ -274,21 +274,58 @@ value: 常量值，必选
 case_sensitive: 大小写敏感，可选，默认false 
 </code></pre></li>
 <li>取值方法：<br>  直接使用常量名；使用constant()函数，<code>mixed constant(string constant_name)</code></li>
-<li><p>判断常量名是否已经定义：  </p>
-  <figure class="highlight plain"><figcaption><span>define($string contant_name)```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">        返回值为ture或false</div><div class="line">2. 系统常量 &lt;br/&gt;</div><div class="line">    常见系统常量：</div><div class="line">    - `__FILE__`:php程序文件名。它可以帮助我们获取当前文件在服务器的物理位置。</div><div class="line"></div><div class="line">    - `__LINE__`:PHP程序文件行数。它可以告诉我们，当前代码在第几行。</div><div class="line">    </div><div class="line">    - `PHP_VERSION`:当前解析器的版本号。它可以告诉我们当前PHP解析器的版本号，我们可以提前知道我们的PHP代码是否可被该PHP解析器解析。</div><div class="line">    </div><div class="line">    - `PHP_OS`：执行当前PHP版本的操作系统名称。它可以告诉我们服务器所用的操作系统名称，我们可以根据该操作系统优化我们的代码。</div><div class="line">    </div><div class="line">***</div><div class="line">### PHP运算符</div><div class="line">#### 算术运算符</div><div class="line">![img](http://img.mukewang.com/5333bfdb0001a27a05300240.jpg)</div><div class="line"></div><div class="line">#### 赋值运算符</div><div class="line">- `=`：传值</div><div class="line">- `&amp;`：传地址</div><div class="line"></div><div class="line">#### 比较运算符</div><div class="line">![](http://img.mukewang.com/533a0af30001e75c06600409.jpg)</div><div class="line"></div><div class="line">#### 三元运算符</div><div class="line">`(“?:”)`三元运算符也是一个比较运算符，对于表达式`(expr1)?(expr2):(expr3)`，如果expr1的值为true，则此表达式的值为expr2，否则为expr3</div><div class="line"></div><div class="line">#### 逻辑运算符</div><div class="line">![](http://img.mukewang.com/533e0fbe0001c56f06080279.jpg)</div><div class="line"></div><div class="line">#### 字符串连接运算符</div><div class="line">- `.` : 字符串连接</div><div class="line">- `.=` : 字符串连接并赋值</div><div class="line"></div><div class="line">#### 错误控制运算符@</div><div class="line">PHP中提供了一个错误控制运算符“@”，对于一些可能会在运行过程中出错的表达式时，我们不希望出错的时候给客户显示错误信息，这样对用户不友好。于是，可以将@放置在一个PHP表达式之前，该表达式可能产生的任何错误信息都被忽略掉；</div><div class="line"></div><div class="line">如果激活了track_error（这个玩意在php.ini中设置）特性，表达式所产生的任何错误信息都被存放在变量$php_errormsg中，此变量在每次出错时都会被覆盖，所以如果想用它的话必须尽早检查。</div><div class="line"></div><div class="line">需要注意的是：错误控制前缀“@”不会屏蔽解析错误的信息，不能把它放在函数或类的定义之前，也不能用于条件结构例如if和foreach等。</div><div class="line"></div><div class="line">***</div><div class="line">### PHP语言结构语句</div><div class="line">- 顺序结构</div><div class="line">- if...else</div><div class="line">- if...else if...else</div><div class="line">- switch...case...default</div><div class="line">- while</div><div class="line">- do...while</div><div class="line">- for(...;...;...)</div><div class="line">- foreach  </div><div class="line">    `foreach`一般用于遍历数组，语法格式有两种：</div></pre></td></tr></table></figure>
-<p>foreach(array as value) // 只取值不取下标<br>foreach(array as index =&gt; value) // 同时取值和下标<br>```</p>
+<li>判断常量名是否已经定义：<br>  <code>bool define($string contant_name)</code><br>  返回值为ture或false</li>
+</ul>
+</li>
+<li><p>系统常量 <br><br> 常见系统常量：</p>
+<ul>
+<li><p><code>__FILE__</code>:php程序文件名。它可以帮助我们获取当前文件在服务器的物理位置。</p>
+</li>
+<li><p><code>__LINE__</code>:PHP程序文件行数。它可以告诉我们，当前代码在第几行。</p>
+</li>
+<li><p><code>PHP_VERSION</code>:当前解析器的版本号。它可以告诉我们当前PHP解析器的版本号，我们可以提前知道我们的PHP代码是否可被该PHP解析器解析。</p>
+</li>
+<li><p><code>PHP_OS</code>：执行当前PHP版本的操作系统名称。它可以告诉我们服务器所用的操作系统名称，我们可以根据该操作系统优化我们的代码。</p>
 </li>
 </ul>
 </li>
 </ol>
+<hr>
+<h3 id="PHP运算符"><a href="#PHP运算符" class="headerlink" title="PHP运算符"></a>PHP运算符</h3><h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><p><img src="http://img.mukewang.com/5333bfdb0001a27a05300240.jpg" alt="img"></p>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><ul>
+<li><code>=</code>：传值</li>
+<li><code>&amp;</code>：传地址</li>
+</ul>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><p><img src="http://img.mukewang.com/533a0af30001e75c06600409.jpg" alt=""></p>
+<h4 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h4><p><code>(“?:”)</code>三元运算符也是一个比较运算符，对于表达式<code>(expr1)?(expr2):(expr3)</code>，如果expr1的值为true，则此表达式的值为expr2，否则为expr3</p>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p><img src="http://img.mukewang.com/533e0fbe0001c56f06080279.jpg" alt=""></p>
+<h4 id="字符串连接运算符"><a href="#字符串连接运算符" class="headerlink" title="字符串连接运算符"></a>字符串连接运算符</h4><ul>
+<li><code>.</code> : 字符串连接</li>
+<li><code>.=</code> : 字符串连接并赋值</li>
+</ul>
+<h4 id="错误控制运算符"><a href="#错误控制运算符" class="headerlink" title="错误控制运算符@"></a>错误控制运算符@</h4><p>PHP中提供了一个错误控制运算符“@”，对于一些可能会在运行过程中出错的表达式时，我们不希望出错的时候给客户显示错误信息，这样对用户不友好。于是，可以将@放置在一个PHP表达式之前，该表达式可能产生的任何错误信息都被忽略掉；</p>
+<p>如果激活了track_error（这个玩意在php.ini中设置）特性，表达式所产生的任何错误信息都被存放在变量$php_errormsg中，此变量在每次出错时都会被覆盖，所以如果想用它的话必须尽早检查。</p>
+<p>需要注意的是：错误控制前缀“@”不会屏蔽解析错误的信息，不能把它放在函数或类的定义之前，也不能用于条件结构例如if和foreach等。</p>
+<hr>
+<h3 id="PHP语言结构语句"><a href="#PHP语言结构语句" class="headerlink" title="PHP语言结构语句"></a>PHP语言结构语句</h3><ul>
+<li>顺序结构</li>
+<li>if…else</li>
+<li>if…else if…else</li>
+<li>switch…case…default</li>
+<li>while</li>
+<li>do…while</li>
+<li>for(…;…;…)</li>
+<li>foreach<br>  <code>foreach</code>一般用于遍历数组，语法格式有两种：    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">foreach(array as value) // 只取值不取下标</div><div class="line">foreach(array as index =&gt; value) // 同时取值和下标</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2018/03/12/php进阶笔记一/" style="float: left;">
-        ← php进阶笔记一
+    <a class="pull-left" href="/2018/03/05/mysql基础笔记/" style="float: left;">
+        ← mysql基础笔记
     </a>
     
     
